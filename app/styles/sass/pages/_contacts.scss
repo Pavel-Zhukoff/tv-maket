@@ -5,6 +5,92 @@
     padding-top: 50px * $height-rate-big;
   }
 
+  .contacts-connect{
+    @include _768() {
+      margin: 10px auto;
+      max-width: 345px;
+    }
+    .contacts-card {
+      &:before {
+        @include _768() {
+          height: 135px;
+        }
+      }
+      &:nth-child(1) {
+        .contmob {
+          display: none;
+          @include _768() {
+            display: inherit;
+          }
+        }
+        @include _768() {
+          width: 136px;
+          order: 2;
+          margin-right: 0;
+        }
+      }
+      &:nth-child(2) {
+        @include _768() {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        @include _768() {
+          width: 200px;
+          margin-right: 8px;
+          order: 1;
+        }
+      }
+
+      .contacts-card_icon{
+        @include _768() {
+          width: 60px;
+          height: 60px;
+          order: 2;
+          background: linear-gradient(180deg,#f8f9fb 60%,transparent 60%);
+          bottom: -30px;
+        }
+
+        .contacts-card_icon__phone {
+          @include _768() {
+            width: 16px!important;
+            margin-top: 5px;
+          }
+        }
+        .contacts-card_icon__email {
+          @include _768() {
+            width: 25px!important;
+            margin-top: 10px;
+          }
+        }
+      }
+      .contacts-card_content {
+        @include _768() {
+          order: 1;
+          padding: 10px 1vw 0;
+          height: 75px;
+        }
+
+        .contacts-card_content__title {
+          @include _768() {
+            font-size: 18px;
+          }
+        }
+        .contacts-card_content__link {
+          @include _768() {
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+        .contacts-card_content__subtitle {
+          @include _768() {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   .contacts-mailing {
     @include display-flex(column);
     width: 540px * $width-rate;
@@ -14,6 +100,12 @@
     position: relative;
     border-radius: 20px;
     align-items: center;
+
+    @include _768() {
+      width: 350px;
+      padding: 35px 40px 15px 40px;
+      margin-top: 0;
+    }
 
     @include _aspect-ratio {
       margin: 80px * $height-rate-big auto 0;
@@ -31,6 +123,12 @@
       @include _aspect-ratio {
         top: -82px * $height-rate-big;
       }
+      @include _768() {
+        width: 58px;
+        height: 58px;
+        left: auto;
+        top: -28px;
+      }
 
     }
 
@@ -45,6 +143,13 @@
       @include _aspect-ratio {
         top: -80px * $height-rate-big;
       }
+      @include _768() {
+        width: 54px;
+        height: 54px;
+        line-height: 54px;
+        left: auto;
+        top: -26px;
+      }
 
       .contacts-mailing_icon__image {
         //display: block;
@@ -56,6 +161,10 @@
         @include _aspect-ratio {
           height: 68px * $height-rate-big;
           margin: 26px * $height-rate-big auto auto;
+        }
+
+        @include _768() {
+          height: 30px;
         }
       }
     }
@@ -73,6 +182,13 @@
         @include _aspect-ratio {
           margin-bottom: 10px * $height-rate-big;
         }
+
+        @include _768() {
+          font-size: 18px;
+          width: 60%;
+          margin: 0px auto 5px auto;
+          justify-content: unsafe;
+        }
       }
 
       .contacts-mailing_label__subtitle {
@@ -81,6 +197,11 @@
         display: block;
         @include _aspect-ratio {
           margin-bottom: 8px * $height-rate-big;
+        }
+
+        @include _768() {
+          font-size: 12px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -103,9 +224,18 @@
         padding-bottom: 12px * $height-rate-big;
       }
 
+      @include _768() {
+        width: 230px;
+        padding: 8px 16px;
+        margin-bottom: 15px;
+      }
+
       &::placeholder {
         color: $color-accent;
         opacity: .5;
+        @include _768() {
+          font-size: 12px;
+        }
       }
     }
 
@@ -123,6 +253,12 @@
       border: 0;
       @include _aspect-ratio {
         padding: 10px * $height-rate-big 20px * $width-rate;
+      }
+
+      @include _768() {
+        max-width: 110px;
+        width: 105px;
+        font-size: 10px;
       }
 
       &:hover {
@@ -146,6 +282,12 @@
     padding-top: 30px * $height-rate-big;
     padding-bottom: 30px * $height-rate-big;
   }
+  @include _768() {
+    img{
+      display: none;
+    }
+    padding: 0 16px;
+  }
 
 
   .contact-form_background {
@@ -161,6 +303,14 @@
     @include display-flex(row);
     justify-content: space-between;
 
+    @include _768() {
+      display: block;
+      &:nth-child(3) {
+        margin: auto;
+        margin-top: 15px;
+      }
+    }
+
     &:last-child {
       justify-content: flex-end;
     }
@@ -168,9 +318,15 @@
     .contact-form_column {
       @include display-flex(column);
       width: 500px * $width-rate;
+      @include _768() {
+        width: 100%;
+      }
 
       &:last-child {
         width: 580px * $width-rate;
+        @include _768() {
+          width: 100%;
+        }
 
         .contact-form_group {
           margin-bottom: 0;
@@ -196,6 +352,10 @@
       @include _aspect-ratio {
         margin-bottom: 10px * $height-rate-big;
       }
+
+      @include _768() {
+        font-size: 18px;
+      }
     }
 
     .contact-form_input {
@@ -205,6 +365,11 @@
       color: $color-accent;
       padding: 10px * $height-rate 20px * $width-rate / 2;
       border-radius: 10px;
+      @include _768() {
+        font-size: 12px;
+        padding: 8px 16px;
+        border-radius: 10px;
+      }
 
       @include _aspect-ratio {
         padding-top: 10px * $height-rate-big;
@@ -214,6 +379,10 @@
       &::placeholder {
         color: $color-accent;
         opacity: .5;
+        @include _768() {
+          font-size: 12px;
+          //padding: 16px 8px;
+        }
       }
 
       &.contact-form_input__textarea {
@@ -243,6 +412,12 @@
       padding-top: 8px * $height-rate-big;
     }
 
+    @include _768() {
+      max-width: 180px;
+      width: 180px;
+      font-size: 18px;
+    }
+
     &:hover {
       opacity: 1;
       background: linear-gradient(90deg, $color-primary 0%, $color-blue 100%);
@@ -262,11 +437,26 @@
 }
 
 .contact-socials {
+  @include _768() {
+    margin-top: 30px;
+  }
+
   .socials_row {
     @include display-flex(row);
     margin-bottom: 50px * $height-rate;
     @include _aspect-ratio {
       margin-bottom: 50px * $height-rate-big;
+    }
+
+    @include _768() {
+      padding: 0 15px;
+      &:nth-child(2) {
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+      &:nth-child(3) {
+        margin-bottom: 60px;
+      }
     }
 
     &:first-child {
@@ -277,6 +467,10 @@
       justify-content: flex-end;
 
       .socials_container {
+        @include _768() {
+          width: 100%;
+        }
+
         .socials_container__item {
           &:nth-child(1) {
             //padding-top: 48px * $height-rate;
@@ -294,6 +488,9 @@
             .socials_container__item_image {
               width: 60px * $width-rate;
               height: auto;
+              @include _768() {
+                width: 25px;
+              }
             }
           }
 
@@ -306,6 +503,9 @@
             .socials_container__item_image {
               width: 50px * $width-rate;
               height: auto;
+              @include _768() {
+                width: 25px;
+              }
             }
           }
 
@@ -324,6 +524,9 @@
     @include display-flex(row);
     width: 820px * $width-rate;
     z-index: 22;
+    @include _768() {
+      width: 100%;
+    }
 
     .socials_container__item {
       @include circle(180px, transparent);
@@ -335,6 +538,16 @@
       text-decoration: none;
       display: block;
       cursor: pointer;
+
+      @include _768() {
+        width: 73px;
+        height: 73px;
+        border: 8px #fff solid;
+        line-height: unset;
+        @include display-flex(column);
+        align-items: center;
+        flex-direction: inherit;
+      }
 
       svg{
         vertical-align: middle;
@@ -410,6 +623,10 @@
         .socials_container__item_image {
           width: 60px * $width-rate;
           height: auto;
+
+          @include _768() {
+            width: 25px;
+          }
         }
       }
 
@@ -426,6 +643,9 @@
         .socials_container__item_image {
           width: 59px * $width-rate;
           height: auto;
+          @include _768() {
+            width: 25px;
+          }
         }
       }
 
@@ -442,6 +662,9 @@
         .socials_container__item_image {
           width: 60px * $width-rate;
           height: auto;
+          @include _768() {
+            width: 25px;
+          }
         }
       }
 
@@ -458,6 +681,9 @@
         .socials_container__item_image {
           width: 60px * $width-rate;
           height: auto;
+          @include _768() {
+            width: 25px;
+          }
         }
       }
 
@@ -474,6 +700,9 @@
         .socials_container__item_image {
           width: 60px * $width-rate;
           height: auto;
+          @include _768() {
+            width: 25px;
+          }
         }
       }
 
@@ -522,10 +751,36 @@
               padding-top: 20px * $height-rate-big;
               top: -110px * $height-rate-big;
             }
+            @include _768() {
+              top: -70px;
+              border-radius: 16px;
+            }
 
             .socials-item_container__link {
               visibility: visible;
               opacity: 1;
+            }
+          }
+        }
+        @include _768() {
+          &:nth-child(1) {
+            .socials-item_container {
+              height: auto;
+              padding-bottom: 100px * $height-rate;
+              padding-top: 20px * $height-rate;
+              top: -70px;
+              border-radius: 16px;
+              justify-content: flex-start;
+              @include _aspect-ratio {
+                padding-bottom: 100px * $height-rate-big;
+                padding-top: 20px * $height-rate-big;
+                top: -110px * $height-rate-big;
+              }
+
+              .socials-item_container__link {
+                visibility: visible;
+                opacity: 1;
+              }
             }
           }
         }
