@@ -6,7 +6,91 @@ body {
 
   }
 }
+.contacts-connect{
+  @include _768() {
+    margin: 10px auto;
+    max-width: 345px;
+  }
+  .contacts-card {
+    &:before {
+      @include _768() {
+        height: 135px;
+      }
+    }
+    &:nth-child(1) {
+      .contmob {
+        display: none;
+        @include _768() {
+          display: inherit;
+        }
+      }
+      @include _768() {
+        width: 136px;
+        order: 2;
+        margin-right: 0;
+      }
+    }
+    &:nth-child(2) {
+      @include _768() {
+        display: none;
+      }
+    }
+    &:nth-child(3) {
+      @include _768() {
+        width: 200px;
+        margin-right: 8px;
+        order: 1;
+      }
+    }
 
+    .contacts-card_icon{
+      @include _768() {
+        width: 60px;
+        height: 60px;
+        order: 2;
+        background: linear-gradient(180deg,#fff 60%,transparent 60%)!important;
+        bottom: -30px;
+      }
+
+      .contacts-card_icon__phone {
+        @include _768() {
+          width: 16px!important;
+          margin-top: 5px!important;
+        }
+      }
+      .contacts-card_icon__email {
+        @include _768() {
+          width: 25px!important;
+          margin-top: 10px!important;
+        }
+      }
+    }
+    .contacts-card_content {
+      @include _768() {
+        order: 1;
+        padding: 10px 1vw 0;
+        height: 75px;
+      }
+
+      .contacts-card_content__title {
+        @include _768() {
+          font-size: 18px;
+        }
+      }
+      .contacts-card_content__link {
+        @include _768() {
+          font-size: 12px;
+          font-weight: 700;
+        }
+      }
+      .contacts-card_content__subtitle {
+        @include _768() {
+          display: none;
+        }
+      }
+    }
+  }
+}
 .director {
   margin-top: 80px * $height-rate;
   @include display-flex(row);
@@ -16,6 +100,23 @@ body {
   @include _aspect-ratio {
     margin-top: 80px * $height-rate-big;
     height: 640px * $height-rate-big;
+  }
+  @include _768() {
+    display: block;
+    margin-top: 40px;
+    height: 600px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      background: $color-white;
+      width: 345px;
+      height: 490px;
+      border-radius: 20px;
+      bottom: 0;
+      left: 15px;
+      z-index: -1;
+    }
   }
 
   .director_bg {
@@ -28,6 +129,9 @@ body {
     @include _aspect-ratio {
       height: 640px * $height-rate-big;
     }
+    @include _768() {
+      display: none;
+    }
   }
 
   .director_thumbnail {
@@ -36,6 +140,11 @@ body {
     border-radius: 50%;
     align-self: center;
     background: $color-primary;
+    @include _768() {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
 
     .director_thumbnail__image {
       display: block;
@@ -55,9 +164,17 @@ body {
 
     }
 
+    @include _768() {
+      margin-left: 0;
+      padding: 15px 30px;
+    }
+
     .director_text {
       padding-left: 40px * $width-rate;
       font-size: $font-size-18;
+      @include _768() {
+        font-size: 12px;
+      }
 
 
       .director_content__title {
@@ -70,6 +187,10 @@ body {
         @include _aspect-ratio {
           margin-bottom: 10px * $height-rate-big;
         }
+        @include _768() {
+          text-align: center;
+          font-size: 18px;
+        }
       }
 
       .director_content__subtitle {
@@ -80,6 +201,10 @@ body {
         @include _aspect-ratio {
           margin-bottom: 20px * $height-rate-big;
         }
+        @include _768() {
+          text-align: center;
+          font-size: 14px;
+        }
       }
 
       .director_content__text {
@@ -88,11 +213,20 @@ body {
         @include _aspect-ratio {
           margin-bottom: 36px * $height-rate-big;
         }
+        @include _768() {
+          line-height: 16px;
+          color: rgba(7, 19, 43, 0.7);
+          text-align: justify;
+          margin-bottom: 2px;
+        }
       }
     }
 
     .director_socials {
       @include display-flex(row);
+      @include _768() {
+        margin: 10px auto;
+      }
 
       .director_socials__link {
         @include display-flex(column);
@@ -105,6 +239,10 @@ body {
 
         &:last-child {
           margin-right: 0;
+        }
+        @include _768() {
+          align-items: center;
+          margin-right: 10px;
         }
 
         .director_socials__link_icon {
@@ -119,6 +257,11 @@ body {
           svg{
             vertical-align: middle;
           }
+          @include _768() {
+            width: 38px;
+            height: 38px;
+            line-height: 38px;
+          }
         }
 
         &.director_socials__link___instagram {
@@ -132,6 +275,9 @@ body {
           .director_socials__link_icon__image {
             width: 46px * $width-rate;
             height: auto;
+            @include _768() {
+              width: 17px;
+            }
           }
         }
 
@@ -146,6 +292,9 @@ body {
           .director_socials__link_icon__image {
             width: 40px * $width-rate;
             height: auto;
+            @include _768() {
+              width: 16px;
+            }
           }
         }
 
@@ -164,6 +313,9 @@ body {
           .director_socials__link_icon__image {
             width: 40px * $width-rate;
             height: auto;
+            @include _768() {
+              width: 18px;
+            }
           }
         }
 
@@ -178,6 +330,9 @@ body {
           .director_socials__link_icon__image {
             width: 42px * $width-rate;
             height: auto;
+            @include _768() {
+              width: 17px;
+            }
           }
         }
 
@@ -195,6 +350,18 @@ body {
 .goods {
   width: 100%;
   height: auto;
+  @include _768() {
+    display: none;
+  }
+}
+.goodsmob {
+  display: none;
+  @include _768() {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0 15px;
+  }
 }
 
 .staff-row {
@@ -208,6 +375,13 @@ body {
     margin-bottom: 50px * $height-rate-big;
     max-height: 500px * $height-rate-big;
     min-height: 500px * $height-rate-big;
+  }
+  @include _768() {
+    width: 345px;
+    display: block;
+    min-height: 100%;
+    max-height: 100%;
+    margin: auto;
   }
 
   &:before {
@@ -223,6 +397,9 @@ body {
     @include _aspect-ratio {
       height: 300px * $height-rate-big;
     }
+    @include _768() {
+      display: none;
+    }
   }
 
   &:last-child {
@@ -235,6 +412,9 @@ body {
 
   &:nth-child(2n+1) {
     padding: 0 80px * $width-rate;
+    @include _768() {
+      padding: 0;
+    }
 
     .staff-card {
       &:nth-child(2n) {
@@ -286,6 +466,32 @@ body {
     &:last-child {
       margin-right: 0;
     }
+    @include _768() {
+      width: 100%!important;
+      padding-top: 0;
+      margin-bottom: 10px;
+      margin-right: 0;
+      &:nth-child(2) {
+        float: left;
+        width: 128px!important;
+        .staff-card_content {
+          text-align: left;
+          h3{
+            text-align: left;
+          }
+        }
+      }
+      &:nth-child(3) {
+        float: right;
+        width: 128px!important;
+        .staff-card_content {
+          text-align: right;
+          h3{
+            text-align: right;
+          }
+        }
+      }
+    }
 
     .staff-card_thumbnail {
       width: 300px * $width-rate;
@@ -293,6 +499,11 @@ body {
       margin: 0 auto 20px * $width-rate;
       border-radius: 50%;
       background: $color-primary;
+
+      @include _768() {
+        width: 128px!important;
+        height: 128px!important;
+      }
 
       .staff-card_thumbnail__image {
         display: block;
@@ -317,6 +528,10 @@ body {
         @include _aspect-ratio {
           margin-bottom: 10px * $height-rate-big;
         }
+        @include _768() {
+          font-size: 14px;
+          margin-bottom: 4px;
+        }
 
       }
 
@@ -324,7 +539,9 @@ body {
         font-family: $font-family-accent;
         font-size: $font-size-18;
         font-weight: 700;
-
+        @include _768() {
+          font-size: 12px;
+        }
       }
     }
 
