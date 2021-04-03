@@ -254,6 +254,15 @@
       display: none;
     }
   }
+  .news-mobile {
+    display: none;
+    padding: 0 16px;
+
+    @include _768 {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 }
 
 

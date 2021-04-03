@@ -11,6 +11,12 @@
     margin-top: 25px * $height-rate-big;
   }
 
+  @include _768 {
+    height: auto;
+    align-items: flex-start;
+    background: $color-footer;
+  }
+
 
   &:before,
   &:after {
@@ -51,12 +57,17 @@
   }
 
   .footer-content {
+    @include display-flex(column);
     height: 480px * $height-rate;
     width: 100%;
     @include _aspect-ratio {
       height: 480px * $height-rate-big;
     }
-    @include display-flex(column);
+
+    @include _768 {
+      height: auto;
+      padding: 16px;
+    }
 
     .footer-content_row {
       @include display-flex(row);
@@ -66,17 +77,31 @@
         margin-bottom: 48px * $height-rate-big;
       }
 
+      @include _768 {
+        @include display-flex(column);
+        align-items: center;
+      }
+
       &:last-child {
         margin-bottom: 0;
       }
 
       &.footer-content_row__vertical {
         flex-direction: column;
+
+        @include _768 {
+
+          .footer-title {
+            display: none;
+          }
+        }
       }
 
       .footer-content_row__column {
-        //flex-grow: 1;
-        //margin-right: 48px;
+
+        @include _768 {
+          @include display-flex(column);
+        }
 
         &:first-child,
         &:last-child {
@@ -88,6 +113,21 @@
 
         &:last-child {
           margin-right: 0;
+        }
+        @include _768 {
+          width: 100%;
+
+          &:first-child {
+            order: 2;
+          }
+
+          &:nth-child {
+            order: 1;
+          }
+
+          &:last-child {
+            order: 3;
+          }
         }
       }
 
@@ -111,6 +151,10 @@
   width: 378px * $width-rate;
   @include _aspect-ratio {
     margin-top: 50px * $height-rate-big;
+  }
+  @include _768 {
+    width: 100%;
+    order: 1;
   }
 
   .newsletter_input-group {
@@ -136,11 +180,19 @@
         padding: 0 4px * $width-rate 10px * $height-rate-big 0;
       }
 
+      @include _768 {
+        font-size: 12px;
+      }
+
       &::placeholder {
         color: $color-white;
         padding: 0;
         margin: 0;
         font-size: $font-size-18;
+
+        @include _768 {
+          font-size: 12px;
+        }
       }
     }
 
@@ -152,6 +204,11 @@
       margin-bottom: 10px * $height-rate;
       @include _aspect-ratio {
         margin-bottom: 10px * $height-rate-big;
+      }
+
+      @include _768 {
+        width: 24px;
+        height: 24px;
       }
 
       &:hover {
@@ -166,6 +223,10 @@
         @include _aspect-ratio {
           height: 14px * $height-rate-big;
         }
+
+        @include _768 {
+          height: 14px;
+        }
       }
     }
   }
@@ -176,6 +237,11 @@
   display: block;
   width: 408px * $width-rate;
   height: auto;
+
+  @include _768 {
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
 .footer_link {
@@ -189,11 +255,34 @@
   @include _aspect-ratio {
     margin-bottom: 22px * $height-rate-big;
   }
+  
+  @include _768 {
+    text-align: center;
+    margin: 16px 0;
+    position: relative;
+
+    &:not(:last-child) {
+      &:after {
+        position: absolute;
+        content: '';
+        width: 58%;
+        height: 1px;
+        background: $color-white;
+        opacity: .5;
+        bottom: -16px;
+        left: 21.5%;
+      }
+    }
+
+  }
 
   &:first-child {
     margin-bottom: 44px * $height-rate;
     @include _aspect-ratio {
       margin-bottom: 44px * $height-rate-big;
+    }
+    @include _768 {
+      margin-bottom: 16px;
     }
   }
 
@@ -216,6 +305,12 @@
     margin-top: 34px * $height-rate-big;
   }
 
+  @include _768 {
+    margin-top: 16px;
+    padding: 0 30px;
+    flex-wrap: wrap;
+  }
+
   .footer_socials__link {
     display: inline-block;
     width: 40px * $width-rate;
@@ -223,6 +318,26 @@
     font-size: $font-size-18;
     margin-right: 40px* $width-rate;
     cursor: pointer;
+
+    @include _768 {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba($color-white, .5);
+      margin-right: 5%;
+      margin-bottom: 16px;
+      @include display-flex(column);
+      align-items: center;
+
+      &:nth-child(5),
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background: $color-white;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -238,6 +353,33 @@
       width: 100%;
       height: auto;
       opacity: .5;
+
+      @include _768 {
+        opacity: 1;
+        width: 18px;
+        margin: auto;
+        display: block;
+        path {
+          fill: $color-footer;
+        }
+        g g rect {
+          fill: $color-footer;
+        }
+
+        &.yandex_dzen_icon {
+          path {
+            &:nth-child(2) {
+              opacity: .7;
+            }
+            &:nth-child(3) {
+              opacity: .5;
+            }
+            &:last-child {
+              fill: $color-white;
+            }
+          }
+        }
+      }
     }
 
     & + .footer_socials__block {
