@@ -1,0 +1,35 @@
+@keyframes gradient-red-animation {
+  0% {
+    background: $gradient-red;
+  }
+  25% {
+    background: linear-gradient(90deg, #FF53A5 0%, $color-red 25%, #FF53A5 50%, $color-red 75%, #FF53A5 100%)
+  }
+  50% {
+    background: linear-gradient(90deg, #FF53A5 0%, $color-red 100%)
+  }
+  75% {
+    background: linear-gradient(90deg, $color-red 0%, #FF53A5 25%, $color-red 50%, #FF53A5 75%, $color-red 100%)
+  }
+  100% {
+    background: $gradient-red;
+  }
+}
+
+@keyframes menu-show-r2l {
+  0% {
+    transform: translateX(1500px * $width-rate);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes menu-search-r2l {
+  0% {
+    width: 500px * $width-rate;
+  }
+  100% {
+    width: 100%;
+  }
+}

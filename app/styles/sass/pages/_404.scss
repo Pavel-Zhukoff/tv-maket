@@ -1,0 +1,85 @@
+.errorpage {
+  background: #195CAE;
+  height: 100vh;
+
+  .main-menu {
+    background: linear-gradient(180deg, rgba(7, 19, 43, 0.6) 0%, rgba(7, 19, 43, 0) 100%);
+
+    .main-menu_logo {
+      background: transparent;
+    }
+
+    .main-menu_container {
+      background: transparent;
+    }
+  }
+
+  .position {
+    display: flex;
+    padding-top: 16rem;
+
+    .errormesg {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+
+      @include _768() {
+        width: 210px;
+      }
+
+      .imgerror {
+        margin-right: 6.25rem;
+
+        @include _768() {
+          width: 210px;
+        }
+
+        img{
+          @include _768() {
+            width: 100%;
+          }
+        }
+      }
+
+      .errortext {
+        color: #fff;
+        font-family: 'Lato';
+
+        h1 {
+          font-size: 3.75rem;
+          margin-bottom: 1.5rem;
+        }
+
+        h2 {
+          font-size: 2.25rem;
+          margin-bottom: 1.75rem;
+        }
+
+        .arrowerrback {
+          .arrow {
+            width: 220px;
+            max-width: 220px;
+
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          .arrow .arrow_circle {
+            background: #FE5797;
+          }
+
+          .arrow_line {
+            background: #FE5797;
+            width: 160px;
+          }
+
+          .arrow_text {
+            bottom: 0;
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+}

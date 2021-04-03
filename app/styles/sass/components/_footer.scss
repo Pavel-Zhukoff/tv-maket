@@ -1,0 +1,301 @@
+.footer {
+  width: 100%;
+  height: 960px * $height-rate; // v - 440px, h -
+  position: relative;
+  @include display-flex(row);
+  align-items: flex-end;
+  background: linear-gradient(180deg, transparent 48%, $color-footer 48%);
+  margin-top: 25px * $height-rate;
+  @include _aspect-ratio {
+    height: 960px * $height-rate-big;
+    margin-top: 25px * $height-rate-big;
+  }
+
+
+  &:before,
+  &:after {
+    position: absolute;
+    height: (960px - 480px) * $height-rate;
+    width: 100%;
+    content: '';
+    left: 0;
+    top: 0;
+    background: $color-background;
+    @include _aspect-ratio {
+      height: (960px - 480px) * $height-rate-big;
+    }
+    @include _768 {
+      display: none;
+    }
+  }
+
+  &:after {
+    clip-path: ellipse(63.5% 880px * $height-rate at 45% -440px * $height-rate);
+
+    @include _1170 {
+      clip-path: ellipse(75% 880px * $height-rate at 45% -440px * $height-rate);
+    }
+
+    @include _aspect-ratio {
+      clip-path: ellipse(70% 880px * $height-rate-big at 45% -440px * $height-rate-big);
+    }
+  }
+
+  &:before {
+    background: $color-footer;
+    height: (960px - 480px - 2px) * $height-rate;
+    top: 2px;
+    @include _aspect-ratio {
+      height: (960px - 480px - 2px) * $height-rate-big;
+    }
+  }
+
+  .footer-content {
+    height: 480px * $height-rate;
+    width: 100%;
+    @include _aspect-ratio {
+      height: 480px * $height-rate-big;
+    }
+    @include display-flex(column);
+
+    .footer-content_row {
+      @include display-flex(row);
+      justify-content: space-between;
+      margin-bottom: 48px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 48px * $height-rate-big;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.footer-content_row__vertical {
+        flex-direction: column;
+      }
+
+      .footer-content_row__column {
+        //flex-grow: 1;
+        //margin-right: 48px;
+
+        &:first-child,
+        &:last-child {
+          padding-top: 28px * $height-rate;
+          @include _aspect-ratio {
+            padding-top: 28px * $height-rate-big;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+    }
+
+  }
+}
+
+.footer-title {
+  display: block;
+  color: $color-white;
+  opacity: .5;
+  font-size: $font-size-24;
+  font-family: $font-family-accent;
+}
+
+
+.newsletter {
+  margin-top: 50px * $height-rate;
+  font-family: $font-family-accent;
+  width: 378px * $width-rate;
+  @include _aspect-ratio {
+    margin-top: 50px * $height-rate-big;
+  }
+
+  .newsletter_input-group {
+    margin-top: 22px * $height-rate;
+    border-bottom: 2px solid $color-white;
+    @include display-flex(row);
+    justify-content: space-between;
+    @include _aspect-ratio {
+      margin-top: 22px * $height-rate-big;
+    }
+
+    .newsletter_input-group__input {
+      background: transparent;
+      padding: 0 4px * $width-rate 10px * $height-rate 0;
+      margin: 0;
+      color: $color-white;
+      font-size: $font-size-18;
+      border: 0;
+      outline: 0;
+      flex-grow: 1;
+
+      @include _aspect-ratio {
+        padding: 0 4px * $width-rate 10px * $height-rate-big 0;
+      }
+
+      &::placeholder {
+        color: $color-white;
+        padding: 0;
+        margin: 0;
+        font-size: $font-size-18;
+      }
+    }
+
+    .newsletter_input-group__submit {
+      @include circle(30px, rgba($color-white, .2));
+      appearance: none;
+      outline: 0;
+      border: 0;
+      margin-bottom: 10px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 10px * $height-rate-big;
+      }
+
+      &:hover {
+        background: $color-white;
+      }
+
+      svg {
+        display: block;
+        width: auto;
+        height: 14px * $height-rate;
+        margin: auto;
+        @include _aspect-ratio {
+          height: 14px * $height-rate-big;
+        }
+      }
+    }
+  }
+}
+
+
+.footer_logo {
+  display: block;
+  width: 408px * $width-rate;
+  height: auto;
+}
+
+.footer_link {
+  text-align: right;
+  font-family: $font-family-accent;
+  font-size: $font-size-24;
+  color: $color-white;
+  text-decoration: none;
+  margin-bottom: 22px * $height-rate;
+  display: block;
+  @include _aspect-ratio {
+    margin-bottom: 22px * $height-rate-big;
+  }
+
+  &:first-child {
+    margin-bottom: 44px * $height-rate;
+    @include _aspect-ratio {
+      margin-bottom: 44px * $height-rate-big;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer_socials {
+  @include display-flex(row);
+  justify-content: center;
+  padding: 0 88px * $width-rate;
+  margin-top: 34px * $height-rate;
+  align-items: center;
+  @include _aspect-ratio {
+    margin-top: 34px * $height-rate-big;
+  }
+
+  .footer_socials__link {
+    display: inline-block;
+    width: 40px * $width-rate;
+    color: $color-white;
+    font-size: $font-size-18;
+    margin-right: 40px* $width-rate;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      opacity: .5;
+    }
+
+    & + .footer_socials__block {
+      width: 0;
+      overflow: hidden;
+      display: none;
+    }
+
+    &:hover + .footer_socials__block {
+      width: auto;
+      display: flex;
+    }
+  }
+
+  .footer_socials__block {
+    transition: width .3s linear;
+    margin-right: 40px * $width-rate;
+    height: 40px * $height-rate;
+    align-items: center;
+
+    &:hover {
+      display: flex;
+      width: auto;
+    }
+
+    .footer_socials__link {
+      width: auto;
+      text-decoration: none;
+      margin-right: 20px * $width-rate;
+      position: relative;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:after {
+        transition: width .3s ease-out;
+        content: '';
+        width: 0;
+        height: 3px;
+        background: $color-white;
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+      }
+
+      &:hover {
+        &:after {
+          width: 70px * $width-rate;
+        }
+      }
+    }
+  }
+}
+
+.footer-content_copyright {
+  font-family: $font-family-accent;
+  font-size: $font-family-base;
+  color: $color-white;
+  opacity: .5;
+}

@@ -1,0 +1,399 @@
+.main-menu {
+  position: absolute;
+}
+
+.prognav {
+  background-image: url("../../../images/dist/headimg.svg");
+  background-size: cover;
+  min-height: 820px * $height-rate;
+  padding-top: 30vh;
+  @include _aspect-ratio {
+    min-height: 820px * $height-rate-big;
+  }
+
+  .main-menu_container, .main-menu_logo {
+    background-color: transparent;
+  }
+
+  .searchprog {
+    margin: 0 auto;
+    width: 785px * $width-rate;
+
+    form {
+      position: relative;
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      clear: both;
+      display: table
+    }
+
+    input[type="text"] {
+      width: 785px * $width-rate;
+      height: 70px * $height-rate;
+      padding-left: 30px * $width-rate;
+      border-radius: 50px;
+      border: 0;
+      background: #fff;
+      outline: none;
+      position: relative;
+      font-size: $font-size-24;
+      font-family: $font-family-accent;
+      @include _aspect-ratio {
+        height: 70px * $height-rate-big;
+      }
+    }
+
+    button {
+      width: 60px * $width-rate;
+      height: 70px * $height-rate;
+      border: 5px * $width-rate solid rgba($color-primary, 0.5);
+      border-radius: 50px;
+      right: -1px;
+      background: #fff;
+      position: absolute;
+      @include _aspect-ratio {
+        height: 70px * $height-rate-big;
+      }
+
+      svg {
+        width: 30px * $width-rate;
+      }
+    }
+
+    .resultprog {
+      background-color: rgba(196, 196, 196, 0.5);
+      font-family: $font-family-accent;
+      border-radius: 10px;
+      position: relative;
+      top: -35px * $height-rate;
+      z-index: 0;
+      min-height: 85px * $height-rate;
+      @include _aspect-ratio {
+        top: -35px * $height-rate-big;
+        min-height: 85px * $height-rate-big;
+      }
+
+      ul {
+        padding: 50px * $height-rate 0 20px * $height-rate 30px * $width-rate;
+
+        @include _aspect-ratio {
+          padding: 50px * $height-rate-big 0 20px * $height-rate-big 30px * $width-rate;
+
+        }
+
+        li {
+          font-size: $font-size-24;
+          padding-bottom: 10px * $height-rate;
+          @include _aspect-ratio {
+            padding-bottom: 10px * $height-rate-big;
+          }
+          a{
+            color: #222222;
+            text-decoration: none;
+          }
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.progblock {
+
+  .news {
+    display: none;
+  }
+
+  .actives {
+    display: flex;
+  }
+
+  .sortprog {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px * $height-rate;
+    @include _aspect-ratio {
+      margin-bottom: 50px * $height-rate-big;
+    }
+
+    .leftsel {
+
+      .progsort {
+        font-family: $font-family-accent;
+        margin-right: 28px * $width-rate;
+        font-size: $font-size-18;
+        color: $color-primary;
+        border: 0 $color-background;
+        background-color: $color-background;
+        opacity: 0.5;
+
+        .arrowsortprog {
+          margin-left: 0.3rem;
+          display: none;
+        }
+
+        .active {
+          display: inherit;
+        }
+
+        svg {
+          width: 12px * $width-rate;
+          padding-bottom: 2px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .active {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+.prognavigation {
+  position: relative;
+
+  .navig {
+    z-index: 2;
+    position: relative;
+    max-width: 1360px * $width-rate;
+    margin: auto;
+    display: flex;
+    bottom: 60px * $height-rate;
+    @include _aspect-ratio {
+      bottom: 60px * $height-rate-big;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        width: 170px * $width-rate;
+        margin-right: 92px * $width-rate;
+        text-align: center;
+        color: $color-primary;
+
+        &:first-child {
+          margin-left: 28px * $width-rate;
+        }
+
+        &:last-child {
+          margin-right: 28px * $width-rate;
+        }
+
+        button {
+          width: 120px * $width-rate;
+          height: 120px * $width-rate;
+          border: 0;
+          border-radius: 100%;
+          margin-bottom: 20px * $height-rate;
+          position: relative;
+          background-color: #fff;
+          @include _aspect-ratio {
+            margin-bottom: 20px * $height-rate-big;
+          }
+
+          &:after {
+            position: absolute;
+            z-index: -1;
+            background: $color-background;
+            width: 134px * $width-rate;
+            height: 131px * $width-rate;
+            left: -7.5px * $width-rate;
+            top: -7px * $width-rate;
+            content: '';
+            border-radius: 100%;
+          }
+
+          svg {
+            margin-top: 5px;
+            width: 100%;
+            height: 55%;
+
+            path {
+              fill: $color-primary;
+            }
+          }
+        }
+
+        p {
+          font-size: 18px * $width-rate;
+          font-family: Lato;
+        }
+      }
+      .active {
+        &:nth-child(1), &:nth-child(6), &:nth-child(11) {
+          color: #FB5D7E;
+
+          button {
+            svg {
+              path {
+                fill: #FB5D7E;
+              }
+            }
+          }
+        }
+
+        &:nth-child(2), &:nth-child(7), &:nth-child(12) {
+            color: #FFB342;
+
+            button {
+              svg {
+                path {
+                  fill: #FFB342;
+                }
+              }
+          }
+        }
+
+        &:nth-child(3), &:nth-child(8), &:nth-child(13) {
+            color: #90EB84;
+
+            button {
+              svg {
+                path {
+                  fill: #90EB84;
+                }
+              }
+          }
+        }
+
+        &:nth-child(4), &:nth-child(9), &:nth-child(14) {
+            color: #2FE7F2;
+
+            button {
+              svg {
+                path {
+                  fill: #2FE7F2;
+                }
+              }
+            }
+        }
+
+        &:nth-child(5), &:nth-child(10), &:nth-child(15) {
+            color: #178ddb;
+
+          button {
+              svg {
+                path {
+                  fill: #099EF1;
+                }
+              }
+          }
+        }
+      }
+
+    }
+
+    .arrowback, .arrownext {
+      padding-top: 70px * $height-rate;
+      @include _aspect-ratio {
+        padding-top: 70px * $height-rate-big;
+      }
+
+      button {
+        border: 0;
+        border-radius: 50px;
+        width: 50px * $width-rate;
+        height: 50px * $width-rate;
+        background: #000;
+        padding: 18px * $height-rate 20px * $width-rate 17px * $height-rate 20px * $width-rate;
+
+        @include _aspect-ratio {
+          height: 50px * $height-rate-big;
+          padding: 18px * $height-rate-big 20px * $width-rate 17px * $height-rate-big 20px * $width-rate;
+        }
+
+        svg {
+          width: 10px * $width-rate;
+        }
+      }
+    }
+  }
+}
+
+.programs-container {
+  @include display-flex(column);
+
+  .programs-row {
+    @include display-flex(row);
+    margin-bottom: 100px * $height-rate;
+    position: relative;
+    @include _aspect-ratio {
+      margin-bottom: 100px * $height-rate-big;
+    }
+
+    &:after {
+      height: 60%;
+      border-radius: 20px;
+      background-color: $color-white;
+      padding: 20px * $height-rate 40px * $width-rate;
+      position: absolute;
+      left: -40px * $width-rate;
+      width: 100%;
+      bottom: 0;
+      z-index: -1;
+      content: '';
+
+      @include _aspect-ratio {
+        padding: 20px * $height-rate-big 40px * $width-rate;
+
+      }
+    }
+
+    .card {
+      .card_thumbnail {
+        height: 170px * $height-rate;
+        @include _aspect-ratio {
+          height: 170px * $height-rate-big;
+        }
+
+        .card_thumbnail__image {
+          &:hover {
+            transform: scale(1.025);
+          }
+        }
+
+        &.bg-white {
+          &:after {
+            background: $color-white;
+          }
+        }
+
+        &:after {
+          width: 40px * $width-rate;
+          height: 40px * $width-rate;
+          top: -20px * $height-rate;
+          right: -15px * $width-rate;
+          @include _aspect-ratio {
+            top: -20px * $height-rate-big;
+          }
+        }
+
+        .card_thumbnail__icon {
+          width: 30px * $width-rate;
+          height: 30px * $width-rate;
+          line-height: 35px * $height-rate;
+          font-size: $font-size-12;
+          background: $color-primary;
+          top: -15px * $height-rate;
+          right: -10px * $width-rate;
+          @include _aspect-ratio {
+            line-height: 35px * $height-rate-big;
+            top: -15px * $height-rate-big;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,503 @@
+.daily-shows {
+  @include display-flex(row);
+  height: 540px * $height-rate;
+  @include _aspect-ratio {
+    height: 540px * $height-rate-big;
+  }
+
+  @include _768 {
+    height: auto;
+  }
+
+  .swiper-slide-prev-prev, .swiper-slide-prev {
+    visibility: hidden;
+  }
+  .daily-shows_controls {
+    @include display-flex(row);
+    width: 300px * $width-rate;
+    height: 100%;
+    flex-shrink: 0;
+    z-index: 4;
+
+    @include _768 {
+      display: none;
+    }
+
+    .daily-shows_controls__left,
+    .daily-shows_controls__right {
+      @include display-flex(row);
+      align-items: center;
+
+    }
+    .daily-shows_controls__right {
+      align-items: flex-end;
+      margin-bottom: 160px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 160px * $height-rate-big;
+      }
+    }
+  }
+
+  .daily-shows_panel {
+    position: relative;
+    width: 100%;
+    @include display-flex(row);
+    flex-wrap: nowrap;
+    margin-left: 30px * $width-rate;
+
+    .daily-shows_panel__slider {
+      @include display-flex(row);
+    }
+
+    &:after {
+      height: 380px * $height-rate;
+      border-radius: 20px;
+      background-color: $color-white;
+      padding: 40px * $height-rate 40px * $width-rate;
+      position: absolute;
+      left: -40px * $width-rate;
+      width: 120%;
+      bottom: 0;
+      z-index: -1;
+      content: '';
+      @include _aspect-ratio {
+        height: 380px * $height-rate-big;
+        padding: 40px * $height-rate-big 40px * $width-rate;
+      }
+
+      @include _768 {
+        height: 96px;
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+
+    .card {
+      width: 460px * $width-rate !important;
+
+      @include _768 {
+        width: 212px !important;
+      }
+
+      .card_content {
+        @include _768 {
+          padding: 5px 0;
+        }
+      }
+
+      .card_content__date {
+        margin-bottom: 50px * $height-rate;
+        @include _aspect-ratio {
+          margin-bottom: 50px * $height-rate-big;
+        }
+
+        @include _768 {
+          display: none;
+        }
+      }
+
+      .card_content__title {
+        bottom: 10px;
+        @include _768 {
+          order: 1;
+        }
+      }
+
+      .card_content__separator {
+        @include _768 {
+          order: 2;
+        }
+      }
+
+      .card_content__subtitle {
+        @include _768 {
+          order: 3;
+        }
+      }
+    }
+  }
+}
+
+.news {
+  @include display-flex(column);
+
+  .news_slider {
+    @include display-flex(column);
+    position: relative;
+
+    &:after {
+      min-height: 190px * $height-rate;
+      max-height: 495px * $height-rate;
+      height: 100%;
+      border-radius: 20px;
+      background-color: $color-white;
+      padding: 40px  * $height-rate 40px * $width-rate;
+      position: absolute;
+      left: -40px * $width-rate;
+      width: 100%;
+      bottom: -7px;
+      z-index: -1;
+      content: '';
+      @include _aspect-ratio {
+        min-height: 190px * $height-rate-big;
+        max-height: 495px * $height-rate-big;
+        padding: 40px  * $height-rate-big 40px * $width-rate;
+      }
+
+      @include _768 {
+        display: none;
+      }
+    }
+
+    .news_slider__slide {
+      @include display-flex(row);
+      flex-wrap: wrap;
+
+      @include _768 {
+        @include display-flex(column);
+        width: 100%;
+
+        &:nth-child(2),
+        &:last-child {
+          display: none;
+        }
+      }
+
+        .card {
+          width: 295px * $width-rate;
+          @include _768 {
+            width: 100%;
+          }
+
+          &:nth-child(4n) {
+            margin-right: 0;
+          }
+          
+
+          .card_content {
+            @include _768 {
+              padding: 8px 16px 16px;
+            }
+
+            .card_content__separator {
+              @include _768 {
+                width: 60px;
+                height: 2px;
+              }
+            }
+
+            .card_content__description {
+              @include _768 {
+                display: block;
+                font-size: 12px;
+              }
+            }
+          }
+
+          .card_thumbnail {
+
+            @include _768 {
+              border-radius: 0;
+            }
+
+            .card_thumbnail__image {
+              @include _768 {
+                border-radius: 0;
+              }
+            }
+
+            &.bg-white {
+              &:after {
+                background: $color-white;
+              }
+            }
+
+            &:after {
+              width: 40px * $width-rate;
+              height: 40px * $width-rate;
+              top: -20px * $height-rate;
+              right: -15px * $width-rate;
+              @include _aspect-ratio {
+               top: -20px * $height-rate-big;
+              }
+              @include _768 {
+                display: none;
+              }
+            }
+
+            .card_thumbnail__icon {
+              width: 30px * $width-rate;
+              height: 30px * $width-rate;
+              line-height: 35px * $height-rate;
+              font-size: $font-size-12;
+              background: $color-primary;
+              top: -15px * $height-rate;
+              right: -10px * $width-rate;
+              @include _aspect-ratio {
+               line-height: 35px * $height-rate-big;
+               top: -15px * $height-rate-big;
+              }
+              @include _768 {
+                display: none;
+              }
+            }
+          }
+        }
+    }
+  }
+
+  .news_controls {
+    @include display-flex(row);
+    justify-content: space-between;
+
+    @include _768 {
+      display: none;
+    }
+  }
+}
+
+
+.banner {
+  @include display-flex(row);
+  justify-content: space-between;
+  width: 100%;
+  height: 200px * $height-rate;
+  background-color: $color-accent;
+  @include _aspect-ratio {
+    height: 200px * $height-rate-big;
+  }
+  @include _768 {
+    height: 77px;
+  }
+
+
+  .banner_section {
+    //@include display-flex(column);
+    padding-top: 24px * $height-rate;
+    @include _aspect-ratio {
+      padding-top: 24px * $height-rate-big;
+    }
+    @include _768 {
+      padding-top: 16px
+    }
+    &:nth-child(2) {
+      padding-top: 0;
+      @include display-flex(column);
+    }
+    &:last-child {
+      padding-top: 40px * $height-rate;
+      text-align: right;
+      @include _aspect-ratio {
+        padding-top: 40px * $height-rate-big;
+      }
+      @include _768 {
+        padding-top: 13px
+      }
+    }
+
+    .banner_section__logo {
+      display: block;
+      width: 280px * $width-rate;
+      height: auto;
+      @include _768 {
+        width: 120px;
+      }
+    }
+
+    .banner_section__title,
+    .banner_section__slogan {
+      color: $color-white;
+      font-weight: 900;
+      font-family: $font-family-accent;
+      display: block;
+
+    }
+
+    .banner_section__slogan {
+      font-size: $font-size-24;
+      margin-top: 10px * $height-rate;
+      @include _aspect-ratio {
+        margin-top: 10px * $height-rate-big;
+      }
+      @include _768 {
+        display: none;
+      }
+    }
+
+    .banner_section__youtube {
+      display: block;
+      width: 180px * $width-rate;
+      height: auto;
+      align-self: center;
+      margin: auto 0;
+      @include _768 {
+        width: 50px;
+      }
+    }
+
+    .banner_section__title {
+      font-size: $font-size-48;
+      text-align: right;
+
+      @include _768 {
+        font-size: 12px;
+      }
+    }
+
+    .btn {
+      margin-top: 36px * $height-rate;
+      margin-right: 0;
+      margin-left: auto;
+      @include _aspect-ratio {
+        margin-top: 36px * $height-rate-big;
+      }
+      @include _768 {
+        margin-top: 5px;
+        font-size: 14px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        padding: 7px 6px;
+      }
+      @include _350 {
+        margin-top: 5px;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        padding: 7px 6px;
+      }
+    }
+  }
+}
+
+
+
+.promo {
+  top: 980px * $height-rate;
+  left: 0;
+  padding: 17px * $height-rate 46px * $width-rate;
+  width: 100%;
+  height: 70px * $height-rate;
+  position: absolute;
+  background: rgba($color-white, .7);
+  z-index: 10000;
+  @include display-flex(row);
+  align-items: center;
+  @include _aspect-ratio {
+    top: 980px * $height-rate-big;
+    height: 70px * $height-rate-big;
+    padding: 17px * $height-rate-big 46px * $width-rate;
+  }
+
+  @include _768{
+    display: none;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: $gradient-red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .promo_close {
+    width: 28px * $width-rate;
+    height: 28px * $width-rate;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .promo_text {
+    font-family: $font-family-accent;
+    font-size: 30px * $height-rate;
+    font-weight: 700;
+    margin-left: 254px * $width-rate;
+    @include _aspect-ratio {
+      font-size: 30px * $height-rate-big;
+    }
+  }
+
+  .promo_show {
+    position: absolute;
+    right: 330px * $width-rate;
+    bottom: -30px * $height-rate;
+    display: block;
+    text-decoration: none;
+    @include _aspect-ratio {
+      bottom: -30px * $height-rate-big;
+    }
+
+    &:active {
+      color: $gradient-red;
+    }
+
+    .promo_show__text {
+      position: absolute;
+      bottom: 40px * $height-rate;
+      left: -90px * $width-rate;
+      @include _aspect-ratio {
+        bottom: 40px * $height-rate-big;
+      }
+      color: $color-accent;
+
+      &:visited {
+        color: $color-accent;
+      }
+
+
+
+    }
+
+    .promo_show__button {
+      @include circle(60px, $gradient-red);
+      text-align: center;
+      z-index: 10001;
+
+      &:hover {
+        animation: gradient-red-animation 1s linear;
+      }
+
+      svg {
+        height: 30px * $height-rate;
+        margin-top: 19px * $height-rate;
+        transform: rotate(180deg);
+        margin-left: 5px * $width-rate;
+
+        @include _aspect-ratio {
+          height: 30px * $height-rate-big;
+          margin-top: 15px * $height-rate-big;
+        }
+        path {
+          stroke: $color-accent
+        }
+        @include _1400 {
+          margin-top: 12px * $height-rate;
+
+          @include _aspect-ratio {
+            margin-top: 12px * $height-rate-big;
+          }
+        }
+      }
+    }
+  }
+}
+.news_slider__container {
+  display: -webkit-inline-box;
+
+  .swiper-slide-next, .swiper-slide-prev{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .swiper-slide-active {
+    visibility:visible;
+    opacity: 1;
+    transition: 0.5s;
+  }
+}

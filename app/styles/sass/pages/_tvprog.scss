@@ -1,0 +1,404 @@
+.tvprogram-nav {
+  @include display-flex(row);
+  justify-content: space-between;
+
+  .tvprogram-nav_item {
+    display: block;
+    position: relative;
+    font-size: $font-size-24;
+    color: $color-primary;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: $color-primary;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 0; //110%
+        height: 3px;
+        transition: width .4s linear;
+        left: 0;
+        bottom: -8px;
+    }
+
+    &:nth-child(1), &:nth-child(6) {
+      &:hover,
+      &.tvprogram-nav_item__other {
+        &:after {
+          background: $gradient-red;
+        }
+      }
+    }
+    &:nth-child(2), &:nth-child(7) {
+      &:hover,
+      &.tvprogram-nav_item__other {
+        &:after {
+          background: $gradient-orange;
+        }
+      }
+    }
+    &:nth-child(3) {
+      &:hover,
+      &.tvprogram-nav_item__other {
+        &:after {
+          background: $gradient-green;
+        }
+      }
+    }
+    &:nth-child(4) {
+      &:hover,
+      &.tvprogram-nav_item__other {
+        &:after {
+          background: linear-gradient(270deg, #24FBC7 0%, #169EEB 100%);
+        }
+      }
+    }
+    &:nth-child(5) {
+      &:hover,
+      &.tvprogram-nav_item__other {
+        &:after {
+          background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+        }
+      }
+    }
+
+    &.tvprogram-nav_item__today {
+
+      &:after {
+        background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+      }
+    }
+
+    &:hover,
+    &.tvprogram-nav_item__other,
+    &.tvprogram-nav_item__today {
+      &:after {
+        width: 112.5%;
+      }
+    }
+  }
+}
+
+.tvprogram {
+
+  @for $i from 0 through 100 {
+    .tvprogram-list-current_progress progress[value="#{$i}"] {
+      & ~ .progress-bg .progress-bar {
+        width: $i * 1%
+      }
+    }
+  }
+
+  .tvprogram-list-current_progress {
+    width: 100%;
+    height: 3px;
+
+
+    progress {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+
+    .progress-bg {
+      width: 100%;
+      height: 3px;
+      background: rgba($color-accent, .1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      overflow: hidden;
+      background: $gradient-red;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+    }
+  }
+
+  .program {
+    @include display-flex(row);
+    border-radius: 20px;
+    width: 100%;
+    max-height: 640px * $height-rate;
+    background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+    padding: 20px * $height-rate 20px * $width-rate;
+    justify-content: space-between;
+    position: relative;
+    @include _aspect-ratio {
+      max-height: 640px * $height-rate-big;
+      padding: 20px * $height-rate-big 20px * $width-rate;
+
+    }
+
+    .external_scrollbar {
+      position: absolute;
+      max-width: 10px * $width-rate;
+      border-radius: 10px;
+      border: 0;
+      height: 100%;
+      z-index: 1000;
+      left: -35px * $width-rate;
+      top: 20px * $height-rate;
+      right: auto;
+      max-height: 600px * $height-rate;
+      @include _aspect-ratio {
+        max-height: 600px * $height-rate-big;
+        top: 20px * $height-rate-big;
+
+      }
+
+      .scroll-element_outer {
+        .scroll-bar {
+          border-radius: 10px;
+          background: $color-primary;
+          border: 0;
+          width: 10px * $width-rate;
+          height: 90px * $height-rate;
+          position: absolute;
+          @include _aspect-ratio {
+            height: 90px * $height-rate-big;
+          }
+
+          &:hover {
+            background: rgba($color-primary, 0.8);
+          }
+        }
+        .scroll-element_size,
+        .scroll-element_track {
+          width: 2px;
+          height: 100%;
+          background-color: #DDE3E8;
+          position: absolute;
+          top: 0;
+          left: 4px;
+          z-index: -1;
+        }
+      }
+    }
+
+    .program-link {
+      position: absolute;
+      //padding: 17px * $height-rate 17px * $width-rate;
+      bottom: -30px * $height-rate;
+      right: -30px * $width-rate;
+      width: 170px * $width-rate;
+      height: 170px * $width-rate;
+      line-height: 170px;
+      text-align: center;
+      z-index: 2;
+
+      svg{
+        vertical-align: middle;
+      }
+
+      @include _aspect-ratio {
+        bottom: -50px * $height-rate-big;
+        padding: 17px * $height-rate-big 17px * $width-rate;
+      }
+
+      &:before {
+        @include circle(200px, $color-background);
+        position: absolute;
+        content: '';
+        left: -15px * $width-rate;
+        top: -15px * $height-rate;
+        z-index: 1;
+        @include _aspect-ratio {
+          top: -15px * $height-rate-big;
+        }
+      }
+
+      &:after {
+        @include circle(170px, linear-gradient(90deg, #F86363 0%, #FF53A5 100%));
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        z-index: 2;
+      }
+      &:hover {
+        svg {
+          width: 100%;
+          height: 100%;
+          top: -2px * $height-rate;
+          left: 0px * $width-rate;
+        }
+      }
+      svg {
+        width: 136px * $width-rate;
+        height: 136px * $width-rate;
+        z-index: 3;
+        position: relative;
+        transition: width .1s linear, height .1s linear;
+      }
+    }
+
+    .program-link-text {
+      color: $color-white;
+      font-size: $font-size-24;
+      position: absolute;
+      bottom: 20px * $height-rate;
+      right: 175px * $width-rate;
+      text-decoration: none;
+      @include _aspect-ratio {
+        bottom: 20px * $height-rate-big;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+
+    .tvprogram-list {
+      width: 510px * $width-rate;
+      background-color: #fff;
+      border-radius: 20px;
+      overflow-y: hidden;
+      direction: rtl;
+      position: relative;
+      padding: 30px * $height-rate 0;
+      max-height: 600px * $height-rate;
+      @include _aspect-ratio {
+        max-height: 600px * $height-rate-big;
+      }
+      .tvprogram-list {
+        padding: 0;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      .tvprogram-list-current_progress {
+        margin-top: 18px * $height-rate;
+        margin-bottom: 28px * $height-rate;
+        padding: 0 25px * $width-rate;
+        @include _aspect-ratio {
+          margin-top: 18px * $height-rate-big;
+          margin-bottom: 28px * $height-rate-big;
+        }
+      }
+
+      ul {
+        direction: ltr;
+
+        li {
+          display: flex;
+          font-size: $font-size-18;
+          line-height: 35px * $height-rate;
+          font-family: $font-family-accent;
+          flex-wrap: wrap;
+          @include _aspect-ratio {
+            line-height: 35px * $height-rate-big;
+          }
+
+          .time {
+            padding-left: 25px * $width-rate;
+            padding-right: 20px * $width-rate;
+            font-weight: 900;
+          }
+
+          .name {
+            width: 75%;
+          }
+        }
+
+        .late {
+          color: rgba($color-accent, 0.5);
+        }
+
+        .tvprogram-list__current {
+
+          .tvprogram-list-current_container {
+            @include display-flex(row);
+            background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+            color: $color-white;
+            position: relative;
+            width: 100%;
+          }
+        }
+
+        .next {
+          color: $color-accent;
+        }
+      }
+    }
+
+    .selectprog {
+      width: 580px * $width-rate;
+      height: 640px * $height-rate;
+      position: relative;
+      bottom: 20px * $height-rate;
+      left: -60px * $width-rate;
+      padding-top: 30px * $height-rate;
+      margin-left: 70px * $width-rate;
+      color: #fff;
+      @include _aspect-ratio {
+        height: 640px * $height-rate-big;
+        bottom: 20px * $height-rate-big;
+        padding-top: 30px * $height-rate-big;
+      }
+
+      .tvprogram_title {
+        font-weight: 900;
+        font-size: $font-size-36;
+        font-family: $font-family-accent;
+        margin-bottom: 24px * $height-rate;
+        display: block;
+        @include _aspect-ratio {
+          margin-bottom: 24px * $height-rate-big;
+        }
+      }
+
+      .tvprogram_genre {
+        @include display-flex(row);
+        margin-bottom: 26px * $height-rate;
+        @include _aspect-ratio {
+          margin-bottom: 26px * $height-rate-big;
+        }
+
+        .badge {
+          margin-right: 10px * $width-rate;
+          font-family: $font-family-accent;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .tvprogram_date {
+        font-family: $font-family-accent;
+        font-size: $font-size-base;
+        font-weight: 700;
+      }
+
+      .tvprogram__text {
+        font-weight: 400;
+        font-size: $font-size-18;
+      }
+
+      .tvprogram-list-current_progress {
+        margin-top: 10px * $height-rate;
+        margin-bottom: 10px * $height-rate;
+        @include _aspect-ratio {
+          margin-top: 10px * $height-rate-big;
+          margin-bottom: 10px * $height-rate-big;
+        }
+
+        .progress-bg {
+          background: $color-white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+$width-rate: 100vw / 1920px;
+$height-rate: 100vh / 1080px;
+$height-rate-big: 100vh / 1440px;
+
+
+$wrapper-padding-h-narrow: 490px * $width-rate;
+$wrapper-padding-h: 330px * $width-rate;
+$wrapper-padding-h-wide: 290px * $width-rate;
+
+$wrapper-margin-top: 100px * $height-rate;
+$wrapper-margin-top-sm: 50px * $height-rate;
+
+$font-family-base: 'Urfa';
+$font-family-accent: 'Lato';
+
+$line-height-base: 1.2;
+
+$font-size-base: 1rem;
+$font-size-12: .857rem;
+$font-size-18: 1.2857rem;
+$font-size-24: 1.7143rem;
+$font-size-36: 2.5714rem;
+$font-size-48: 3.4286rem;
+
+$color-background: #f8f9fb;
+$color-footer: #25292b;
+
+$color-accent: #07132b;
+$color-primary: #195cae;
+$color-secondary: #f8f9fb;
+$color-inactive: #dde3e8;
+
+
+$color-red: #f86363;
+$color-orange: #fb7e24;
+$color-blue: #169eeb;
+$color-green: #50da6e;
+$color-white: #fff;
+
+$gradient-red: linear-gradient(90deg, $color-red 0%, #FF53A5 100%);
+$gradient-orange: linear-gradient(90deg, $color-orange 0%, #FBB224 100%);
+$gradient-blue: linear-gradient(90deg, $color-blue 0%, #24FBC7 100%);
+$gradient-green: linear-gradient(90deg, $color-green 0%, #C9FA98 100%);
+
+$nav-sidebar-width: 470px * $width-rate;
+$nav-menu-width: 1430px * $width-rate;
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff');
+  }
+}
+
+@include font('Lato', normal, 400, '../fonts/lato-regular.woff');
+@include font('Lato', normal, 900, '../fonts/lato-black.woff');
+@include font('Urfa', normal, 400, '../fonts/urfa-regular.woff');
+@include font('Urfa', normal, 500, '../fonts/urfa-medium.woff');
+
+@mixin display-flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin _aspect-ratio {
+  @media screen and (aspect-ratio: 4/3) {
+    @content;
+  }
+  @media screen and (aspect-ratio: 5/4) {
+    @content;
+  }
+}
+
+@mixin _1600 {
+  @media screen and (max-width: 1610px) {
+    @content;
+  }
+}
+
+@mixin _1400 {
+  @media screen and (max-width: 1410px) {
+    @content;
+  }
+}
+
+@mixin _1170 {
+  @media screen and (max-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin _980 {
+  @media screen and (max-width: 981px) {
+    @content;
+  }
+}
+
+@mixin _768 {
+  @media screen and (max-width: 780px) {
+    @content;
+  }
+}
+
+@mixin _600 {
+  @media screen and (max-width: 601px) {
+    @content;
+  }
+}
+
+@mixin _480 {
+  @media screen and (max-width: 481px) {
+    @content;
+  }
+}
+
+@mixin _350 {
+  @media screen and (max-width: 351px) {
+    @content;
+  }
+}

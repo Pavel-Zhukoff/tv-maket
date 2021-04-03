@@ -1,0 +1,399 @@
+@mixin controls-button($width, $height) {
+  width: $width * $width-rate;
+  height: $height * $height-rate;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  box-sizing: content-box;
+
+  @include _aspect-ratio {
+    height: $height * $height-rate-big;
+  }
+
+  svg {
+    fill: $color-white !important;
+    opacity: .5 !important;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    svg {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.section-header {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-height: 1160px * $height-rate;
+  height: 1160px * $height-rate;
+  @include _aspect-ratio {
+    max-height: 1160px * $height-rate-big;
+    height: 1160px * $height-rate-big;
+  }
+
+  @include _768() {
+    @include display-flex(column);
+    height: auto;
+    width: 100%;
+  }
+
+  .live-view-sidebar {
+    width: $nav-sidebar-width;
+    max-width: $nav-sidebar-width;
+    background-color: $color-accent;
+    color: $color-white;
+    height: 770px * $height-rate;
+    max-height: 770px * $height-rate;
+    position: relative;
+    z-index: 5;
+    @include _aspect-ratio {
+      height: 770px * $height-rate-big;
+      max-height: 770px * $height-rate-big;
+    }
+
+    @include _768() {
+      @include display-flex(row);
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      order: 2;
+    }
+
+    &:after {
+      left: 0;
+      bottom: -200px * $height-rate;
+      content: ' ';
+      height: 205px * $height-rate;
+      width: 100%;
+      position: absolute;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 5px * $height-rate, 34% 100%, 0% 77.5%);
+      background-color: $color-accent;
+      @include _aspect-ratio {
+        bottom: -200px * $height-rate-big;
+        height: 205px * $height-rate-big;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 5px * $height-rate, 34% 100%, 0% 77.5%);
+
+      }
+      @include _768() {
+        display: none;
+      }
+    }
+
+    &:before {
+      content: '';
+      width: 875px * $width-rate;
+      height: 365px * $height-rate;
+      position: absolute;
+      background: $color-accent;
+      bottom: -385px * $height-rate;
+      left: 186px * $width-rate;
+      clip-path: polygon(0% 52%, 72.5% 100%, 100% 87%, 33.7% 0%);
+      @include _aspect-ratio {
+        height: 365px * $height-rate-big;
+        bottom: -385px * $height-rate-big;
+      }
+      @include _768() {
+        display: none;
+      }
+    }
+
+    .live-view-sidebar_item {
+      padding: 30px * $height-rate 40px * $width-rate;
+      position: relative;
+
+      @include _aspect-ratio {
+        padding: 30px * $height-rate-big 40px * $width-rate;
+      }
+      
+      @include _768 {
+        @include display-flex(column);
+        padding: 5px 16px;
+        &:last-child {
+          display: none;
+        }
+      }
+
+      &.active {
+        background: $gradient-red;
+
+        &:after {
+          content: ' ';
+          position: absolute;
+          height: 100%; //25 25
+          width: 50px * $width-rate;
+          clip-path: polygon(0% 0%, 0% 100%, 45.5% 100%, 45.5% 40%, 100% 50%, 45.5% 60%, 45.5% 0%);
+          background-color: #FF53A5;
+          right: -47.5px * $width-rate;
+          top: 0;
+
+          @include _768 {
+            width: 16px;
+            clip-path: polygon(0 0, 0% 100%, 1px 100%, 100% 50%, 1px 0);
+            right: -15px;
+          }
+        }
+      }
+
+      .live-view-sidebar_item__short-info {
+        @include display-flex(row);
+        font-size: $font-size-12;
+        justify-content: space-between;
+
+        @include _768 {
+          order: 1;
+        }
+
+        .time,
+        .censure {
+          font-family: $font-family-accent;
+          @include _768 {
+            font-size: 9px;
+          }
+        }
+
+        .censure {
+          font-weight: 900;
+        }
+
+      }
+
+      .live-view-sidebar_item__title {
+        font-size: $font-size-36;
+        margin-top: 10px * $height-rate;
+        @include _aspect-ratio {
+          margin-top: 10px * $height-rate-big;
+        }
+
+        @include _768 {
+          font-size: 14px;
+          order: 3;
+          margin-top: 3px;
+
+          &:nth-child(2) {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .live-view-sidebar_item__separator {
+        width: 60px * $width-rate;
+        height: 3px;
+        margin-top: 10px * $height-rate;
+        @include _aspect-ratio {
+          margin-top: 10px * $height-rate-big;
+        }
+
+        @include _768 {
+          width: 60px;
+          height: 1px;
+          background: $color-white !important;
+          order: 2;
+          margin-top: 3px;
+        }
+      }
+
+      &:first-child {
+        .live-view-sidebar_item__separator {
+          background: $color-white;
+        }
+
+        @include _768 {
+          width: 57%;
+        }
+      }
+
+      &:nth-child(2) {
+        .live-view-sidebar_item__separator {
+          background: $gradient-blue;
+        }
+        @include _768 {
+          width: 43%;
+          padding-left: 32px;
+        }
+      }
+
+      &:last-child {
+        .live-view-sidebar_item__separator {
+          background: $gradient-orange;
+        }
+      }
+
+      .live-view-sidebar_item__description {
+        margin-top: 10px * $height-rate;
+        opacity: .7;
+        @include _aspect-ratio {
+          margin-top: 10px * $height-rate-big;
+        }
+
+        @include _768 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .video {
+    width: $nav-menu-width;
+    max-width: $nav-menu-width;
+    height: 1275px * $height-rate;
+    max-height: 1275px * $height-rate;
+    position: absolute;
+    left: 490px * $width-rate;
+    top: 0;
+    background: linear-gradient(0deg, transparent 0%, $color-accent 100%);
+    z-index: 2;
+    clip-path: polygon(0% 0%, 0% 73.7%, 42% 100%, 100% 87%, 100% 0%);
+    @include _aspect-ratio {
+      height: 1275px * $height-rate-big;
+      max-height: 1275px * $height-rate-big;
+    }
+
+    @include _768() {
+      height: auto;
+      max-height: 100%;
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      left: auto;
+      top: auto;
+      order: 1;
+      clip-path: none;
+      background: rgba($color-accent, .25);
+
+    }
+
+    .video_player {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .video_controls {
+      position: absolute;
+      @include display-flex(column);
+      bottom: 330px * $height-rate;
+      left: 60px * $width-rate;
+      z-index: 10;
+      @include _aspect-ratio {
+        bottom: 330px * $height-rate-big;
+      }
+
+      @include _768{
+        bottom: 8px;
+        left: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
+
+      }
+
+      .video_controls__buttons {
+        width: 100%;
+        @include display-flex(row);
+        margin-bottom: 30px * $height-rate;
+        align-items: baseline;
+        justify-content: space-between;
+        @include _aspect-ratio {
+          margin-bottom: 30px * $height-rate-big;
+        }
+
+        @include _768 {
+          width: 100%;
+          margin-bottom: 8px;
+        }
+
+        .buttons_conteiner__left {
+          @include display-flex(row);
+          align-items: baseline;
+        }
+
+        .buttons_pause {
+          @include controls-button(22px, 30px);
+
+          @include _768 {
+            width: 15px;
+            height: 20px;
+          }
+        }
+
+        .buttons_audio {
+          @include controls-button(21px, 30px);
+          margin-left: 20px;
+
+          @include _768 {
+            width: 15px;
+            height: 20px;
+            margin-left: 8px;
+          }
+        }
+
+        .buttons_fullscreen {
+          @include controls-button(60px, 60px);
+          margin-right: 0;
+          @include _768 {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      @for $i from 0 through 100 {
+        .video_controls__progressbar progress[value="#{$i}"] {
+          & ~ .progress-bg .progress-bar {
+            width: $i * 1%
+          }
+        }
+      }
+
+      .video_controls__progressbar {
+        width: 1310px * $width-rate;
+        height: 2px;
+        @include _768 {
+          width: 100%;
+        }
+
+
+        progress {
+          position: absolute;
+          width: 0;
+          height: 0;
+          overflow: hidden;
+          left: -777px * $width-rate;
+        }
+
+        .progress-bg {
+          width: 1310px * $width-rate;
+          height: 2px;
+          background: $color-white;
+          opacity: .5;
+          position: relative;
+          overflow: hidden;
+          @include _768 {
+            width: 100%;
+          }
+
+        }
+
+        .progress-bar {
+          overflow: hidden;
+          background: $gradient-red;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+        }
+      }
+    }
+
+  }
+
+}

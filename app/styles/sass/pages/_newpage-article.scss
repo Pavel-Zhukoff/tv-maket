@@ -1,0 +1,143 @@
+.page-article {
+  display: flex;
+
+  .article {
+    margin: auto;
+    padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate;
+    max-width: 1360px * $width-rate;
+    width: 1360px * $width-rate;
+    @include _aspect-ratio {
+      padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate-big;
+    }
+
+    @include _768() {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px 15px 0 15px;
+      margin: inherit;
+    }
+
+    .headart {
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-size-18;
+      font-family: $font-family-accent;
+      color: $color-primary;
+      margin-bottom: 30px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 30px * $height-rate-big;
+      }
+
+      @include _768() {
+        margin-bottom: 15px;
+        font-size: 10px;
+      }
+
+      .leftcol {
+        span {
+          padding-right: 30px * $width-rate;
+          margin: auto;
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+          svg{
+            @include _768() {
+              height: 7px;
+            }
+          }
+        }
+
+        .nonactive {
+          opacity: 0.5;
+        }
+      }
+
+      .rightcol {
+        display: flex;
+
+        div {
+          padding-right: 30px * $width-rate;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        .date {
+          margin: auto;
+        }
+      }
+    }
+    .contents{
+      .with-title{
+        font-family: $font-family-accent;
+        font-size: 64px;
+        font-weight: 700;
+        color: #07132B;
+        width: 50%;
+        margin-bottom: 30px * $height-rate;
+
+        @include _768() {
+          font-size: 24px * $height-rate;
+          width: 65%;
+          margin-bottom: 10px * $height-rate;
+        }
+      }
+      .cont-post {
+        font-family: $font-family-base;
+
+        .imagepost {
+          display: flex;
+
+          .imgpost {
+            margin: 0 auto 30px * $height-rate auto;
+            max-width: 940px * $width-rate;
+            @include _768() {
+              margin: 0 auto 10px auto;
+              max-width: 768px;
+            }
+
+            p{
+              img{
+                border-radius: 10px;
+                width: 100%;
+
+                @include _768() {
+                  width: 100%;
+                }
+              }
+            }
+            figcaption{
+              color: #07132B;
+              font-style: italic;
+              font-weight: 400;
+              font-size: 18px * $height-rate;
+              opacity: 0.7;
+              text-align: left;
+              margin-top: 10px * $height-rate;
+              @include _768() {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .textpost {
+          font-size: 18px * $height-rate;
+          text-align: justify;
+          color: #07132B;
+          font-weight: 400;
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            @include _768() {
+              line-height: 16px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

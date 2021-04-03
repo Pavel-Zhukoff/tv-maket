@@ -1,0 +1,410 @@
+.page-article {
+  display: flex;
+
+  .article {
+    margin: auto;
+    padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate;
+    max-width: 1360px * $width-rate;
+    width: 1360px * $width-rate;
+    @include _aspect-ratio {
+      padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate-big;
+    }
+
+    .headart {
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-size-18;
+      font-family: $font-family-accent;
+      color: $color-primary;
+      margin-bottom: 30px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 30px * $height-rate-big;
+      }
+
+      .leftcol {
+        span {
+          padding-right: 30px * $width-rate;
+          margin: auto;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        .nonactive {
+          opacity: 0.5;
+        }
+      }
+
+      .rightcol {
+        display: flex;
+
+        div {
+          padding-right: 30px * $width-rate;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+
+        .date {
+          margin: auto;
+        }
+      }
+    }
+
+    .titleblock {
+      display: flex;
+      font-family: $font-family-accent;
+      color: $color-accent;
+      margin-bottom: 50px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 50px * $height-rate-big;
+      }
+
+      .lefttext {
+        width: 50%;
+
+        .with-title {
+          font-weight: 700;
+          font-size: 4.57rem;
+          margin-bottom: 30px * $height-rate;
+          @include _aspect-ratio {
+            margin-bottom: 30px * $height-rate-big;
+          }
+        }
+
+        .text {
+          background-color: #FFFFFF;
+          border-radius: 10px;
+          padding: 50px * $height-rate 50px * $width-rate;
+          font-size: $font-size-18;
+          font-weight: 400;
+          position: relative;
+          left: -50px * $width-rate;
+          width: 1350px * $width-rate;
+
+          @include _aspect-ratio {
+            padding: 50px * $height-rate-big 50px * $width-rate;
+
+          }
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            width: 590px * $width-rate;
+            text-align: justify;
+            @include _aspect-ratio {
+              margin-bottom: 30px * $height-rate-big;
+            }
+          }
+        }
+      }
+
+      .imgright {
+        width: 50%;
+        z-index: 2;
+        text-align: right;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .quote-left {
+      display: flex;
+      margin-bottom: 50px * $height-rate;
+      font-family: $font-family-accent;
+      justify-content: space-between;
+      @include _aspect-ratio {
+        margin-bottom: 50px * $height-rate-big;
+      }
+
+      .quote {
+        position: relative;
+
+        .text {
+          width: 500px * $width-rate;
+          background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+          text-align: center;
+          padding: 50px * $height-rate 50px * $width-rate;
+          border: 3px solid #FFFFFF;
+          border-radius: 0 60px;
+
+          @include _aspect-ratio {
+            padding: 50px * $height-rate-big 50px * $width-rate;
+
+          }
+
+          &:after {
+            position: absolute;
+            width: 150px * $width-rate;
+            height: 150px * $width-rate;
+            border-radius: 50%;
+            background: $color-background;
+            content: '';
+            left: -75px * $width-rate;
+            top: -75px * $width-rate;
+          }
+
+          p {
+            font-weight: 900;
+            font-size: $font-size-36;
+            color: #FFFFFF;
+          }
+        }
+
+        .card_thumbnail__icon {
+          position: absolute;
+          background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+          width: 125px * $width-rate;
+          height: 125px * $width-rate;
+          border-radius: 50%;
+          margin: auto;
+          left: -75px * $width-rate;
+          top: -75px * $width-rate;
+          text-align: center;
+          line-height: 180px * $height-rate;
+          @include _aspect-ratio {
+            line-height: 180px * $height-rate-big;
+          }
+
+          svg {
+            width: 81px * $width-rate;
+            height: auto;
+          }
+        }
+      }
+
+      .righttext {
+        position: relative;
+        left: 50px * $width-rate;
+
+        .text {
+          background-color: $color-white;
+          padding: 50px * $height-rate 50px * $width-rate;
+          border-radius: 10px;
+          font-size: $font-size-18;
+          font-weight: 400;
+
+          @include _aspect-ratio {
+            padding: 50px * $height-rate-big 50px * $width-rate;
+
+          }
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            width: 588px * $width-rate;
+            text-align: justify;
+            @include _aspect-ratio {
+              margin-bottom: 30px * $height-rate-big;
+            }
+          }
+
+          &:after {
+            position: absolute;
+            width: 100px * $width-rate;
+            height: 100px * $width-rate;
+            border-radius: 50%;
+            background: $color-background;
+            content: '';
+            left: -100px * $width-rate;
+            top: 0;
+
+          }
+
+          &:before {
+            position: absolute;
+            width: 100px * $width-rate;
+            height: 50px * $width-rate;
+            background: #FFFFFF;
+            content: '';
+            left: -50px * $width-rate;
+            top: 0;
+          }
+        }
+      }
+    }
+
+    .image-right {
+      display: flex;
+      font-family: $font-family-accent;
+      color: $color-accent;
+      margin-bottom: 50px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 50px * $height-rate-big;
+      }
+
+      .lefttext {
+        width: 50%;
+
+        .text {
+          background-color: #FFFFFF;
+          border-radius: 10px;
+          padding: 50px;
+          font-size: $font-size-18;
+          font-weight: 400;
+          position: relative;
+          left: -50px * $width-rate;
+          width: 1350px * $width-rate;
+          margin-top: 30px * $height-rate;
+          @include _aspect-ratio {
+            margin-top: 30px * $height-rate-big;
+          }
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            width: 590px * $width-rate;
+            text-align: justify;
+            @include _aspect-ratio {
+              margin-bottom: 30px * $height-rate-big;
+            }
+          }
+        }
+      }
+
+      .imgright {
+        width: 50%;
+        z-index: 2;
+        text-align: right;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .image-left {
+      display: flex;
+      font-family: $font-family-accent;
+      color: $color-accent;
+      margin-bottom: 50px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 50px * $height-rate-big;
+      }
+
+      .imgleft {
+        width: 50%;
+        z-index: 2;
+        text-align: left;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .righttext {
+        width: 50%;
+
+        .text {
+          background-color: #FFFFFF;
+          border-radius: 10px;
+          padding: 50px * $height-rate 50px * $width-rate 50px * $height-rate 720px * $width-rate;
+          font-size: $font-size-18;
+          font-weight: 400;
+          position: relative;
+          width: 1350px * $width-rate;
+          left: -680px * $width-rate;
+          margin-top: 30px * $height-rate;
+          @include _aspect-ratio {
+            margin-top: 30px * $height-rate-big;
+            padding: 50px * $height-rate-big 50px * $width-rate 50px * $height-rate-big 720px * $width-rate;
+
+          }
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            width: 580px * $width-rate;
+            text-align: justify;
+            @include _aspect-ratio {
+              margin-bottom: 30px * $height-rate-big;
+            }
+          }
+        }
+      }
+    }
+
+    .text-block-full {
+      display: flex;
+      font-family: $font-family-accent;
+      color: $color-accent;
+      margin-bottom: 50px * $height-rate;
+      @include _aspect-ratio {
+        margin-bottom: 50px * $height-rate-big;
+      }
+
+      .lefttext {
+        width: 50%;
+
+        .text {
+          background-color: #FFFFFF;
+          border-radius: 10px;
+          padding: 50px * $height-rate 50px * $width-rate;
+          font-size: $font-size-18;
+          font-weight: 400;
+          position: relative;
+          left: -50px * $width-rate;
+          width: 720px * $width-rate;
+          margin-top: 30px * $height-rate;
+          height: 100%;
+          @include _aspect-ratio {
+            margin-top: 30px * $height-rate-big;
+            padding: 50px * $height-rate-big 50px * $width-rate;
+
+          }
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            width: 580px * $width-rate;
+            text-align: justify;
+            @include _aspect-ratio {
+              margin-bottom: 30px * $height-rate-big;
+            }
+          }
+        }
+      }
+
+      .righttext {
+        width: 50%;
+
+        .text {
+          background-color: $color-white;
+          border-radius: 10px;
+          padding: 50px * $height-rate 50px * $width-rate;
+          font-size: $font-size-18;
+          font-weight: 400;
+          position: relative;
+          left: -50px * $width-rate;
+          width: 720px * $width-rate;
+          margin-top: 30px * $height-rate;
+          height: 100%;
+          @include _aspect-ratio {
+            margin-top: 30px * $height-rate-big;
+            padding: 50px * $height-rate-big 50px * $width-rate;
+
+          }
+
+          p {
+            margin-bottom: 30px * $height-rate;
+            width: 580px * $width-rate;
+            text-align: justify;
+            padding-left: 40px * $width-rate;
+            @include _aspect-ratio {
+              margin-bottom: 30px * $height-rate-big;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pgart {
+  .section-title {
+    color: $color-primary;
+    font-size: $font-size-36;
+  }
+}

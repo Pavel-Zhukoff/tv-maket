@@ -1,0 +1,393 @@
+@mixin menu-item() {
+  color: $color-white;
+  font-size: $font-size-24;
+  font-family: $font-family-base;
+  text-decoration: none;
+  margin-bottom: 32px * $height-rate;
+  @include _aspect-ratio {
+    margin-bottom: 32px * $height-rate-big;
+  }
+}
+
+@mixin right-menu-icon($width, $height) {
+  display: block;
+  width: $width * $width-rate;
+  height: $height * $height-rate;
+  object-fit: cover;
+  @include _aspect-ratio {
+    height: $height * $height-rate-big;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  @include _1600 {
+    width: .9 * $width * $width-rate;
+    height: .9 * $height * $height-rate;
+    @include _aspect-ratio {
+      height: .9 * $height * $height-rate-big;
+    }
+  }
+
+}
+
+.main-menu {
+  z-index: 100;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 170px * $height-rate;
+  @include display-flex(row);
+  @include _aspect-ratio {
+    height: 170px * $height-rate-big;
+
+  }
+  @include _768 {
+    height: 100px;
+  }
+  @include _480 {
+    height: 45px;
+  }
+
+  .main-menu_logo {
+    padding: 30px * $height-rate 86px * $width-rate;
+    background: $color-accent;
+    max-width: $nav-sidebar-width;
+    width: $nav-sidebar-width;
+    @include _aspect-ratio {
+      padding: 30px * $height-rate 86px * $width-rate;
+    }
+    @include _768 {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+    }
+    &.gradient-background {
+      background: linear-gradient(0deg, transparent 0%, $color-accent 100%);
+    }
+
+    &.background-transparent {
+      background: transparent;
+    }
+
+    a {
+      display: block;
+
+      @include _768 {
+        margin-top: 10px;
+      }
+
+      .main-menu_logo__image {
+        display: block;
+        width: 300px * $width-rate;
+        height: auto;
+        margin: 0 auto 0;
+
+        @include _768 {
+          width: 300px * $width-rate;
+        }
+
+        @include _480 {
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  .main-menu_container {
+    max-width: $nav-menu-width;
+    width: $nav-menu-width;
+    margin-left: 20px * $width-rate;
+    background-color: $color-accent;
+    
+    @include _768() {
+      display: none;
+    }
+    &.gradient-background {
+      background: linear-gradient(0deg, transparent 0%, $color-accent 100%);
+    }
+
+    &.gradient-background-art {
+      background-color: $color-accent;
+    }
+
+    &.background-transparent {
+      background: transparent;
+    }
+
+    .menu-container {
+      padding: 32px * $height-rate 60px * $width-rate;
+      @include display-flex(row);
+      justify-content: space-between;
+
+      @include _aspect-ratio {
+        padding: 32px * $height-rate-big 60px * $width-rate;
+      }
+
+      .menu-container_left {
+        @include display-flex(row);
+        flex-wrap: wrap;
+        max-width: 765px * $width-rate;
+
+        @include _1400 {
+          max-width: 800px * $width-rate
+        }
+
+        .menu-container_left__item {
+          @include menu-item;
+          margin-left: 100px * $width-rate;
+          position: relative;
+
+          &:first-child, &:nth-child(5) {
+            margin-left: 0;
+          }
+
+          &:after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            transition: width .3s ease-out;
+          }
+
+          &:hover {
+            text-decoration: none;
+            color: $color-white;
+
+            &:after {
+              width: 110%;
+              background: $gradient-blue;
+            }
+          }
+
+          &.active {
+            &:after {
+              width: 110%;
+              background: #fd5893;
+            }
+          }
+
+        }
+      }
+
+      .menu-container_right {
+        @include display-flex(row);
+
+        .menu-container_socials,
+        .menu-container_live {
+          @include menu-item;
+
+          &:hover {
+            color: $color-primary;
+          }
+        }
+
+        .menu-container_live {
+          @include display-flex(row);
+          color: $color-red;
+
+          .menu-container_live__icon {
+            margin-right: 20px * $width-rate;
+            @include right-menu-icon(31px, 31px);
+
+            svg path#stroke {
+              stroke: $color-red;
+            }
+
+            svg path#circle {
+              fill: $color-red;
+            }
+          }
+
+          &:hover {
+            .menu-container_live__icon {
+              svg path#stroke {
+                stroke: $color-primary;
+              }
+
+              svg path#circle {
+                fill: $color-primary;
+              }
+            }
+          }
+        }
+
+        .menu-container_socials {
+          @include display-flex(row);
+
+          .menu-container_socials__icon {
+            margin-right: 20px * $width-rate;
+            @include right-menu-icon(30px, 30px);
+
+            svg {
+              fill: $color-white;
+            }
+          }
+
+          &:hover {
+            .menu-container_socials__icon {
+              svg {
+                fill: $color-primary;
+              }
+            }
+          }
+        }
+
+        .menu-container_search {
+          margin-top: 18px * $height-rate;
+          margin-left: 60px * $width-rate;
+          cursor: pointer;
+          @include _aspect-ratio {
+            margin-top: 18px * $height-rate-big;
+          }
+
+          .menu-container_search__icon {
+            @include right-menu-icon(60px, 60px);
+
+            svg {
+              fill: $color-white;
+            }
+
+            &:hover {
+              svg path {
+                fill: $color-primary;
+              }
+            }
+          }
+        }
+      }
+
+      .menu-container__search {
+        width: 100%;
+        height: 72px * $height-rate;
+        border-bottom: 2px solid $color-white;
+        padding-bottom: 10px * $height-rate;
+        @include display-flex(row);
+        align-items: flex-end;
+        display: none;
+        animation: menu-search-r2l .5s linear;
+        @include _aspect-ratio {
+          height: 72px * $height-rate-big;
+          padding-bottom: 10px * $height-rate-big;
+        }
+
+        form {
+          @include display-flex(row);
+          flex-grow: 1;
+        }
+
+        .menu-container__search_input {
+          display: block;
+          flex-grow: 1;
+          padding: 0 24px * $width-rate;
+          background: transparent;
+          outline: 0;
+          border: 0;
+          color: $color-white;
+          font-size: $font-size-24;
+          font-family: $font-family-accent;
+        }
+
+        .menu-container__search_close {
+          margin-bottom: 10px * $height-rate;
+          @include _aspect-ratio {
+            margin-bottom: 10px * $height-rate-big;
+          }
+
+          svg {
+            path {
+              fill: $color-white;
+            }
+          }
+
+          &:hover {
+            svg path {
+              fill: $color-primary;
+            }
+          }
+        }
+      }
+
+      .menu-container__socials {
+        width: 100%;
+        height: 72px * $height-rate;
+        padding-bottom: 10px * $height-rate;
+        @include display-flex(row);
+        align-items: flex-end;
+        justify-content: space-between;
+        display: none;
+        @include _aspect-ratio {
+          height: 72px * $height-rate-big;
+          padding-bottom: 10px * $height-rate-big;
+        }
+
+        .menu-container__socials_close,
+        .menu-container__socials_container {
+          animation: menu-show-r2l 1.25s linear;
+        }
+
+        .menu-container__socials_close {
+
+          svg {
+            path {
+              fill: $color-white;
+            }
+          }
+
+          &:hover {
+            svg path {
+              fill: $color-primary;
+            }
+          }
+        }
+
+        .menu-container__socials_container {
+          @include display-flex(row);
+          align-items: center;
+
+          .menu-container__socials__link {
+            height: 30px * $height-rate;
+            width: auto;
+            margin-right: 50px * $width-rate;
+            @include _aspect-ratio {
+              height: 30px * $height-rate-big;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            svg {
+              fill: $color-white;
+              height: 100%;
+              width: auto;
+
+              path {
+                fill: $color-white;
+              }
+            }
+
+            &:hover {
+              svg {
+                g g rect {
+                  fill: $color-primary;
+                }
+
+                path {
+                  fill: $color-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
