@@ -1,5 +1,8 @@
 .main-menu {
   position: absolute;
+  @include _768() {
+    display: none;
+  }
 }
 
 .prognav {
@@ -10,9 +13,15 @@
   @include _aspect-ratio {
     min-height: 820px * $height-rate-big;
   }
+  @include _768() {
+    display: none;
+  }
 
   .main-menu_container, .main-menu_logo {
     background-color: transparent;
+    @include _768() {
+      background-color: #07132B;
+    }
   }
 
   .searchprog {
@@ -104,6 +113,86 @@
   }
 }
 
+.mobsearch{
+  display: none;
+  @include _768() {
+    display: block;
+    height: auto;
+
+    .search {
+      background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+      text-align: center;
+      padding: 10px 15px;
+
+      form{
+        input[type="text"]{
+          width: 100%;
+          height: 32px;
+          border-radius: 20px;
+          border: 0;
+          font-size: 12px;
+          padding: 5px 10px;
+
+          &::placeholder{
+            color: #07132B;
+            opacity: 0.5;
+          }
+        }
+        button{
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          border: 3px rgba(22, 158, 235, 0.8) solid;
+          position: absolute;
+          padding: 5.5px;
+          background-color: #fff;
+          right: 14px;
+          svg{
+            width: 15px;
+          }
+        }
+      }
+    }
+    .allprogs {
+      background: linear-gradient(90deg, rgba(25, 92, 174, 0.8) 0%, rgba(22, 158, 235, 0.8) 100%);
+      border-radius: 0 0 15px 15px;
+
+      .listprog{
+        padding: 10px 15px 0px 15px;
+        ul{
+          display: flex;
+          flex-wrap: wrap;
+          li{
+            font-size: 12px;
+            padding: 4px 16px;
+            background: #fff;
+            border: 1px #000 solid;
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            a{
+              text-decoration: none;
+              color: #000;
+            }
+          }
+        }
+      }
+      button{
+        width: 100%;
+        font-size: 14px;
+        font-weight: 700;
+        background: transparent;
+        border-radius: 0 0 15px 15px;
+        border: 0;
+        padding: 15px;
+        p{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
 .progblock {
 
   .news {
@@ -121,9 +210,14 @@
     @include _aspect-ratio {
       margin-bottom: 50px * $height-rate-big;
     }
+    @include _768() {
+      margin-bottom: 20px;
+    }
 
     .leftsel {
-
+      @include _768() {
+        padding: 0 15px;
+      }
       .progsort {
         font-family: $font-family-accent;
         margin-right: 28px * $width-rate;
@@ -132,6 +226,10 @@
         border: 0 $color-background;
         background-color: $color-background;
         opacity: 0.5;
+        @include _768() {
+          font-size: 10px;
+          padding: 0;
+        }
 
         .arrowsortprog {
           margin-left: 0.3rem;
@@ -145,6 +243,9 @@
         svg {
           width: 12px * $width-rate;
           padding-bottom: 2px;
+          @include _768() {
+            width: 6px;
+          }
         }
 
         &:last-child {
@@ -162,6 +263,9 @@
 
 .prognavigation {
   position: relative;
+  @include _768() {
+    display: none;
+  }
 
   .navig {
     z-index: 2;
@@ -332,6 +436,10 @@
     @include _aspect-ratio {
       margin-bottom: 100px * $height-rate-big;
     }
+    @include _768() {
+      display: block;
+      margin-bottom: 0;
+    }
 
     &:after {
       height: 60%;
@@ -352,10 +460,23 @@
     }
 
     .card {
+      @include _768() {
+        margin-right: 0;
+      }
       .card_thumbnail {
         height: 170px * $height-rate;
         @include _aspect-ratio {
           height: 170px * $height-rate-big;
+        }
+        @include _768() {
+          height: 210px;
+        }
+
+        img {
+          @include _768() {
+            border-radius: unset;
+            height: 210px;
+          }
         }
 
         .card_thumbnail__image {
@@ -368,6 +489,9 @@
           &:after {
             background: $color-white;
           }
+          @include _768() {
+            display: none;
+          }
         }
 
         &:after {
@@ -377,6 +501,9 @@
           right: -15px * $width-rate;
           @include _aspect-ratio {
             top: -20px * $height-rate-big;
+          }
+          @include _768() {
+            display: none;
           }
         }
 
@@ -391,6 +518,38 @@
           @include _aspect-ratio {
             line-height: 35px * $height-rate-big;
             top: -15px * $height-rate-big;
+          }
+          @include _768() {
+            display: none;
+          }
+        }
+      }
+      .card_content {
+        @include _768() {
+          padding: 8px 15px 15px 15px;
+        }
+        .card_content__title {
+          @include _768() {
+            font-size: 14px;
+            color: #07132B;
+            margin-bottom: 5px;
+          }
+        }
+        .card_content__separator {
+          @include _768() {
+            width: 60px;
+            height: 2px;
+            margin-bottom: 5px;
+          }
+        }
+        .card_content__description {
+          @include _768() {
+            font-size: 12px;
+          }
+        }
+        .card_content__date {
+          @include _768() {
+            font-size: 9px;
           }
         }
       }
