@@ -117,7 +117,7 @@
   display: none;
   @include _768() {
     display: block;
-    height: auto;
+    height: 100px;
 
     .search {
       background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
@@ -156,23 +156,118 @@
     .allprogs {
       background: linear-gradient(90deg, rgba(25, 92, 174, 0.8) 0%, rgba(22, 158, 235, 0.8) 100%);
       border-radius: 0 0 15px 15px;
+      position: absolute;
+      z-index: 99999;
 
       .listprog{
-        padding: 10px 15px 0px 15px;
+        padding: 0px 15px 0px 15px;
+        height: 0px;
+        overflow: hidden;
+        transition: 1s;
+
+        &.active {
+          height: 260px;
+          padding: 10px 15px 0px 15px;
+          transition: 1s;
+        }
+
         ul{
           display: flex;
           flex-wrap: wrap;
           li{
+            font-family: $font-family-accent;
             font-size: 12px;
-            padding: 4px 16px;
+            padding: 6px 16px;
             background: #fff;
-            border: 1px #000 solid;
+            //border: 1px #000 solid;
+            border:0;
             border-radius: 20px;
-            margin-right: 10px;
-            margin-bottom: 10px;
+            margin-right: 8px;
+            margin-bottom: 8px;
             a{
               text-decoration: none;
               color: #000;
+            }
+            &:nth-child(1), &:nth-child(6), &:nth-child(11), &:nth-child(15) {
+              //border: 2px #FB5D7E solid;
+              box-shadow: 0px 0px 0px 2px #FB5D7E inset;
+              a {
+                color: #FB5D7E;
+              }
+            }
+            &:nth-child(2), &:nth-child(7), &:nth-child(12), &:nth-child(16) {
+              //border: 2px #FFB342 solid;
+              box-shadow: 0px 0px 0px 2px #FFB342 inset;
+              a {
+                color: #FFB342;
+              }
+            }
+            &:nth-child(3), &:nth-child(8) {
+              //border: 2px #90EB84 solid;
+              box-shadow: 0px 0px 0px 2px #90EB84 inset;
+              a {
+                color: #90EB84;
+              }
+            }
+            &:nth-child(4), &:nth-child(9), &:nth-child(13) {
+              //border: 2px #2FE7F2 solid;
+              box-shadow: 0px 0px 0px 2px #2FE7F2 inset;
+              a {
+                color: #2FE7F2;
+              }
+            }
+            &:nth-child(5), &:nth-child(10), &:nth-child(14) {
+              //border: 2px #178ddb solid;
+              box-shadow: 0px 0px 0px 2px #178ddb inset;
+              a {
+                color: #178ddb;
+              }
+            }
+          }
+          .active {
+           background: #000;
+            a{
+              color: #fff;
+            }
+            &:nth-child(1), &:nth-child(6), &:nth-child(11), &:nth-child(15) {
+              background: $gradient-red;
+              border: 0;
+              box-shadow:unset;
+              a{
+                color: #fff;
+              }
+            }
+            &:nth-child(2), &:nth-child(7), &:nth-child(12), &:nth-child(16) {
+              background: $gradient-orange;
+              border: 0;
+              box-shadow:unset;
+              a{
+                color: #fff;
+              }
+            }
+            &:nth-child(3), &:nth-child(8) {
+              background: $gradient-green;
+              border: 0;
+              box-shadow:unset;
+              a{
+                color: #fff;
+              }
+            }
+            &:nth-child(4), &:nth-child(9), &:nth-child(13) {
+              background: linear-gradient(270deg, #24FBC7 0%, #169EEB 100%);
+              border: 0;
+              box-shadow:unset;
+              a{
+                color: #fff;
+              }
+            }
+            &:nth-child(5), &:nth-child(10), &:nth-child(14) {
+              background: $gradient-blue;
+              border: 0;
+              box-shadow:unset;
+              a{
+                color: #fff;
+              }
             }
           }
         }
@@ -185,8 +280,19 @@
         border-radius: 0 0 15px 15px;
         border: 0;
         padding: 15px;
+        justify-content: center;
+        @include display-flex(column);
+        align-items: center;
+        flex-direction: inherit;
         p{
           color: #fff;
+          margin-right: 5px;
+        }
+        span{
+          display: none;
+          &.active {
+            display: inherit;
+          }
         }
       }
     }

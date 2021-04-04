@@ -64,6 +64,8 @@
       max-width: 100%;
       width: 100%;
       padding: 0;
+      @include display-flex(column);
+      justify-content: center;
     }
     &.gradient-background {
       background: linear-gradient(0deg, transparent 0%, $color-accent 100%);
@@ -75,11 +77,6 @@
 
     a {
       display: block;
-
-      @include _768 {
-        margin-top: 10px;
-      }
-
       .main-menu_logo__image {
         display: block;
         width: 300px * $width-rate;
@@ -391,3 +388,202 @@
   }
 }
 
+
+.navigation-mobile {
+  display: none;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+
+  @include _768 {
+    @include display-flex(row);
+    align-items: center;
+    padding: 0 34px;
+    justify-content: space-between;
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 60px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+    opacity: .8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: height .25s linear;
+  }
+
+  &.nav-menu_active {
+    &:after {
+      height: 250px;
+    }
+  }
+
+  &.nav-menu_search-active {
+    .live-view-button {
+      display: none;
+    }
+    .nav-button {
+      display: none;
+    }
+    .nav-menu-container {
+      display: none;
+    }
+    .search_button {
+      display: none;
+    }
+    .search_container {
+      display: block;
+    }
+  }
+
+  .search_button {
+    width: 38px;
+    height: 38px;
+
+    .search_button__icon {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .search_container {
+    display: none;
+    width: 100%;
+
+    form {
+      @include display-flex(row);
+      flex-grow: 1;
+    }
+
+    .search_container__field {
+      display: block;
+      flex-grow: 1;
+      padding: 0 24px * $width-rate;
+      background: transparent;
+      outline: 0;
+      border: 0;
+      color: $color-white;
+      font-size: 14px;
+      font-family: $font-family-accent;
+      position: relative;
+      border-bottom: 2px solid $color-white;
+      margin-right: 8px;
+    }
+    .search_container__button {
+      border: 2px solid $color-white;
+      font-size: 14px;
+      background-color: transparent;
+      position: relative;
+      transition: border-color linear .3s;
+      color: $color-white;
+      padding: 11px 16px;
+      border-radius: 10px;
+      font-family: $font-family-accent;
+
+      .search_button__text {
+        display: block;
+      }
+
+      &:hover {
+        background-color: transparent;
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  .live-view-button {
+    margin-bottom: 54px;
+    text-decoration: none;
+
+    .live-view-button_icon {
+      @include display-flex(column);
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      box-sizing: content-box;
+      background:
+              linear-gradient(90deg, #F86363 0%, #FF53A5 100%) padding-box, /*this is your grey background*/
+              linear-gradient($color-white , rgba($color-white, 0.1)) border-box;
+      .live-view-button_icon__element {
+        width: 20px;
+        height: auto;
+        //margin: 0 auto;
+        margin-left: 21px;
+      }
+    }
+
+    .live-view-button_text {
+      text-align: center;
+      color: $color-white;
+      font-size: 10px;
+      font-family: $color-accent;
+      font-weight: 700;
+      margin-top: 5px;
+      display: block;
+    }
+  }
+
+  .nav-button {
+    width: 38px;
+    height: 16px;
+    cursor: pointer;
+
+    .nav-button_icon {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .nav-menu-container {
+    width: 100%;
+    position: absolute;
+    display: none;
+    padding: 24px 16px;
+    left: 0;
+    top: -190px;
+
+    &.nav-menu-container_active {
+      @include display-flex(row);
+      justify-content: space-between;
+      height: 190px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    
+    .nav-menu-container_column {
+      @include display-flex(column);
+
+      .nav-menu-link {
+        font-size: 18px;
+        margin-bottom: 16px;
+        font-family: $font-family-accent;
+        font-weight: 700;
+        color: $color-white;
+        text-decoration: none;
+        position: relative;
+
+        &.nav-menu-link_active {
+          &:after {
+            content: '';
+            width: 110%;
+            height: 2px;
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+          }
+        }
+      }
+    }
+  }
+}
