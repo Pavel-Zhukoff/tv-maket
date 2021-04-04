@@ -1,3 +1,8 @@
+.navigation-mobile {
+  @include _768 {
+    display: none;
+  }
+}
 .errorpage {
   background: #195CAE;
   height: 100vh;
@@ -14,9 +19,15 @@
     }
   }
 
+
   .position {
-    display: flex;
-    padding-top: 16rem;
+    @include display-flex(column);
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     .errormesg {
       display: flex;
@@ -24,14 +35,15 @@
       margin: auto;
 
       @include _768() {
-        width: 210px;
+        width: 232px;
       }
 
       .imgerror {
         margin-right: 6.25rem;
 
         @include _768() {
-          width: 210px;
+          width: 100%;
+          margin: 0;
         }
 
         img{
@@ -42,17 +54,32 @@
       }
 
       .errortext {
-        color: #fff;
-        font-family: 'Lato';
+        color: $color-white;
+        font-family: $font-family-accent;
+
+        @include _768 {
+          @include display-flex(row);
+          flex-wrap: wrap;
+          margin-top: 16px;
+        }
 
         h1 {
           font-size: 3.75rem;
           margin-bottom: 1.5rem;
+
+          @include _768 {
+            font-size: 54px;
+            margin-right: 8px;
+          }
         }
 
         h2 {
           font-size: 2.25rem;
           margin-bottom: 1.75rem;
+
+          @include _768 {
+            font-size: 14px;
+          }
         }
 
         .arrowerrback {
@@ -67,16 +94,35 @@
 
           .arrow .arrow_circle {
             background: #FE5797;
+            @include _768 {
+              width: 44px;
+              height: 44px;
+
+              svg {
+                width: 20px;
+              }
+            }
           }
 
           .arrow_line {
             background: #FE5797;
             width: 160px;
+            @include _768 {
+              top: 22px;
+              left: 44px;
+              width: 115px;
+            }
           }
 
           .arrow_text {
             bottom: 0;
             font-size: 1.125rem;
+            color: $color-white;
+
+            @include _768 {
+              font-size: 14px;
+              margin-right: 32px;
+            }
           }
         }
       }
