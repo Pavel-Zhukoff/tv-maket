@@ -1,0 +1,6 @@
+.main-menu {
+  position: relative;
+  @include _768() {
+    display: block;
+  }
+}
