@@ -67,10 +67,16 @@ h1,h2,h3 {
 
 .wrapper-m-t-sm {
   margin-top: $wrapper-margin-top-sm;
+  @include _768 {
+    margin-top: 16px;
+  }
 }
 
 .wrapper-m-t-sm-art {
   margin-top: $wrapper-margin-top;
+  @include _768 {
+    margin-top: 16px;
+  }
 }
 
 .wrapper {
@@ -844,6 +850,10 @@ h1,h2,h3 {
       .b-v-post {
         grid-column: 1;
         grid-row: 1 / -1;
+
+        @include _768 {
+          background: linear-gradient(270deg, #C9FA98 0%, #50DA6E 100%);
+        }
       }
 
       .s-h-post {
@@ -863,6 +873,9 @@ h1,h2,h3 {
       .b-v-post {
         grid-column: 2;
         grid-row: 1 / -1;
+        @include _768 {
+          background: linear-gradient(270deg, #24FBC7 0%, #169EEB 100%);
+        }
       }
 
       .s-h-post {
@@ -887,28 +900,6 @@ h1,h2,h3 {
         display: none;
         @include _768 {
           display: block;
-          border-radius: 16px;
-          padding: 16px;
-          &:after {
-            height: 100%;
-          }
-          .article_content {
-            padding: 0;
-              .article_content__date {
-                font-size: 9px;
-                margin-bottom: 6px;
-              }
-              .article_content__title {
-                font-size: 12px;
-                margin-bottom: 8px;
-              }
-              .article_content__separator {
-                display: none;
-              }
-              .article_content__url {
-                display: none;
-              }
-          }
         }
       }
     }
@@ -988,6 +979,40 @@ h1,h2,h3 {
       }
     }
 
+    .b-h-post,
+    .b-v-post,
+    .s-h-post {
+      @include _768 {
+        border-radius: 16px;
+        padding: 16px;
+        &:after {
+          height: 100%;
+        }
+        .article_content {
+          padding: 0;
+
+          .badge {
+            display: none;
+          }
+
+          .article_content__date {
+            font-size: 9px;
+            margin-bottom: 6px;
+          }
+          .article_content__title {
+            font-size: 12px;
+            margin-bottom: 8px;
+          }
+          .article_content__separator {
+            display: none;
+          }
+          .article_content__url {
+            display: none;
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -1002,6 +1027,10 @@ h1,h2,h3 {
   display: none;
   @include _aspect-ratio {
     bottom: 120px * $height-rate-big;
+  }
+
+  @include _768 {
+    display: none;
   }
 
   &:hover {
