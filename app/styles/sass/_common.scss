@@ -319,11 +319,17 @@ h1,h2,h3 {
         @include _aspect-ratio {
           height: 50px * $height-rate-big;
           top: calc(50% - #{25px * $height-rate-big});
-
         }
         circle {
           fill: none;
           transition: stroke $card-animation-time linear;
+        }
+        @include _768 {
+          width: 50px;
+          height: 50px;
+          display: block;
+          top: calc(50% - 25px);
+          left: calc(50% - 25px);
         }
       }
 
@@ -529,12 +535,12 @@ h1,h2,h3 {
 
     @include _768 {
       order: 2;
-      margin-top: 24px;
+      margin: 24px auto 0;
       display: block;
       border-radius: 16px;
       font-size: 14px;
       padding: 18px 36px;
-      flex-basis: 0;
+      flex-shrink: 2;
     }
 
     &:hover {

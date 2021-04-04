@@ -48,6 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         },
     });
+    if (window.innerWidth < 780) {
+        $(".navigation-mobile .nav-button").on("click", function (event){
+            if ($(".navigation-mobile .nav-menu-container").hasClass("nav-menu-container_active")) {
+                $(".nav-menu-container_active").toggleClass("nav-menu-container_active");
+                $(".navigation-mobile").toggleClass("nav-menu_active");
+            } else {
+                $(".navigation-mobile").toggleClass("nav-menu_active");
+                $(".navigation-mobile .nav-menu-container").toggleClass("nav-menu-container_active")
+            }
+        });
+        $(".search_button").on("click", function (event) {
+            $(".navigation-mobile").toggleClass("nav-menu_search-active");
+        });
+
+    }
     if (window.innerWidth > 780) {
         const newscont = new Swiper('.swiper-contein', {
             slideToClickedSlide: true,
