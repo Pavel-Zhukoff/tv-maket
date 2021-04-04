@@ -119,6 +119,8 @@
 
           &:first-child {
             order: 2;
+            @include display-flex(row);
+            flex-wrap: wrap;
           }
 
           &:nth-child {
@@ -324,7 +326,7 @@
       height: 34px;
       border-radius: 50%;
       background: rgba($color-white, .5);
-      margin-right: 5%;
+      margin-right: 10%;
       margin-bottom: 16px;
       @include display-flex(column);
       align-items: center;
@@ -337,6 +339,14 @@
       &:hover {
         background: $color-white;
       }
+    }
+
+    @include _480 {
+      margin-right: 7.5%;
+    }
+
+    @include _350 {
+      margin-right: 5%;
     }
 
     &:last-child {
