@@ -1,6 +1,15 @@
+.main-menu {
+  @include _768() {
+    display: none;
+  }
+}
 .tvprogram-nav {
   @include display-flex(row);
   justify-content: space-between;
+  @include _768() {
+    display: none;
+  }
+
 
   .tvprogram-nav_item {
     display: block;
@@ -80,6 +89,58 @@
     }
   }
 }
+.wrapper-m-t {
+  @include _768() {
+    margin-top: 0;
+  }
+
+  .tvprogram-nav-mobile {
+    display: none;
+    @include _768() {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(25, 92, 174, 0.8) 0%, rgba(22, 158, 235, 0.8) 100%);
+      border-radius: 0 0 15px 15px;
+      font-size: 18px;
+      justify-content: space-between;
+      padding: 2px 15px;
+      z-index: 99;
+
+      a {
+        background: transparent;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+        @include display-flex(column);
+        align-items: center;
+        line-height: 40px;
+      }
+
+      .tvprogram-nav_item__today {
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
+        &:nth-child(1), &:nth-child(6) {
+          color: #fb5d7e;
+        }
+        &:nth-child(2), &:nth-child(7) {
+          color: #ffb342;
+        }
+        &:nth-child(3) {
+          color: #90eb84;
+        }
+        &:nth-child(4) {
+          color: #2fe7f2;
+        }
+        &:nth-child(5) {
+          color: #099ef1;
+        }
+      }
+    }
+  }
+}
 
 .tvprogram {
 
@@ -94,6 +155,9 @@
   .tvprogram-list-current_progress {
     width: 100%;
     height: 3px;
+    @include _768() {
+      height: 2px;
+    }
 
 
     progress {
@@ -109,6 +173,9 @@
       background: rgba($color-accent, .1);
       position: relative;
       overflow: hidden;
+      @include _768() {
+        background: #07132B;
+      }
     }
 
     .progress-bar {
@@ -136,6 +203,13 @@
       padding: 20px * $height-rate-big 20px * $width-rate;
 
     }
+    @include _768() {
+      background: transparent;
+      padding: 0;
+      border-radius: 0;
+      max-height: 770px;
+      height: 770px;
+    }
 
     .external_scrollbar {
       position: absolute;
@@ -152,6 +226,9 @@
         max-height: 600px * $height-rate-big;
         top: 20px * $height-rate-big;
 
+      }
+      @include _768() {
+        display: none;
       }
 
       .scroll-element_outer {
@@ -193,6 +270,9 @@
       line-height: 170px;
       text-align: center;
       z-index: 2;
+      @include _768() {
+        display: none;
+      }
 
       svg{
         vertical-align: middle;
@@ -250,6 +330,9 @@
       @include _aspect-ratio {
         bottom: 20px * $height-rate-big;
       }
+      @include _768() {
+        display: none;
+      }
 
       &:hover {
         text-decoration: none;
@@ -272,6 +355,14 @@
       .tvprogram-list {
         padding: 0;
       }
+      @include _768() {
+        width: 100%;
+        background: transparent;
+        border-radius: 0;
+        padding: 15px 0;
+        overflow-y: auto;
+        max-height: 770px;
+      }
 
       &::-webkit-scrollbar {
         width: 0;
@@ -285,6 +376,11 @@
         @include _aspect-ratio {
           margin-top: 18px * $height-rate-big;
           margin-bottom: 28px * $height-rate-big;
+        }
+        @include _768() {
+          margin-top: 4px;
+          margin-bottom: 4px;
+          padding: 0 16px;
         }
       }
 
@@ -300,15 +396,25 @@
           @include _aspect-ratio {
             line-height: 35px * $height-rate-big;
           }
+          @include _768() {
+            font-size: 14px;
+          }
 
           .time {
             padding-left: 25px * $width-rate;
             padding-right: 20px * $width-rate;
             font-weight: 900;
+            @include _768() {
+              padding-left: 15px;
+              padding-right: 25px;
+            }
           }
 
           .name {
             width: 75%;
+            @include _768() {
+
+            }
           }
         }
 
@@ -317,6 +423,38 @@
         }
 
         .tvprogram-list__current {
+          .mobtitletel{
+            display: none;
+            @include _768() {
+              display: block;
+              font-size: 18px;
+              font-weight: 900;
+              color: #07132B;
+              padding: 16px 16px 0 16px;
+            }
+          }
+          .mobtelnow{
+            display: none;
+            @include _768() {
+              display: block;
+              font-weight: 700;
+              font-size: 10px;
+              color: #07132B;
+              padding: 0px 16px 8px 16px;
+              line-height: 12px;
+            }
+          }
+          .mobteldesc{
+            display: none;
+            @include _768() {
+              display: block;
+              font-size: 10px;
+              color: #07132B;
+              opacity: 0.7;
+              line-height: 13px;
+              padding: 0px 16px 16px 16px;
+            }
+          }
 
           .tvprogram-list-current_container {
             @include display-flex(row);
@@ -346,6 +484,9 @@
         height: 640px * $height-rate-big;
         bottom: 20px * $height-rate-big;
         padding-top: 30px * $height-rate-big;
+      }
+      @include _768() {
+        display: none;
       }
 
       .tvprogram_title {
@@ -393,6 +534,11 @@
         @include _aspect-ratio {
           margin-top: 10px * $height-rate-big;
           margin-bottom: 10px * $height-rate-big;
+        }
+        @include _768() {
+          margin-top: 4px;
+          margin-bottom: 4px;
+          padding: 0 16px;
         }
 
         .progress-bg {

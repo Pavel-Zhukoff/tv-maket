@@ -267,6 +267,21 @@
           }
 
           .content {
+            @include _768() {
+              max-height: 50px;
+              overflow: hidden;
+              line-height: 16px;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              transition: 1s;
+
+              &.active {
+                max-height: 1000px;
+                display: block;
+                transition: 1s;
+              }
+            }
             p {
               font-size: $font-size-18;
               opacity: 0.7;

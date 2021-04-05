@@ -41,6 +41,9 @@
       .imgerror {
         margin-right: 6.25rem;
 
+        width: 490px * $width-rate;
+
+
         @include _768() {
           width: 100%;
           margin: 0;
