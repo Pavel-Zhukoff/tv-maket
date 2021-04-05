@@ -163,5 +163,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     })
+
+    const slideform = new Swiper('.sliderformat', {
+        slideToClickedSlide: true,
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+            nextEl: '.control .next',
+            prevEl: '.control .prev',
+        },
+        on: {
+            init() {
+                updateClasses(this);
+            },
+            slideChange() {
+                updateClasses(this);
+            },
+        },
+    })
 })
 
