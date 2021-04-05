@@ -66,6 +66,7 @@
       padding: 0;
       @include display-flex(column);
       justify-content: center;
+      background: $color-accent !important;
     }
     &.gradient-background {
       background: linear-gradient(0deg, transparent 0%, $color-accent 100%);

@@ -181,16 +181,19 @@ h1,h2,h3 {
     @include circle(60px, $color-accent);
     position: absolute;
     text-align: center;
+    @include display-flex(row);
+    justify-content: center;
+    align-items: center;
 
     svg {
       width: 15px * $width-rate;
       height: 29px * $height-rate;
-      margin-right: 3px * $width-rate;
-      margin-top: 19px * $height-rate;
+      //margin-right: 3px * $width-rate;
+      //margin-top: 19px * $height-rate;
 
       @include _aspect-ratio {
         height: 29px * $height-rate-big;
-        margin-top: 19px * $height-rate-big;
+        //margin-top: 19px * $height-rate-big;
       }
     }
   }
