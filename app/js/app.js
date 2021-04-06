@@ -88,6 +88,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         $el.find('.swiper-slide-next-next').removeClass('swiper-slide-next-next');
         slides.eq(activeIndex).next().next().addClass('swiper-slide-next-next');
+
+        $el.find('.swiper-slide-prev-prev-prev').removeClass('swiper-slide-prev-prev-prev');
+        slides.eq(activeIndex).prev().prev().prev().addClass('swiper-slide-prev-prev-prev');
+
+        $el.find('.swiper-slide-next-next-next').removeClass('swiper-slide-next-next-next');
+        slides.eq(activeIndex).next().next().next().addClass('swiper-slide-next-next-next');
+
+        $el.find('.swiper-slide-4').removeClass('swiper-slide-4');
+        slides.eq(activeIndex).next().next().next().next().addClass('swiper-slide-4');
+
+        $el.find('.swiper-slide-5').removeClass('swiper-slide-5');
+        slides.eq(activeIndex).next().next().next().next().next().addClass('swiper-slide-5');
+
+        $el.find('.swiper-slide-6').removeClass('swiper-slide-6');
+        slides.eq(activeIndex).next().next().next().next().next().next().addClass('swiper-slide-6');
+
+        $el.find('.swiper-slide-7').removeClass('swiper-slide-7');
+        slides.eq(activeIndex).next().next().next().next().next().next().next().addClass('swiper-slide-7');
+
+        $el.find('.swiper-slide-8').removeClass('swiper-slide-8');
+        slides.eq(activeIndex).next().next().next().next().next().next().next().next().addClass('swiper-slide-8');
     }
     $(".promo .promo_close").ready(function () {
         $(".promo .promo_close").on("click", function(event) {
@@ -167,10 +188,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const slideform = new Swiper('.sliderformat', {
         slideToClickedSlide: true,
         loop: true,
+        allowTouchMove: false,
         slidesPerView: 2,
+        slidesPerView: 'auto',
         navigation: {
             nextEl: '.control .next',
             prevEl: '.control .prev',
+        },
+        on: {
+            init() {
+                updateClasses(this);
+            },
+            slideChange() {
+                updateClasses(this);
+            },
+        },
+    })
+
+    const slideprog = new Swiper('.swiper-cct', {
+        slideToClickedSlide: false,
+        loop: false,
+        allowTouchMove: false,
+        slidesPerView: 5,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        navigation: {
+            nextEl: '.arrownext',
+            prevEl: '.arrowback',
         },
         on: {
             init() {

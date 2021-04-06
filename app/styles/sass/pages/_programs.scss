@@ -302,10 +302,14 @@
 
   .news {
     display: none;
+    transition: .5s;
+    transform: scale(0.5);
   }
 
   .actives {
     display: flex;
+    transition: .5s;
+    transform: scale(1);
   }
 
   .sortprog {
@@ -382,130 +386,171 @@
     @include _aspect-ratio {
       bottom: 60px * $height-rate-big;
     }
-
-    ul {
+    .slideprog {
       display: flex;
+      z-index: 10;
+      //overflow: hidden;
+      //max-width: 1260px * $width-rate;
+      max-width: 1260px * $width-rate;
 
-      li {
-        width: 170px * $width-rate;
-        margin-right: 92px * $width-rate;
-        text-align: center;
-        color: $color-primary;
+      .swiper-slide-active {
+        visibility: visible;
+        opacity: 1;
+        transition: .5s;
+        margin-left: 28px * $width-rate;
+      }
 
-        &:first-child {
-          margin-left: 28px * $width-rate;
-        }
+      .swiper-slide-prev {
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        transform: scale(0.5);
+      }
+      .swiper-slide-prev-prev, .swiper-slide-prev-prev-prev {
+        visibility: hidden;
+        transform: scale(1);
+      }
+      .swiper-slide-5 {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(1);
+        transition: .5s;
+      }
 
-        &:last-child {
-          margin-right: 28px * $width-rate;
-        }
 
-        button {
-          width: 120px * $width-rate;
-          height: 120px * $width-rate;
-          border: 0;
-          border-radius: 100%;
-          margin-bottom: 20px * $height-rate;
-          position: relative;
-          background-color: #fff;
-          @include _aspect-ratio {
-            margin-bottom: 20px * $height-rate-big;
+      .swiper-slide-6, .swiper-slide-7, .swiper-slide-8 {
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        transform: scale(0.5);
+      }
+
+      ul {
+        display: flex;
+        width: 100%;
+
+        li {
+          width: 170px * $width-rate;
+          text-align: center;
+          color: $color-primary;
+          margin-right: 96.5px * $width-rate;
+
+          //&:first-child {
+          //  margin-left: 28px * $width-rate;
+          //}
+
+          &:last-child {
+            //margin-right: 28px * $width-rate;
           }
 
-          &:after {
-            position: absolute;
-            z-index: -1;
-            background: $color-background;
-            width: 134px * $width-rate;
-            height: 131px * $width-rate;
-            left: -7.5px * $width-rate;
-            top: -7px * $width-rate;
-            content: '';
+          button {
+            width: 120px * $width-rate;
+            height: 120px * $width-rate;
+            border: 0;
             border-radius: 100%;
-          }
-
-          svg {
-            margin-top: 5px;
-            width: 100%;
-            height: 55%;
-
-            path {
-              fill: $color-primary;
+            margin-bottom: 20px * $height-rate;
+            position: relative;
+            background-color: #fff;
+            @include _aspect-ratio {
+              margin-bottom: 20px * $height-rate-big;
             }
-          }
-        }
 
-        p {
-          font-size: 18px * $width-rate;
-          font-family: Lato;
-        }
-      }
-      .active {
-        &:nth-child(1), &:nth-child(6), &:nth-child(11) {
-          color: #FB5D7E;
+            &:after {
+              position: absolute;
+              z-index: -1;
+              background: $color-background;
+              width: 134px * $width-rate;
+              height: 131px * $width-rate;
+              left: -7.5px * $width-rate;
+              top: -7px * $width-rate;
+              content: '';
+              border-radius: 100%;
+            }
 
-          button {
             svg {
+              margin-top: 5px;
+              width: 100%;
+              height: 55%;
+
               path {
-                fill: #FB5D7E;
+                fill: $color-primary;
               }
+            }
+          }
+
+          p {
+            font-size: 18px * $width-rate;
+            font-family: Lato;
+          }
+        }
+        .active {
+          &:nth-child(1), &:nth-child(6), &:nth-child(11) {
+            color: #FB5D7E;
+
+            button {
+              svg {
+                path {
+                  fill: #FB5D7E;
+                }
+              }
+            }
+          }
+
+          &:nth-child(2), &:nth-child(7), &:nth-child(12) {
+              color: #FFB342;
+
+              button {
+                svg {
+                  path {
+                    fill: #FFB342;
+                  }
+                }
+            }
+          }
+
+          &:nth-child(3), &:nth-child(8), &:nth-child(13) {
+              color: #90EB84;
+
+              button {
+                svg {
+                  path {
+                    fill: #90EB84;
+                  }
+                }
+            }
+          }
+
+          &:nth-child(4), &:nth-child(9), &:nth-child(14) {
+              color: #2FE7F2;
+
+              button {
+                svg {
+                  path {
+                    fill: #2FE7F2;
+                  }
+                }
+              }
+          }
+
+          &:nth-child(5), &:nth-child(10), &:nth-child(15) {
+              color: #178ddb;
+
+            button {
+                svg {
+                  path {
+                    fill: #099EF1;
+                  }
+                }
             }
           }
         }
 
-        &:nth-child(2), &:nth-child(7), &:nth-child(12) {
-            color: #FFB342;
-
-            button {
-              svg {
-                path {
-                  fill: #FFB342;
-                }
-              }
-          }
-        }
-
-        &:nth-child(3), &:nth-child(8), &:nth-child(13) {
-            color: #90EB84;
-
-            button {
-              svg {
-                path {
-                  fill: #90EB84;
-                }
-              }
-          }
-        }
-
-        &:nth-child(4), &:nth-child(9), &:nth-child(14) {
-            color: #2FE7F2;
-
-            button {
-              svg {
-                path {
-                  fill: #2FE7F2;
-                }
-              }
-            }
-        }
-
-        &:nth-child(5), &:nth-child(10), &:nth-child(15) {
-            color: #178ddb;
-
-          button {
-              svg {
-                path {
-                  fill: #099EF1;
-                }
-              }
-          }
-        }
       }
-
     }
 
     .arrowback, .arrownext {
       padding-top: 70px * $height-rate;
+      z-index: 99;
       @include _aspect-ratio {
         padding-top: 70px * $height-rate-big;
       }
@@ -527,9 +572,18 @@
           width: 10px * $width-rate;
         }
       }
+
+      &.swiper-button-disabled {
+        button{
+          background: #DDE3E8;
+        }
+      }
     }
   }
 }
+
+
+
 
 .programs-container {
   @include display-flex(column);
