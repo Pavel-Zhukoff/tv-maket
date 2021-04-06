@@ -153,6 +153,70 @@
     display: none;
   }
 }
+.formatads {
+  display: none;
+  @include _768 {
+    display: block;
+    margin-bottom: 50px;
+
+    .control {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 300px * $width-rate;
+      position: relative;
+      bottom: 30px;
+    }
+
+    .svgformat{
+      text-align: center;
+    }
+    .sliderformat{
+      display: flex;
+      margin-top: 20px;
+
+      .slidercardformat {
+        display: flex;
+        position: relative;
+        left: 475px * $width-rate;
+
+        .cardformat {
+          width: 200px;
+          height: 90px;
+          background: #FFFFFF;
+          box-shadow: 5px 5px 10px rgba(7, 19, 43, 0.1);
+          border-radius: 16px;
+          font-size: 15px;
+          padding: 5px;
+          text-align: center;
+          @include display-flex(column);
+          align-items: center;
+          flex-direction: inherit;
+
+          p {
+            color: #07132B;
+            width: 100%;
+          }
+        }
+        .swiper-slide{
+          transition: all 200ms linear;
+        }
+        .swiper-slide-active {
+          transform: scale(1);
+        }
+        .swiper-slide-prev, .swiper-slide-next {
+          transform: scale(0.8);
+          bottom: 30px;
+          position: relative;
+        }
+        .swiper-slide-prev-prev, .swiper-slide-next-next {
+          transform: scale(0.1);
+          bottom: 50px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
 
 
 .ads-example-block {
