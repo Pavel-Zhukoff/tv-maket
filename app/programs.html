@@ -1230,6 +1230,9 @@
                 $(this).addClass('active')
                 $('.menusel').removeClass('actives')
                 $(`.menusel[data-menu=${$(this).attr('data-toggle')}]`).addClass('actives')
+                $('.listprog').toggleClass('active')
+                $('.close').toggleClass('active')
+                $('.open').toggleClass('active')
             })
             $('#selec').click(function () {
                 $('.listprog').toggleClass('active')

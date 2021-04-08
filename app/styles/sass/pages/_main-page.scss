@@ -47,6 +47,47 @@
 
     .daily-shows_panel__slider {
       @include display-flex(row);
+
+      .card{
+        @include _768 {
+          .card_thumbnail {
+            .card_thumbnail__icon {
+              width: 24px;
+              height: 24px;
+              right: -13px;
+              top: -13px;
+              line-height: 0;
+              @include display-flex(column);
+              justify-content: center;
+            }
+            &:after {
+              width: 28px;
+              height: 28px;
+              top: -14px;
+              right: -14px;
+            }
+          }
+        }
+        .card_content{
+          .card_content__title {
+            @include _768 {
+              margin-top: 5px;
+              margin-bottom: 3px;
+            }
+          }
+          .card_content__description {
+            @include _768 {
+              display: none;
+            }
+          }
+          .card_content__separator {
+            @include _768 {
+              width: 100%;
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
     }
 
     &:after {

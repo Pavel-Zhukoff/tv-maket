@@ -268,7 +268,7 @@
 
           .content {
             @include _768() {
-              max-height: 50px;
+              max-height: 48px;
               overflow: hidden;
               line-height: 16px;
               display: -webkit-box;

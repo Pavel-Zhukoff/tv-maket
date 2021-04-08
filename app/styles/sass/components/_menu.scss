@@ -477,6 +477,7 @@
       position: relative;
       border-bottom: 2px solid $color-white;
       margin-right: 8px;
+      border-radius: 0;
     }
     .search_container__button {
       border: 2px solid $color-white;
@@ -501,8 +502,10 @@
   }
 
   .live-view-button {
-    margin-bottom: 54px;
+    margin-bottom: 50px;
     text-decoration: none;
+    text-align: center;
+    justify-content: center;
 
     .live-view-button_icon {
       @include display-flex(column);
@@ -512,6 +515,7 @@
       border-radius: 50%;
       border: 3px solid transparent;
       box-sizing: content-box;
+      margin: auto;
       background:
               linear-gradient(90deg, #F86363 0%, #FF53A5 100%) padding-box, /*this is your grey background*/
               linear-gradient($color-white , rgba($color-white, 0.1)) border-box;
@@ -527,7 +531,7 @@
       text-align: center;
       color: $color-white;
       font-size: 10px;
-      font-family: $color-accent;
+      font-family: $font-family-accent;
       font-weight: 700;
       margin-top: 5px;
       display: block;
