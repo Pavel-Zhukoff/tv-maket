@@ -1238,13 +1238,18 @@ h1,h2,h3 {
 .show-more-mobile {
   background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
   border-radius: 30px;
-  padding: 7px 24px;
+  padding: 0px 24px;
+  height: 26px;
   text-decoration: none;
   display: none;
 
   @include _768 {
     text-align: right;
-    display: inline;
+    display: block;
+    @include display-flex(column);
+    align-items: center;
+    justify-content: center;
+    flex-direction: inherit;
   }
 
   &:hover {
@@ -1255,5 +1260,10 @@ h1,h2,h3 {
   .text {
     color: $color-white;
     font-size: 10px;
+    line-height: 26px;
+    vertical-align: middle;
+  }
+  svg{
+    margin-left: 3px;
   }
 }

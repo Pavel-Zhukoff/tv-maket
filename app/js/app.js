@@ -189,8 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slideToClickedSlide: true,
         loop: true,
         allowTouchMove: false,
-        slidesPerView: 2,
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         navigation: {
             nextEl: '.control .next',
             prevEl: '.control .prev',

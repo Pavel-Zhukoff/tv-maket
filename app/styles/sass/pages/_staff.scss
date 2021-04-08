@@ -14,7 +14,7 @@ body {
   .contacts-card {
     &:before {
       @include _768() {
-        height: 135px;
+        height: 120px;
       }
     }
     &:nth-child(1) {
@@ -26,8 +26,14 @@ body {
       }
       @include _768() {
         width: 136px;
+        height: 120px;
         order: 2;
         margin-right: 0;
+        .contacts-card_icon {
+          //margin-top: 22px;
+          bottom: -16px;
+          top: 16px;
+        }
       }
     }
     &:nth-child(2) {
@@ -38,8 +44,13 @@ body {
     &:nth-child(3) {
       @include _768() {
         width: 200px;
+        height: 120px;
         margin-right: 8px;
         order: 1;
+        .contacts-card_icon {
+          //margin-top: 22px;
+          bottom: -26px;
+        }
       }
     }
 
@@ -47,21 +58,27 @@ body {
       @include _768() {
         width: 60px;
         height: 60px;
+        min-height: 60px;
         order: 2;
         background: linear-gradient(180deg,#fff 60%,transparent 60%)!important;
-        bottom: -30px;
+        bottom: -16px;
+        @include display-flex(column);
+        align-items: center;
+        justify-content: center;
       }
 
       .contacts-card_icon__phone {
         @include _768() {
           width: 16px!important;
-          margin-top: 5px!important;
+          height: 30px!important;
+          margin-top: inherit!important;
         }
       }
       .contacts-card_icon__email {
         @include _768() {
           width: 25px!important;
-          margin-top: 10px!important;
+          height: 20px!important;
+          margin-top: inherit!important;
         }
       }
     }
@@ -75,6 +92,7 @@ body {
       .contacts-card_content__title {
         @include _768() {
           font-size: 18px;
+          margin-top: 10px;
         }
       }
       .contacts-card_content__link {

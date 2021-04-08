@@ -2,6 +2,8 @@
   color: $color-primary;
   @include _768 {
     text-align: center;
+    margin-left: 0;
+    margin-bottom: 25px;
   }
 }
 
@@ -173,11 +175,14 @@
     .sliderformat{
       display: flex;
       margin-top: 20px;
+      position: relative;
+      max-width: 200px;
+      margin: 20px auto 0 auto;
 
       .slidercardformat {
         display: flex;
         position: relative;
-        left: 475px * $width-rate;
+        //left: 600px * $width-rate;
 
         .cardformat {
           width: 200px;

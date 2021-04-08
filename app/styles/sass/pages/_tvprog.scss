@@ -117,7 +117,7 @@
         text-decoration: none;
         @include display-flex(column);
         align-items: center;
-        line-height: 40px;
+        justify-content: center;
       }
 
       .tvprogram-nav_item__today {
@@ -267,7 +267,7 @@
       right: -30px * $width-rate;
       width: 170px * $width-rate;
       height: 170px * $width-rate;
-      line-height: 170px;
+      line-height: 190px * $height-rate;
       text-align: center;
       z-index: 2;
       @include _768() {
