@@ -9,8 +9,11 @@
     height: auto;
   }
 
-  .swiper-slide-prev-prev, .swiper-slide-prev {
+  .swiper-slide-prev-prev, .swiper-slide-prev, .swiper-slide-prev-prev-prev {
     visibility: hidden;
+    @include _768 {
+      visibility: visible;
+    }
   }
   .daily-shows_controls {
     @include display-flex(row);
@@ -40,10 +43,16 @@
 
   .daily-shows_panel {
     position: relative;
-    width: 100%;
+    //width: 100%;
+    width: 460px * $width-rate;
     @include display-flex(row);
     flex-wrap: nowrap;
     margin-left: 30px * $width-rate;
+    @include _768 {
+      width: 212px;
+      margin: 5px auto;
+    }
+
 
     .daily-shows_panel__slider {
       @include display-flex(row);
@@ -97,7 +106,7 @@
       padding: 40px * $height-rate 40px * $width-rate;
       position: absolute;
       left: -40px * $width-rate;
-      width: 120%;
+      width: 100vw;
       bottom: 0;
       z-index: -1;
       content: '';
@@ -108,8 +117,9 @@
 
       @include _768 {
         height: 96px;
-        width: 100%;
+        width: 100vw;
         border-radius: 0;
+        left: -158px * $width-ratemob;
       }
     }
 
@@ -168,7 +178,7 @@
 
     &:after {
       min-height: 190px * $height-rate;
-      max-height: 495px * $height-rate;
+      max-height: 540px * $height-rate;
       height: 100%;
       border-radius: 20px;
       background-color: $color-white;
@@ -208,6 +218,7 @@
           width: 295px * $width-rate;
           @include _768 {
             width: 100%;
+            padding: 0 15px;
           }
 
           &:nth-child(4n) {
@@ -217,7 +228,7 @@
 
           .card_content {
             @include _768 {
-              padding: 8px 16px 16px;
+              padding: 8px 0px 16px;
             }
 
             .card_content__separator {
@@ -243,7 +254,7 @@
 
             .card_thumbnail__image {
               @include _768 {
-                border-radius: 0;
+                border-radius: 10px;
               }
             }
 
