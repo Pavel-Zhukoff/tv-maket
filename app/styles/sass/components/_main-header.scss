@@ -258,6 +258,10 @@
       max-height: 1275px * $height-rate-big;
     }
 
+    &.fullnonactive {
+      clip-path: none;
+    }
+
     @include _768() {
       height: auto;
       max-height: 100%;
@@ -281,13 +285,44 @@
       //right: 200px * $width-rate;
       overflow: hidden;
       @include _768() {
-        width: 100%;
-        min-height: 210px;
-        height: auto;
+        width: 100vw;
+        height: 56.3vw;
+      }
+
+      .vjs-control-bar {
+        display: none;
+
+        &.contactive {
+          display: flex;
+        }
+      }
+
+      .vjs-big-play-button {
+        top: unset;
+        left: unset;
+        margin: 80px auto;
+        font-size: 30px;
+        line-height: 48px;
+        height: 50px;
+        width: 50px;
+        position: relative;
+        padding: 0;
+        cursor: pointer;
+        opacity: 1;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background-color: #2B333F;
+        background-color: transparent;
+        border-radius: 50%;
+        transition: all 0.4s;
+        visibility: hidden;
+
+        @include _768() {
+          visibility: visible;
+        }
       }
 
       video{
-        max-width: 200%;
+        max-width: inherit;
         width: auto;
         height: 100%;
         //width: 50%;
@@ -310,6 +345,7 @@
       }
 
       @include _768{
+        display: none;
         bottom: 8px;
         left: 0;
         padding-left: 16px;

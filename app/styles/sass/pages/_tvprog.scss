@@ -102,7 +102,6 @@
       width: 100%;
       background: linear-gradient(90deg, rgba(25, 92, 174, 0.8) 0%, rgba(22, 158, 235, 0.8) 100%);
       border-radius: 0 0 15px 15px;
-      font-size: 18px;
       justify-content: space-between;
       padding: 2px 15px;
       z-index: 99;
@@ -113,9 +112,10 @@
         height: 40px;
         border-radius: 50%;
         font-weight: 700;
+        font-size: 15px;
         color: #fff;
         text-decoration: none;
-        @include display-flex(column);
+        display: flex;
         align-items: center;
         justify-content: center;
       }

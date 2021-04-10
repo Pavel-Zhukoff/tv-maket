@@ -22,22 +22,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     const daily = new Swiper('.daily-shows_panel', {
         slideToClickedSlide: true,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 20,
-        initialSlide: arrayLength-3,
-        cssMode: false,
-        slidesOffsetAfter: -40,
+        initialSlide: 0,
+        slidesOffsetAfter: 0,
+        loop: false,
         navigation: {
             nextEl: '.daily-shows_controls__left .arrow',
             prevEl: '.daily-shows_controls__right .arrow',
         },
         breakpoints: {
-          780: {
-              slidesPerView: 1,
-              initialSlide: 2,
-              slidesOffsetAfter: 0,
-              spaceBetween: 16,
-          },
+            // when window width is >= 320px
+            790: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            220: {
+                initialSlide: 0,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: false
+            },
         },
         on: {
             init() {
@@ -208,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slideToClickedSlide: false,
         loop: false,
         allowTouchMove: false,
-        slidesPerView: 5,
         slidesPerView: 'auto',
         spaceBetween: 0,
         navigation: {

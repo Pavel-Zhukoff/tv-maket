@@ -13,7 +13,7 @@
     .contacts-card {
       &:before {
         @include _768() {
-          height: 135px;
+          height: 120px;
         }
       }
       &:nth-child(1) {
@@ -68,7 +68,7 @@
         @include _768() {
           order: 1;
           padding: 10px 1vw 0;
-          height: 75px;
+          height: 60px;
         }
 
         .contacts-card_content__title {
