@@ -280,13 +280,13 @@
             .card_thumbnail__icon {
               width: 30px * $width-rate;
               height: 30px * $width-rate;
-              line-height: 35px * $height-rate;
+              //line-height: 35px * $height-rate;
               font-size: $font-size-12;
               background: $color-primary;
               top: -15px * $height-rate;
               right: -10px * $width-rate;
               @include _aspect-ratio {
-               line-height: 35px * $height-rate-big;
+               //line-height: 35px * $height-rate-big;
                top: -15px * $height-rate-big;
               }
               @include _768 {
@@ -519,6 +519,9 @@
       @include circle(60px, $gradient-red);
       text-align: center;
       z-index: 10001;
+      @include display-flex(column);
+      align-items: center;
+      justify-content: center;
 
       &:hover {
         animation: gradient-red-animation 1s linear;
@@ -526,13 +529,10 @@
 
       svg {
         height: 30px * $height-rate;
-        margin-top: 19px * $height-rate;
         transform: rotate(180deg);
-        margin-left: 5px * $width-rate;
 
         @include _aspect-ratio {
           height: 30px * $height-rate-big;
-          margin-top: 15px * $height-rate-big;
         }
         path {
           stroke: $color-accent
