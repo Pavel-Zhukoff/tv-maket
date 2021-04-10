@@ -34,6 +34,9 @@
       svg {
         width: 14px * $width-rate;
         padding-bottom: 2px;
+        @include _768 {
+          width: 6px;
+        }
       }
 
       &:last-child {

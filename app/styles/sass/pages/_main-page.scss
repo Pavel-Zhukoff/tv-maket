@@ -273,24 +273,30 @@
                top: -20px * $height-rate-big;
               }
               @include _768 {
-                display: none;
+                width: 34px;
+                height: 34px;
+                top: -16px;
+                right: -16px;
               }
             }
 
             .card_thumbnail__icon {
               width: 30px * $width-rate;
               height: 30px * $width-rate;
-              //line-height: 35px * $height-rate;
               font-size: $font-size-12;
               background: $color-primary;
               top: -15px * $height-rate;
               right: -10px * $width-rate;
               @include _aspect-ratio {
-               //line-height: 35px * $height-rate-big;
                top: -15px * $height-rate-big;
               }
               @include _768 {
-                display: none;
+                width: 24px;
+                height: 24px;
+                font-size: 9px;
+                background: #195cae;
+                top: -10px;
+                right: -10px;
               }
             }
           }

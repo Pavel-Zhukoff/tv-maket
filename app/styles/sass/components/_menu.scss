@@ -462,12 +462,22 @@
     form {
       @include display-flex(row);
       flex-grow: 1;
+      position: relative;
+
+      .close__search {
+        position: absolute;
+        background: transparent;
+        border: 0;
+        left: 0;
+        bottom: 15px;
+        padding: 0;
+      }
     }
 
     .search_container__field {
       display: block;
       flex-grow: 1;
-      padding: 0 24px * $width-rate;
+      padding: 0 5px 0 25px;
       background: transparent;
       outline: 0;
       border: 0;
@@ -478,6 +488,10 @@
       border-bottom: 2px solid $color-white;
       margin-right: 8px;
       border-radius: 0;
+
+      &::placeholder{
+        color: rgba(255, 255, 255, 0.5);
+      }
     }
     .search_container__button {
       border: 2px solid $color-white;
