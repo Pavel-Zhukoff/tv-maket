@@ -365,9 +365,6 @@
               height: 100%;
               width: auto;
 
-              path {
-                fill: $color-white;
-              }
             }
 
             &:hover {
@@ -590,6 +587,7 @@
         color: $color-white;
         text-decoration: none;
         position: relative;
+        width: max-content;
 
         &.nav-menu-link_active {
           &:after {

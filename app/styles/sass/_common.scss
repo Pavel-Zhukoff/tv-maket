@@ -10,7 +10,7 @@
   display: block;
   width: $width;
   height: $height;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 @mixin icon($d) {
@@ -685,7 +685,7 @@ h1,h2,h3 {
       }
 
       &:hover {
-        text-decoration: underline;
+        color:#195CAE;
       }
     }
 
@@ -1004,6 +1004,8 @@ h1,h2,h3 {
         }
         .article_content {
           padding: 0;
+          text-decoration: none;
+
 
           .badge {
             display: none;

@@ -103,6 +103,9 @@
           @include display-flex(column);
         }
 
+        &:nth-child(2) {
+          padding-top: 2px * $height-rate;
+        }
         &:first-child,
         &:last-child {
           padding-top: 28px * $height-rate;
@@ -204,6 +207,10 @@
       outline: 0;
       border: 0;
       margin-bottom: 10px * $height-rate;
+      padding: 0;
+      @include display-flex(column);
+      align-items: center;
+      justify-content: center;
       @include _aspect-ratio {
         margin-bottom: 10px * $height-rate-big;
       }
@@ -221,7 +228,6 @@
         display: block;
         width: autogit pu;
         height: 14px * $height-rate;
-        margin: auto;
         @include _aspect-ratio {
           height: 14px * $height-rate-big;
         }

@@ -231,6 +231,20 @@
             }
             .more{
               width: 10px;
+
+              .opentx {
+                display: none;
+                &.active {
+                  display: block;
+                }
+              }
+              .closetx {
+                display: none;
+                transform: rotate(180deg);
+                &.active {
+                  display: block;
+                }
+              }
             }
           }
         }
@@ -408,6 +422,31 @@
     width: 1360px * $width-rate;
     @include _aspect-ratio {
       padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate-big;
+    }
+  }
+  @include _768() {
+    .programs-container {
+      .programs-row {
+        .card {
+          .card_thumbnail {
+            .card_thumbnail__icon {
+              top: -12px;
+              right: -8px;
+              line-height: unset;
+              @include display-flex(column);
+              align-items: center;
+              justify-content: center;
+            }
+            &::after{
+              display: block;
+              width: 30px;
+              height: 30px;
+              top: -15px;
+              right: -11px;
+            }
+          }
+        }
+      }
     }
   }
 }

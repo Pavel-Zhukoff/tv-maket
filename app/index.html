@@ -1,6 +1,7 @@
 <!--#set var="title" value="Главная" -->
 <!--#include virtual="/parts/header.html" -->
 <link rel="stylesheet" href="css/main-page.min.css">
+<link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 
 </head>
 
@@ -215,7 +216,6 @@
         </div>
     </aside>
     <div class="video">
-        <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
         <video id="teleefir" class="video_player video-js" controls>
         </video>
             <div class="video_controls">
@@ -257,37 +257,6 @@
                 </div>
             </div>
         </div>
-        <script src="https://unpkg.com/video.js/dist/video.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script>
-            let video = videojs('teleefir', {
-                autoplay: true,
-                muted: true,
-                controls: true,
-                poster: 'images/dist/poster.png',
-            });
-            var _0x3e0d=["\x68\x74\x74\x70\x3A\x2F\x2F\x38\x32\x2E\x31\x33\x38\x2E\x32\x2E\x35\x30\x3A\x31\x39\x33\x35\x2F\x6C\x69\x76\x65\x2F\x54\x65\x6F\x54\x56\x2E\x73\x74\x72\x65\x61\x6D\x5F\x37\x32\x30\x70\x2F\x70\x6C\x61\x79\x6C\x69\x73\x74\x2E\x6D\x33\x75\x38","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x78\x2D\x6D\x70\x65\x67\x55\x52\x4C","\x73\x72\x63"];video[_0x3e0d[2]]({src:_0x3e0d[0],type:_0x3e0d[1],withCredentials:false})
-            player.play();
-        </script>
-        <script>
-            $('.buttons_pause').click(function () {
-                $('.stopb').toggleClass('active')
-                $('.playb').toggleClass('active')
-                $('.vjs-play-control').click()
-            })
-            $('.buttons_audio').click(function () {
-                $('.muteb').toggleClass('active')
-                $('.unmuteb').toggleClass('active')
-                $('.vjs-mute-control').click()
-            })
-            $('.buttons_fullscreen').click(function () {
-                $('.vjs-fullscreen-control').click()
-            })
-            $('.vjs-fullscreen-control').click(function () {
-                $('.video').toggleClass('fullnonactive')
-                $('.vjs-control-bar').toggleClass('contactive')
-            })
-        </script>
     </div>
 
 </header>
@@ -955,15 +924,14 @@
             </article>
             <article class="b-v-post d-mob-show">
                 <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
 
@@ -995,27 +963,25 @@
 
             </article>
             <article class="s-h-post d-mob-show">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
             <article class="s-h-post d-mob-show">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
         </div>
@@ -1074,28 +1040,26 @@
 
             <article class="b-h-post d-mob-show">
                 <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
             <article class="b-v-post d-mob-show">
                 <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
 
@@ -1103,40 +1067,36 @@
         <div class="articles_container d-mob-show">
             <article class="b-v-post d-mob-show">
                 <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
             <article class="s-h-post d-mob-show">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
+                </a>
 
             </article>
             <article class="s-h-post d-mob-show">
-                <div class="article_content">
+                <a href="#" class="article_content">
                     <span class="article_content__date">Сегодня 15:00</span>
                     <div class="article_content__separator"></div>
                     <h3 class="article_content__title">Петр толстый подвел итоги</h3>
                     <p class="article_content__description">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
                     </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-
+                </a>
             </article>
 
 
