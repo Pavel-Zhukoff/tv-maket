@@ -13,7 +13,7 @@
     .contacts-card {
       &:before {
         @include _768() {
-          height: 120px;
+          height: 110px;
         }
       }
       &:nth-child(1) {
@@ -68,7 +68,7 @@
         @include _768() {
           order: 1;
           padding: 10px 1vw 0;
-          height: 60px;
+          height: 50px;
         }
 
         .contacts-card_content__title {
@@ -428,7 +428,7 @@
 
     &.contact-form_submit__active {
       background-clip: text;
-      color: transparent;
+      color: #169eeb;
       background-image: linear-gradient(270deg, #24fbc7 0%, #169eeb 25%);
       border-image: linear-gradient(270deg, #24fbc7 0%, #169eeb 25%);
       border: 1px #169eeb solid;

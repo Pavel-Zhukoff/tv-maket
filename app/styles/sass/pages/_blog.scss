@@ -1,6 +1,9 @@
 .main-menu {
   position: relative;
   @include _768() {
-    display: block;
+    display: flex;
   }
+}
+.progblock {
+  margin-top: 20px;
 }

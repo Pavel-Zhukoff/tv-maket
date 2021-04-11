@@ -118,6 +118,9 @@
   @include _768() {
     display: block;
     height: 100px;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
 
     .search {
       background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
@@ -299,6 +302,9 @@
 }
 
 .progblock {
+  @include _768() {
+    margin-top: 120px;
+  }
 
   .news {
     display: none;
@@ -679,7 +685,12 @@
             top: -15px * $height-rate-big;
           }
           @include _768() {
-            display: none;
+            display: block;
+            width: 24px;
+            height: 24px;
+            font-size: 9px;
+            top: 10px;
+            right: 15px;
           }
         }
       }
