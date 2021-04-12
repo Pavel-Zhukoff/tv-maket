@@ -274,4 +274,9 @@ $('.more').click(function () {
     $('.opentx').toggleClass('active')
     $('.closetx').toggleClass('active')
 })
-
+$('.prog_menu-drop').mouseenter(function () {
+    $('.programs__contain-menu').addClass('activepm')
+})
+$('.programs__contain-menu').mouseleave(function(){
+    $('.programs__contain-menu').removeClass('activepm')
+});

@@ -34,7 +34,7 @@
 }
 
 .main-menu {
-  z-index: 100;
+  z-index: 99999;
   position: relative;
   margin: 0;
   padding: 0;
@@ -382,6 +382,185 @@
         }
       }
 
+    }
+  }
+}
+
+.programs__contain-menu {
+  background: rgba(7, 19, 43, 0.9);
+  box-shadow: 0px 20px 20px rgba(7, 19, 43, 0.25);
+  max-height: 0;
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top:0;
+  z-index: 9999;
+  font-family: $font-family-base;
+  font-size: $font-size-24;
+  transition: 1s;
+
+  &.activepm{
+    max-height: 395px * $height-rate;
+    height: 395px * $height-rate;
+    transition: 1s;
+  }
+  .programs__contain {
+    padding-top: 210px * $height-rate;
+    padding-left: 550px * $width-rate;
+    display: flex;
+
+    .prog__list{
+      margin-right: 120px * $width-rate;
+
+      .comp__list{
+        margin-bottom: 25px * $width-rate;
+        position: relative;
+        width: max-content;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        a{
+          color: $color-white;
+          text-decoration: none;
+
+          svg{
+            width: 30px * $width-rate;
+            fill: $color-white;
+          }
+        }
+        &:after {
+          position: absolute;
+          content: '';
+          width: 0;
+          height: 3px;
+          bottom: -5px;
+          left: 0;
+          transition: width .3s ease-out;
+        }
+      }
+    }
+  }
+
+  .prgl1{
+    .comp__list {
+      &:nth-child(1) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+          }
+        }
+      }
+      &:nth-child(2) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(270deg, #FBB224 0%, #FB7E24 100%);
+          }
+        }
+      }
+      &:nth-child(3) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(270deg, #C9FA98 0%, #50DA6E 100%);
+          }
+        }
+      }
+    }
+  }
+  .prgl2{
+    .comp__list {
+      &:nth-child(1) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(270deg, #24FBC7 0%, #169EEB 100%);
+          }
+        }
+      }
+      &:nth-child(2) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+          }
+        }
+      }
+      &:nth-child(3) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+          }
+        }
+      }
+    }
+  }
+  .prgl3{
+    .comp__list {
+      &:nth-child(1) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(270deg, #FBB224 0%, #FB7E24 100%);
+          }
+        }
+      }
+      &:nth-child(2) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(270deg, #C9FA98 0%, #50DA6E 100%);
+          }
+        }
+      }
+      &:nth-child(3) {
+
+        &:hover {
+          text-decoration: none;
+          color: $color-white;
+
+          &:after {
+            width: 105%;
+            background: linear-gradient(270deg, #24FBC7 0%, #169EEB 100%);
+          }
+        }
+      }
     }
   }
 }
