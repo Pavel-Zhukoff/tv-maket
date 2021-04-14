@@ -1,3 +1,16 @@
+.main-menu {
+  background: linear-gradient(180deg, rgba(7, 19, 43, 0.6) 0%, rgba(7, 19, 43, 0) 100%);
+  position: absolute;
+
+  .main-menu_logo {
+    background: transparent;
+  }
+
+  .main-menu_container {
+    background: transparent;
+  }
+}
+
 .navigation-mobile {
   @include _768 {
     display: none;
@@ -6,19 +19,6 @@
 .errorpage {
   background: #195CAE;
   height: 100vh;
-
-  .main-menu {
-    background: linear-gradient(180deg, rgba(7, 19, 43, 0.6) 0%, rgba(7, 19, 43, 0) 100%);
-
-    .main-menu_logo {
-      background: transparent;
-    }
-
-    .main-menu_container {
-      background: transparent;
-    }
-  }
-
 
   .position {
     @include display-flex(column);

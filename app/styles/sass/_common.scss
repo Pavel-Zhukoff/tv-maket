@@ -766,7 +766,15 @@ h1,h2,h3 {
 
 .articles {
   @include _768{
-    padding: 0 16px;
+    display: none;
+  }
+
+  &.mobshow{
+    display: none;
+    @include _768{
+      display: inherit;
+      padding: 0 16px;
+    }
   }
 
   .article_link_show {
