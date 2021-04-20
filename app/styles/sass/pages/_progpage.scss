@@ -27,6 +27,7 @@
           }
         }
         .card {
+          max-width: 25%;
           a{
             img{
               @include _768() {
