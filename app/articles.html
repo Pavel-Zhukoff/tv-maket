@@ -8,743 +8,29 @@
 <section class="wrapper wrapper-m-t-sm-art">
     <div class="sortart">
         <div class="leftsel">
-            <button class="artsort active">
+            <button class="artsort popular active">
                 По популярности
-                <span class="arrowsort"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="arrowsort active"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 6L6 1L1 6" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="arrowsort popsort"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="arrowsort popsort active"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 6L6 1L1 6" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </button>
-            <button class="artsort">
+            <button class="artsort newest">
                 По новизне
-                <span class="arrowsort active"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                <span class="arrowsort"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 6L6 1L1 6" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="arrowsort newsort active"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L6 6L11 1" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="arrowsort newsort"><svg viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 6L6 1L1 6" stroke="#195CAE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </button>
         </div>
         <div class="rightsel">
             <div class="categoryart">
-                <button class="badge">#статьи</button>
+                <button class="badge" data-toggle="articles">#статьи</button>
             </div>
             <div class="categoryart">
-                <button class="badge">#разное</button>
-            </div>
-            <div class="categoryart active">
-                <button class="badge">#все</button>
+                <button class="badge" data-toggle="other">#разное</button>
             </div>
         </div>
     </div>
-    <div class="articlesg">
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <div class="article_list">
-                        <span class="article_content__date">Сегодня 15:00</span>
-                        <span><button class="badge">#разное</button></span>
-                    </div>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
+    <div class="articlesg" id="articlesg">
     </div>
-    <div class="articlesg mob">
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
-        <div class="articles_container">
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-            <article class="art-card">
-                <img src="images/dist/placeholder-1.png" alt="" class="article_thumbnail">
-                <div class="article_content">
-                    <span class="article_content__date">Сегодня 15:00</span>
-                    <div class="article_content__separator"></div>
-                    <a href="#"><h3 class="article_content__title">Петр толстый подвел итоги</h3></a>
-                    <a href="#"><p class="article_content__description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.
-                    </p></a>
-                    <a href="" class="article_content__url">Подробнее</a>
-                </div>
-            </article>
-        </div>
+    <div class="articlesg mob" id="articlesgmob">
     </div>
 </section>
 
@@ -757,10 +43,192 @@
     </span>
 </div>
 
+
+
 <script>
-    $('#filter').on('click', ()=> {
-        $('.item').addClass('hide');
-        $('.red').removeClass('hide');
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+        var articles = [
+            Art1 = {
+                "name": "Петр толстый подвел 1",
+                "time": "Сегодня 15:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art2 = {
+                "name": "Петр толстый подвел 2",
+                "time": "Сегодня 10:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "разное",
+                "href": "https://google.com"
+            },
+            Art3 = {
+                "name": "Петр толстый подвел 3",
+                "time": "Сегодня 19:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art4 = {
+                "name": "Петр толстый подвел 4",
+                "time": "Сегодня 4:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "разное",
+                "href": "https://google.com"
+            },
+            Art5 = {
+                "name": "Петр толстый подвел 5",
+                "time": "Сегодня 5:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art6 = {
+                "name": "Петр толстый подвел 6",
+                "time": "Сегодня 1:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "разное",
+                "href": "https://google.com"
+            },
+            Art7 = {
+                "name": "Петр толстый подвел 7",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art8 = {
+                "name": "Петр толстый подвел 8",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "разное",
+                "href": "https://google.com"
+            },
+            Art9 = {
+                "name": "Петр толстый подвел 9",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art10 = {
+                "name": "Петр толстый подвел 10",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "разное",
+                "href": "https://google.com"
+            },
+            Art11 = {
+                "name": "Петр толстый подвел 11",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art12 = {
+                "name": "Петр толстый подвел 12",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "статьи",
+                "href": "https://google.com"
+            },
+            Art13 = {
+                "name": "Петр толстый подвел 13",
+                "time": "Сегодня 6:00",
+                "img": "http://localhost:3000/images/dist/placeholder-1.png",
+                "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni molestias omnis porro quod ratione reiciendis sit.",
+                "categ": "разное",
+                "href": "https://google.com"
+            }
+        ];
+
+        var out = '';
+
+        function vivod(articlesh) {
+            return articlesh.map(el => {
+                    return (
+                        '<article class="art-card">' +
+                        '<img src="' + el.img + '" class="article_thumbnail">' +
+                        '<div class="article_content">' +
+                        '<div class="article_list">' +
+                        '<span class="article_content__date">' + el.time + '</span>' +
+                        '<span><button class="badge">#' + el.categ + '</button></span>' +
+                        '</div>' +
+                        '<div class="article_content__separator"></div>' +
+                        '<a href="' + el.href + '"><h3 class="article_content__title">' + el.name + '</h3></a>' +
+                        '<p class="article_content__description">' + el.desc + '</p>' +
+                        '<a href="' + el.href + '" class="article_content__url">Подробнее</a>' +
+                        '</div>' +
+                        '</article>'
+                    );
+                }
+            ).join("");
+        }
+
+        function vivodmob(articlesh) {
+            return articlesh.map(el => {
+                    return (
+                        '<article class="art-card">' +
+                        '<img src="' + el.img + '" class="article_thumbnail">' +
+                        '<div class="article_content">' +
+                        '<span class="article_content__date">' + el.time + '</span>' +
+                        '<div class="article_content__separator"></div>' +
+                        '<a href="' + el.href + '"><h3 class="article_content__title">' + el.name + '</h3></a>' +
+                        '<a href="' + el.href + '"><p class="article_content__description">' + el.desc + '</p></a>' +
+                        '<a href="' + el.href + '" class="article_content__url">Подробнее</a>' +
+                        '</div>' +
+                        '</article>'
+                    );
+                }
+            ).join("");
+        }
+
+        function showarticles(articles, container) {
+            let out = "";
+            if (window.innerWidth > 768) {
+                for (let i = 0; i < (articles.length / 7); i++) {
+                    let articles1 = articles.slice(i * 7, i * 7 + 3);
+                    let articles2 = articles.slice(i * 7 + 3, i * 7 + 7);
+                    out += '<div class="articles_container">';
+                    out += vivod(articles1);
+                    out += '</div>';
+                    out += '<div class="articles_container">';
+                    out += vivod(articles2);
+                    out += '</div>';
+                }
+            } else {
+                for (let i = 0; i < (articles.length / 5); i++) {
+                    let articles1 = articles.slice(i * 5, i * 5 + 3);
+                    let articles2 = articles.slice(i * 5 + 3, i * 5 + 5);
+                    out += '<div class="articles_container">';
+                    out += vivodmob(articles1);
+                    out += '</div>';
+                    out += '<div class="articles_container">';
+                    out += vivodmob(articles2);
+                    out += '</div>';
+                }
+            }
+            document.getElementById(container).innerHTML = out;
+        }
+
+        if (window.innerWidth > 768) {
+            showarticles(articles, 'articlesg');
+        } else {
+            showarticles(articles, 'articlesgmob');
+        }
+    })
 </script>
+
 <!--#include virtual="/parts/footer.html" -->
