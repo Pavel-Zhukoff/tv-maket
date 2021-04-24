@@ -536,9 +536,11 @@
       border: 20px * $width-rate $color-white solid;
       margin-left: -20px * $width-rate;
       text-align: center;
-      line-height: 155px * $height-rate;
       text-decoration: none;
       display: block;
+      @include display-flex(column);
+      align-items: center;
+      flex-direction: inherit;
       cursor: pointer;
 
       @include _768() {

@@ -216,6 +216,7 @@
 
         .card {
           width: 295px * $width-rate;
+          max-width: 25%;
           @include _768 {
             width: 100%;
             padding: 0 15px;
