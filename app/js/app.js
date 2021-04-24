@@ -293,3 +293,13 @@ $('.newest').click(function () {
     $(this).addClass('active')
     $('.popular').removeClass('active')
 })
+
+$('.prog_touch').click(function () {
+    $('.tvprogram-list__current').addClass('nonactive')
+    $('.prog_touch').removeClass('prog_current')
+    $(this).toggleClass('prog_current')
+})
+$('.tvprogram-list__current').click(function () {
+    $(this).removeClass('nonactive')
+    $('.prog_touch').removeClass('prog_current')
+})

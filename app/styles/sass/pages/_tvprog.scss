@@ -460,10 +460,25 @@
             position: relative;
             width: 100%;
           }
+          &.nonactive {
+            .tvprogram-list-current_container {
+              background: transparent;
+              color: #07132B;
+            }
+            .mobtitletel, .tvprogram-list-current_progress, .mobtelnow, .mobteldesc {
+              display: none;
+            }
+          }
+
         }
 
         .next {
           color: $color-accent;
+
+          &.prog_current{
+            background: linear-gradient(90deg,#f86363 0,#ff53a5 100%);
+            color: #fff;
+          }
         }
       }
     }
