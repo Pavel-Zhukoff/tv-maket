@@ -280,3 +280,26 @@ $('.prog_menu-drop').mouseenter(function () {
 $('.programs__contain-menu').mouseleave(function(){
     $('.programs__contain-menu').removeClass('activepm')
 });
+$('.categoryart').click(function () {
+    $(this).toggleClass('active')
+})
+$('.popular').click(function () {
+    $('.popsort').toggleClass('active')
+    $(this).addClass('active')
+    $('.newest').removeClass('active')
+})
+$('.newest').click(function () {
+    $('.newsort').toggleClass('active')
+    $(this).addClass('active')
+    $('.popular').removeClass('active')
+})
+
+$('.prog_touch').click(function () {
+    $('.tvprogram-list__current').addClass('nonactive')
+    $('.prog_touch').removeClass('prog_current')
+    $(this).toggleClass('prog_current')
+})
+$('.tvprogram-list__current').click(function () {
+    $(this).removeClass('nonactive')
+    $('.prog_touch').removeClass('prog_current')
+})

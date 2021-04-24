@@ -566,11 +566,12 @@
         width: 50px * $width-rate;
         height: 50px * $width-rate;
         background: #000;
-        padding: 18px * $height-rate 20px * $width-rate 17px * $height-rate 20px * $width-rate;
+        @include display-flex(column);
+        align-items: center;
+        justify-content: center;
 
         @include _aspect-ratio {
           height: 50px * $height-rate-big;
-          padding: 18px * $height-rate-big 20px * $width-rate 17px * $height-rate-big 20px * $width-rate;
         }
 
         svg {
