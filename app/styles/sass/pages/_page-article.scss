@@ -26,6 +26,11 @@
           padding-right: 30px * $width-rate;
           margin: auto;
 
+          a{
+            text-decoration: none;
+            color: $color-primary;
+          }
+
           &:last-child {
             padding-right: 0;
           }
