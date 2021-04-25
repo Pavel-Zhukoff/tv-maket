@@ -220,6 +220,7 @@
           @include _768 {
             width: 100%;
             padding: 0 15px;
+            max-width: 100%;
           }
 
           &:nth-child(4n) {

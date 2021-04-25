@@ -628,6 +628,7 @@
       max-width: 25%;
       @include _768() {
         margin-right: 0;
+        max-width: 100%;
       }
       .card_thumbnail {
         height: 170px * $height-rate;
