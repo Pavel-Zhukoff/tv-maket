@@ -41,7 +41,7 @@
 
     input[type="text"] {
       width: 785px * $width-rate;
-      height: 70px * $height-rate;
+      height: 60px * $width-rate;
       padding-left: 30px * $width-rate;
       border-radius: 50px;
       border: 0;
@@ -57,7 +57,7 @@
 
     button {
       width: 60px * $width-rate;
-      height: 70px * $height-rate;
+      height: 60px * $width-rate;
       border: 5px * $width-rate solid rgba($color-primary, 0.5);
       border-radius: 50px;
       right: -1px;

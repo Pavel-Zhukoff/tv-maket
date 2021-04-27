@@ -188,6 +188,7 @@
         .menu-container_live {
           @include display-flex(row);
           color: $color-red;
+          align-items: center;
 
           .menu-container_live__icon {
             margin-right: 20px * $width-rate;
@@ -199,6 +200,10 @@
 
             svg path#circle {
               fill: $color-red;
+            }
+
+            svg{
+              height: 100%;
             }
           }
 
@@ -217,6 +222,7 @@
 
         .menu-container_socials {
           @include display-flex(row);
+          align-items: center;
 
           .menu-container_socials__icon {
             margin-right: 20px * $width-rate;
@@ -224,6 +230,7 @@
 
             svg {
               fill: $color-white;
+              height: 100%;
             }
           }
 
