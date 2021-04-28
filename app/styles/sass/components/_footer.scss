@@ -321,7 +321,7 @@
 
   .footer_socials__link {
     display: inline-block;
-    width: 40px * $width-rate;
+    width: auto;
     color: $color-white;
     font-size: $font-size-18;
     margin-right: 40px* $width-rate;
@@ -366,7 +366,7 @@
     }
 
     svg {
-      width: 100%;
+      width: 40px * $width-rate;
       height: auto;
       opacity: .5;
 
@@ -408,46 +408,63 @@
       width: auto;
       display: flex;
     }
-  }
 
-  .footer_socials__block {
-    transition: width .3s linear;
-    margin-right: 40px * $width-rate;
-    height: 40px * $height-rate;
-    align-items: center;
-
-    &:hover {
+    .footer_socials__block {
       display: flex;
-      width: auto;
-    }
+      transition: width .3s linear;
+      height: 40px * $height-rate;
+      align-items: center;
+      max-width: 0;
+      overflow: hidden;
+      transition: all 1s ease-out;
 
-    .footer_socials__link {
-      width: auto;
-      text-decoration: none;
-      margin-right: 20px * $width-rate;
-      position: relative;
-
-      &:last-child {
-        margin-right: 0;
+      @include _768 {
+        display: none;
       }
 
-      &:after {
-        transition: width .3s ease-out;
-        content: '';
-        width: 0;
-        height: 3px;
-        background: $color-white;
-        position: absolute;
-        bottom: -6px;
-        left: 0;
-      }
+      .footer_socials__link {
+        width: auto;
+        text-decoration: none;
+        margin-right: 20px * $width-rate;
+        position: relative;
+        white-space: nowrap;
 
-      &:hover {
+        &:first-child{
+          margin-left: 40px * $width-rate;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
         &:after {
-          width: 70px * $width-rate;
+          transition: width .3s ease-out;
+          content: '';
+          width: 0;
+          height: 3px;
+          background: $color-white;
+          position: absolute;
+          bottom: -6px;
+          left: 0;
+        }
+
+        &:hover {
+          &:after {
+            width: 70px * $width-rate;
+          }
         }
       }
     }
+
+    &.active_soc{
+      .footer_socials__block{
+        max-width: 400px;
+        transition: all 1s ease-out;
+      }
+    }
+  }
+  span{
+    display: flex!important;
   }
 }
 

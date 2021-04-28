@@ -58,6 +58,15 @@
       @include display-flex(row);
 
       .card{
+        .card_thumbnail {
+          min-height: 260px * $height-rate;
+          max-height: 260px * $height-rate;
+          @include _768 {
+            min-height: 115px;
+            max-height: 115px;
+          }
+        }
+
         @include _768 {
           .card_thumbnail {
             .card_thumbnail__icon {
@@ -128,6 +137,11 @@
 
       @include _768 {
         width: 212px !important;
+
+        img{
+          min-height: 115px;
+          max-height: 115px;
+        }
       }
 
       .card_content {
@@ -220,6 +234,7 @@
           @include _768 {
             width: 100%;
             padding: 0 15px;
+            max-width: 100%;
           }
 
           &:nth-child(4n) {
@@ -248,14 +263,20 @@
           }
 
           .card_thumbnail {
+            min-height: 170px * $height-rate;
+            max-height: 170px * $height-rate;
 
             @include _768 {
               border-radius: 0;
+              min-height: 185px;
+              max-height: 185px;
             }
 
             .card_thumbnail__image {
               @include _768 {
                 border-radius: 10px;
+                min-height: 185px;
+                max-height: 185px;
               }
             }
 
@@ -288,6 +309,8 @@
               background: $color-primary;
               top: -15px * $height-rate;
               right: -10px * $width-rate;
+              display: flex;
+              line-height: normal;
               @include _aspect-ratio {
                top: -15px * $height-rate-big;
               }

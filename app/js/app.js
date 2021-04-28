@@ -250,10 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.buttons_fullscreen').click(function () {
         $('.vjs-fullscreen-control').click()
     })
-    $('.vjs-fullscreen-control').click(function () {
-        $('.video').toggleClass('fullnonactive')
-        $('.vjs-control-bar').toggleClass('contactive')
-    })
 })
 $('.selprogview').click(function () {
     $('.selprogview').removeClass('active')
@@ -303,3 +299,9 @@ $('.tvprogram-list__current').click(function () {
     $(this).removeClass('nonactive')
     $('.prog_touch').removeClass('prog_current')
 })
+$('.footer_socials__link').mouseenter(function () {
+    $(this).addClass('active_soc')
+})
+$('.footer_socials__block').mouseleave(function(){
+    $('.footer_socials__link').removeClass('active_soc')
+});

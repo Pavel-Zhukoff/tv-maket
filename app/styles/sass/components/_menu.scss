@@ -128,10 +128,26 @@
       .menu-container_left {
         @include display-flex(row);
         flex-wrap: wrap;
-        max-width: 765px * $width-rate;
+        max-width: 880px * $width-rate;
+
+        @include _1600 {
+          max-width: 800px * $width-rate
+        }
 
         @include _1400 {
           max-width: 800px * $width-rate
+        }
+
+        @include _1250 {
+          max-width: 900px * $width-rate
+        }
+
+        @include _1170 {
+          max-width: 800px * $width-rate
+        }
+
+        @include _1005 {
+          max-width: 900px * $width-rate
         }
 
         .menu-container_left__item {
@@ -188,6 +204,7 @@
         .menu-container_live {
           @include display-flex(row);
           color: $color-red;
+          align-items: center;
 
           .menu-container_live__icon {
             margin-right: 20px * $width-rate;
@@ -199,6 +216,10 @@
 
             svg path#circle {
               fill: $color-red;
+            }
+
+            svg{
+              height: 100%;
             }
           }
 
@@ -217,6 +238,7 @@
 
         .menu-container_socials {
           @include display-flex(row);
+          align-items: center;
 
           .menu-container_socials__icon {
             margin-right: 20px * $width-rate;
@@ -224,6 +246,7 @@
 
             svg {
               fill: $color-white;
+              height: 100%;
             }
           }
 

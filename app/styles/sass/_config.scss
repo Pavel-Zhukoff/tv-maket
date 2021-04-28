@@ -86,8 +86,20 @@ $nav-menu-width: 1430px * $width-rate;
   }
 }
 
+@mixin _1250 {
+  @media screen and (max-width: 1250px) {
+    @content;
+  }
+}
+
 @mixin _1170 {
   @media screen and (max-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin _1005 {
+  @media screen and (max-width: 1005px) {
     @content;
   }
 }
