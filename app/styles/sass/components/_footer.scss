@@ -427,6 +427,7 @@
         text-decoration: none;
         margin-right: 20px * $width-rate;
         position: relative;
+        white-space: nowrap;
 
         &:first-child{
           margin-left: 40px * $width-rate;
