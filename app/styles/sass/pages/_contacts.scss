@@ -350,8 +350,13 @@
       color: $color-primary;
       font-size: $font-size-18;
       margin-bottom: 10px * $height-rate;
+      font-family: $font-family-base;
       @include _aspect-ratio {
         margin-bottom: 10px * $height-rate-big;
+      }
+
+      &::placeholder{
+        font-size: $font-size-24;
       }
 
       @include _1200() {
