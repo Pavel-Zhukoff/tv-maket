@@ -1524,3 +1524,120 @@ h1,h2,h3 {
     margin-left: 3px;
   }
 }
+
+.promo {
+  top: 980px * $height-rate;
+  left: 0;
+  padding: 17px * $height-rate 46px * $width-rate;
+  width: 100%;
+  height: 70px * $height-rate;
+  position: absolute;
+  background: rgba($color-white, .7);
+  z-index: 10000;
+  @include display-flex(row);
+  align-items: center;
+  @include _aspect-ratio {
+    top: 980px * $height-rate-big;
+    height: 70px * $height-rate-big;
+    padding: 17px * $height-rate-big 46px * $width-rate;
+  }
+
+  @include _768{
+    display: none;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: $gradient-red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .promo_close {
+    width: 28px * $width-rate;
+    height: 28px * $width-rate;
+    cursor: pointer;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .promo_text {
+    font-family: $font-family-accent;
+    font-size: 30px * $height-rate;
+    font-weight: 700;
+    margin-left: 254px * $width-rate;
+    @include _aspect-ratio {
+      font-size: 30px * $height-rate-big;
+    }
+  }
+
+  .promo_show {
+    position: absolute;
+    right: 330px * $width-rate;
+    bottom: -30px * $height-rate;
+    display: block;
+    text-decoration: none;
+    @include _aspect-ratio {
+      bottom: -30px * $height-rate-big;
+    }
+
+    &:active {
+      color: $gradient-red;
+    }
+
+    .promo_show__text {
+      position: absolute;
+      bottom: 40px * $height-rate;
+      left: -90px * $width-rate;
+      @include _aspect-ratio {
+        bottom: 40px * $height-rate-big;
+      }
+      color: $color-accent;
+
+      &:visited {
+        color: $color-accent;
+      }
+
+
+
+    }
+
+    .promo_show__button {
+      @include circle(60px, $gradient-red);
+      text-align: center;
+      z-index: 10001;
+      @include display-flex(column);
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        animation: gradient-red-animation 1s linear;
+      }
+
+      svg {
+        height: 30px * $height-rate;
+        transform: rotate(180deg);
+
+        @include _aspect-ratio {
+          height: 30px * $height-rate-big;
+        }
+        path {
+          stroke: $color-accent
+        }
+        @include _1400 {
+          margin-top: 12px * $height-rate;
+
+          @include _aspect-ratio {
+            margin-top: 12px * $height-rate-big;
+          }
+        }
+      }
+    }
+  }
+}
