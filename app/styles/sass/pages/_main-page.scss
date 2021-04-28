@@ -137,6 +137,11 @@
 
       @include _768 {
         width: 212px !important;
+
+        img{
+          min-height: 115px;
+          max-height: 115px;
+        }
       }
 
       .card_content {
@@ -270,6 +275,8 @@
             .card_thumbnail__image {
               @include _768 {
                 border-radius: 10px;
+                min-height: 185px;
+                max-height: 185px;
               }
             }
 

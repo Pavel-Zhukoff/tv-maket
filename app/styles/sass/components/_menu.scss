@@ -128,10 +128,26 @@
       .menu-container_left {
         @include display-flex(row);
         flex-wrap: wrap;
-        max-width: 765px * $width-rate;
+        max-width: 880px * $width-rate;
+
+        @include _1600 {
+          max-width: 800px * $width-rate
+        }
 
         @include _1400 {
           max-width: 800px * $width-rate
+        }
+
+        @include _1250 {
+          max-width: 900px * $width-rate
+        }
+
+        @include _1170 {
+          max-width: 800px * $width-rate
+        }
+
+        @include _1005 {
+          max-width: 900px * $width-rate
         }
 
         .menu-container_left__item {
