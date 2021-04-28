@@ -119,6 +119,10 @@ body {
     margin-top: 80px * $height-rate-big;
     height: 640px * $height-rate-big;
   }
+  @include _1600 {
+    justify-content: center;
+    height: 440px * $height-rate;
+  }
   @include _768() {
     display: block;
     margin-top: 40px;
@@ -145,6 +149,9 @@ body {
     z-index: -1;
     @include _aspect-ratio {
       height: 640px * $height-rate-big;
+    }
+    @include _1600 {
+      height: 440px * $height-rate;
     }
     @include _768() {
       display: none;
@@ -266,7 +273,9 @@ body {
           @include circle(100px, $color-background);
           text-align: center;
           margin-bottom: 10px * $height-rate;
-          line-height: 110px * $height-rate;
+          @include display-flex(column);
+          align-items: center;
+          justify-content: center;
           @include _aspect-ratio {
             margin-bottom: 10px * $height-rate-big;
           }
