@@ -349,6 +349,11 @@
       @include _aspect-ratio {
         max-height: 600px * $height-rate-big;
       }
+
+      .scroll-content {
+        border-radius: 0;
+      }
+
       .tvprogram-list {
         padding: 0;
       }
@@ -417,6 +422,10 @@
 
         .late {
           color: rgba($color-accent, 0.5);
+          &.prog_current{
+            background: linear-gradient(90deg,#f86363 0,#ff53a5 100%);
+            color: #fff;
+          }
         }
 
         .tvprogram-list__current {

@@ -92,6 +92,12 @@ $nav-menu-width: 1430px * $width-rate;
   }
 }
 
+@mixin _1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin _1170 {
   @media screen and (max-width: 1171px) {
     @content;
