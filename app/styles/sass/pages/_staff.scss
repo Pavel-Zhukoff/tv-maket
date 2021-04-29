@@ -112,16 +112,10 @@ body {
 .director {
   margin-top: 80px * $height-rate;
   @include display-flex(row);
-  justify-content: space-between;
-  height: 640px * $height-rate;
+  justify-content: center;
   position: relative;
   @include _aspect-ratio {
     margin-top: 80px * $height-rate-big;
-    height: 640px * $height-rate-big;
-  }
-  @include _1600 {
-    justify-content: center;
-    height: 440px * $height-rate;
   }
   @include _768() {
     display: block;
@@ -150,9 +144,6 @@ body {
     @include _aspect-ratio {
       height: 640px * $height-rate-big;
     }
-    @include _1600 {
-      height: 440px * $height-rate;
-    }
     @include _768() {
       display: none;
     }
@@ -164,6 +155,8 @@ body {
     border-radius: 50%;
     align-self: center;
     background: $color-primary;
+
+
     @include _768() {
       width: 200px;
       height: 200px;
@@ -181,11 +174,14 @@ body {
     @include display-flex(column);
     padding: 60px * $height-rate 50px * $width-rate;
     margin-left: 65px * $width-rate;
-    justify-content: space-between;
+    justify-content: center;
 
     @include _aspect-ratio {
       padding: 60px * $height-rate-big 50px * $width-rate;
+    }
 
+    @media screen and (min-width: 1500px) {
+      padding: 0;
     }
 
     @include _768() {
@@ -199,6 +195,7 @@ body {
       @include _768() {
         font-size: 12px;
       }
+
 
 
       .director_content__title {
