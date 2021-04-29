@@ -234,8 +234,11 @@ document.addEventListener('DOMContentLoaded', () => {
         controls: true,
         poster: 'images/dist/poster.png',
     });
-    var _0x3e0d=["\x68\x74\x74\x70\x3A\x2F\x2F\x38\x32\x2E\x31\x33\x38\x2E\x32\x2E\x35\x30\x3A\x31\x39\x33\x35\x2F\x6C\x69\x76\x65\x2F\x54\x65\x6F\x54\x56\x2E\x73\x74\x72\x65\x61\x6D\x5F\x37\x32\x30\x70\x2F\x70\x6C\x61\x79\x6C\x69\x73\x74\x2E\x6D\x33\x75\x38","\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x78\x2D\x6D\x70\x65\x67\x55\x52\x4C","\x73\x72\x63"];video[_0x3e0d[2]]({src:_0x3e0d[0],type:_0x3e0d[1],withCredentials:false})
-
+    video.src({
+        src: `http://82.138.2.50:1935/live/TeoTV.stream_720p/playlist.m3u8`,
+        type: 'application/x-mpegURL',
+        withCredentials: false,
+    });
 
     $('.buttons_pause').click(function () {
         $('.stopb').toggleClass('active')
