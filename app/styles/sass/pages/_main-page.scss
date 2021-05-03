@@ -328,6 +328,15 @@
             }
 
             .card_thumbnail__image {
+              display: flex;
+              overflow: hidden;
+              align-items: center;
+
+              img{
+                width: 100%;
+                height: auto;
+              }
+
               @include _768 {
                 border-radius: 10px;
                 min-height: 185px;

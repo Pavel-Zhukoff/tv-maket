@@ -362,6 +362,7 @@
 
   .ads-example-block_text {
     font-size: $font-size-18;
+    font-weight: 400;
     @include _768 {
       font-size: 12px;
     }
