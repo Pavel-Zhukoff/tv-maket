@@ -135,12 +135,67 @@
     .card {
       width: 460px * $width-rate !important;
 
+      .card_thumbnail__image {
+        height: 100%;
+        padding: 20px * $height-rate 20px * $width-rate;
+        background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+        outline: none;
+        overflow: hidden;
+
+        p{
+          color: #FFFFFF;
+          opacity: 0.7;
+          font-size: $font-size-48;
+          font-family: $font-family-accent;
+          font-weight: 700;
+        }
+      }
+
+      &:nth-child(5n+1){
+        .card_thumbnail__image,
+        .card_thumbnail__icon,
+        .card_content__separator {
+          background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
+        }
+
+      }
+      &:nth-child(5n+2){
+        .card_thumbnail__image,
+        .card_thumbnail__icon,
+        .card_content__separator {
+          background: linear-gradient(270deg, #FBB224 0%, #FB7E24 100%);
+        }
+      }
+      &:nth-child(5n+3){
+        .card_thumbnail__image,
+        .card_thumbnail__icon,
+        .card_content__separator {
+          background: linear-gradient(270deg, #C9FA98 0%, #50DA6E 100%);
+        }
+      }
+      &:nth-child(5n+4){
+        .card_thumbnail__image,
+        .card_thumbnail__icon,
+        .card_content__separator {
+          background: linear-gradient(270deg, #24FBC7 0%, #169EEB 100%);
+        }
+      }
+      &:nth-child(5n+5){
+        .card_thumbnail__image,
+        .card_thumbnail__icon,
+        .card_content__separator {
+          background: linear-gradient(90deg, #195CAE 0%, #169EEB 100%);
+        }
+      }
+
+
       @include _768 {
         width: 212px !important;
 
-        img{
+        .card_thumbnail__image {
           min-height: 115px;
           max-height: 115px;
+          background: linear-gradient(90deg, #F86363 0%, #FF53A5 100%);
         }
       }
 
@@ -273,6 +328,15 @@
             }
 
             .card_thumbnail__image {
+              display: flex;
+              overflow: hidden;
+              align-items: center;
+
+              img{
+                width: 100%;
+                height: auto;
+              }
+
               @include _768 {
                 border-radius: 10px;
                 min-height: 185px;

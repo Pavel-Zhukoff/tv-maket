@@ -689,6 +689,17 @@ h1,h2,h3 {
       }
     }
 
+    .article_content__description_link{
+      flex-grow: 1;
+      color: #07132b;
+      text-decoration: none;
+
+      .article_content__description {
+        font-size: $font-size-18;
+        flex-grow: 1;
+      }
+    }
+
     .article_content__description {
       font-size: $font-size-18;
       flex-grow: 1;
@@ -873,6 +884,17 @@ h1,h2,h3 {
         }
       }
 
+      .article_content__description_link{
+        flex-grow: 1;
+        color: #07132b;
+        text-decoration: none;
+
+        .article_content__description {
+          font-size: $font-size-18;
+          flex-grow: 1;
+        }
+      }
+
       .article_content__description {
         font-size: $font-size-18;
         flex-grow: 1;
@@ -932,9 +954,17 @@ h1,h2,h3 {
           .article_thumbnail {
             width: 380px * $width-rate;
             height: 380px * $width-rate;
-            border-radius: 10px;
             display: flex;
             margin: 0 auto;
+            overflow: hidden;
+            justify-content: center;
+            border-radius: 10px;
+
+            img{
+              width: auto;
+              height: 100%;
+              border-radius: 10px;
+            }
 
             @include _768 {
               display: none;
@@ -969,9 +999,17 @@ h1,h2,h3 {
           .article_thumbnail {
             width: 465px * $width-rate;
             height: 260px * $height-rate;
-            border-radius: 10px;
             display: flex;
             margin: 0 auto;
+            overflow: hidden;
+            align-items: center;
+            border-radius: 10px;
+
+            img{
+              width: 100%;
+              height: max-content;
+              border-radius: 10px;
+            }
 
             @include _768 {
               display: none;
@@ -1093,9 +1131,17 @@ h1,h2,h3 {
           .article_thumbnail {
             width: 380px * $width-rate;
             height: 380px * $width-rate;
-            border-radius: 10px;
             display: flex;
             margin: 0 auto;
+            overflow: hidden;
+            justify-content: center;
+            border-radius: 10px;
+
+            img{
+              width: auto;
+              height: 100%;
+              border-radius: 10px;
+            }
 
             @include _768 {
               display: none;
@@ -1181,9 +1227,11 @@ h1,h2,h3 {
             a{
               .article_content__title{
                 color: #07132B;
+                text-decoration: none;
               }
               .article_content__description{
                 color: #07132B;
+                text-decoration: none;
               }
             }
           }
