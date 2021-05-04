@@ -689,6 +689,17 @@ h1,h2,h3 {
       }
     }
 
+    .article_content__description_link{
+      flex-grow: 1;
+      color: #07132b;
+      text-decoration: none;
+
+      .article_content__description {
+        font-size: $font-size-18;
+        flex-grow: 1;
+      }
+    }
+
     .article_content__description {
       font-size: $font-size-18;
       flex-grow: 1;
@@ -870,6 +881,17 @@ h1,h2,h3 {
           &:hover {
             color:#195CAE;
           }
+        }
+      }
+
+      .article_content__description_link{
+        flex-grow: 1;
+        color: #07132b;
+        text-decoration: none;
+
+        .article_content__description {
+          font-size: $font-size-18;
+          flex-grow: 1;
         }
       }
 
@@ -1205,9 +1227,11 @@ h1,h2,h3 {
             a{
               .article_content__title{
                 color: #07132B;
+                text-decoration: none;
               }
               .article_content__description{
                 color: #07132B;
+                text-decoration: none;
               }
             }
           }
