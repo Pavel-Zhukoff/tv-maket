@@ -89,10 +89,15 @@
         width: 50%;
         margin-bottom: 30px * $height-rate;
 
+        @iclude _980(){
+          font-size: 3rem;
+          width: 60%;
+        }
+
         @include _768() {
-          font-size: 24px * $height-rate;
+          font-size: 24px;
           width: 65%;
-          margin-bottom: 10px * $height-rate;
+          margin-bottom: 10px;
         }
       }
       ul{
