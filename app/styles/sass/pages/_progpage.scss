@@ -341,12 +341,7 @@
 
           .card{
             width: 300px * $width-rate;
-            height: 235px * $height-rate;
-            margin-bottom: 10px * $height-rate;
-            @include _aspect-ratio {
-              height: 235px * $height-rate-big;
-              margin-bottom: 10px * $height-rate-big;
-            }
+            margin-bottom: 0px * $height-rate;
             &:first-child{
               margin-top: 20px * $height-rate;
               @include _aspect-ratio {
