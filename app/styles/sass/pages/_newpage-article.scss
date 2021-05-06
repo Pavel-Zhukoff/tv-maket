@@ -113,7 +113,8 @@
         width: auto;
         display: flex;
         margin: 0 auto 30px * $height-rate auto;
-        max-width: 100%;
+        max-width: 60%;
+        min-width: 60%;
         @include _768() {
           margin-bottom: 10px;
         }
@@ -155,7 +156,7 @@
           p {
             margin-bottom: 30px * $height-rate;
             font-family: $font-family-base;
-            font-size: 18px * $height-rate;
+            font-size: $font-size-18;
             text-align: justify;
             color: #07132B;
             font-weight: 400;

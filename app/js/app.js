@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         poster: 'images/dist/poster.png',
     });
     video.src({
-        src: `http://82.138.2.50:1935/live/TeoTV.stream_720p/playlist.m3u8`,
+        src: `https://606e854f4dd19.streamlock.net:443/live/TeoTV.stream_720p/playlist.m3u8`,
         type: 'application/x-mpegURL',
         withCredentials: false,
     });
