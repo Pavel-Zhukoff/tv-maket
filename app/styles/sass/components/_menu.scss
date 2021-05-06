@@ -420,7 +420,7 @@
   z-index: 9999;
   font-family: $font-family-base;
   font-size: $font-size-24;
-  transition: 1s;
+  transition: 0.5s;
 
   &.activepm{
     max-height: 395px * $height-rate;
