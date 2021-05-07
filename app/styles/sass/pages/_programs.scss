@@ -629,6 +629,7 @@
       @include _768() {
         margin-right: 0;
         max-width: 100%;
+        padding: 0 15px;
       }
       .card_thumbnail {
         height: 170px * $height-rate;
@@ -664,8 +665,8 @@
         &:after {
           width: 40px * $width-rate;
           height: 40px * $width-rate;
-          top: -20px * $height-rate;
-          right: -15px * $width-rate;
+          top: -20px * $width-rate;
+          right: -20px * $width-rate;
           @include _aspect-ratio {
             top: -20px * $height-rate-big;
           }
@@ -677,17 +678,17 @@
         .card_thumbnail__icon {
           width: 30px * $width-rate;
           height: 30px * $width-rate;
-          line-height: 35px * $height-rate;
           font-size: $font-size-12;
           background: $color-primary;
-          top: -15px * $height-rate;
-          right: -10px * $width-rate;
-          @include _aspect-ratio {
-            line-height: 35px * $height-rate-big;
-            top: -15px * $height-rate-big;
-          }
+          top: -15px * $width-rate;
+          right: -15px * $width-rate;
+          @include display-flex(column);
+          align-items: center;
+          flex-direction: inherit;
+          justify-content: center;
+
           @include _768() {
-            display: block;
+            display: flex;
             width: 24px;
             height: 24px;
             font-size: 9px;
@@ -698,7 +699,7 @@
       }
       .card_content {
         @include _768() {
-          padding: 8px 15px 15px 15px;
+          padding: 8px 0px 15px 0px;
         }
         .card_content__title {
           @include _768() {

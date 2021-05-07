@@ -50,10 +50,10 @@
     padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate;
     max-width: 1360px * $width-rate;
     width: 1360px * $width-rate;
-    margin-bottom: 160px * $height-rate;
+    margin-bottom: 100px * $height-rate;
     @include _aspect-ratio {
       padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate-big;
-      margin-bottom: 160px * $height-rate-big;
+      margin-bottom: 100px * $height-rate-big;
     }
     @include _768() {
       padding: 0;

@@ -463,11 +463,8 @@ h1,h2,h3 {
     .card_content__description {
       font-size: $font-size-base;
       color: $color-accent;
-      margin-bottom: 10px * $height-rate;
+      margin-bottom: 10px * $width-rate;
       flex-grow: 1;
-      @include _aspect-ratio {
-        margin-bottom: 10px * $height-rate-big;
-      }
     }
 
     .card_content__date {

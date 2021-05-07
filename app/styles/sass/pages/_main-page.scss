@@ -247,8 +247,8 @@
     position: relative;
 
     &:after {
-      min-height: 190px * $height-rate;
-      max-height: 540px * $height-rate;
+      min-height: 190px * $width-rate;
+      max-height: 575px * $width-rate;
       height: 100%;
       border-radius: 20px;
       background-color: $color-white;
@@ -260,8 +260,6 @@
       z-index: -1;
       content: '';
       @include _aspect-ratio {
-        min-height: 190px * $height-rate-big;
-        max-height: 495px * $height-rate-big;
         padding: 40px  * $height-rate-big 40px * $width-rate;
       }
 
@@ -319,9 +317,9 @@
           }
 
           .card_thumbnail {
-            min-height: 200px * $height-rate;
-            height: 200px * $height-rate;
-            max-height: 200px * $height-rate;
+            min-height: 170px * $width-rate;
+            height: 170px * $width-rate;
+            max-height: 170px * $width-rate;
 
             @include _768 {
               border-radius: 0;
@@ -355,11 +353,8 @@
             &:after {
               width: 40px * $width-rate;
               height: 40px * $width-rate;
-              top: -20px * $height-rate;
-              right: -15px * $width-rate;
-              @include _aspect-ratio {
-               top: -20px * $height-rate-big;
-              }
+              top: -20px * $width-rate;
+              right: -20px * $width-rate;
               @include _768 {
                 width: 34px;
                 height: 34px;
@@ -373,13 +368,12 @@
               height: 30px * $width-rate;
               font-size: $font-size-12;
               background: $color-primary;
-              top: -15px * $height-rate;
-              right: -10px * $width-rate;
+              top: -15px * $width-rate;
+              right: -15px * $width-rate;
               display: flex;
-              line-height: normal;
-              @include _aspect-ratio {
-               top: -15px * $height-rate-big;
-              }
+              @include display-flex(column);
+              align-items: center;
+              justify-content: center;
               @include _768 {
                 width: 24px;
                 height: 24px;
