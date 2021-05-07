@@ -1015,7 +1015,7 @@ h1,h2,h3 {
 
             img{
               width: 100%;
-              height: max-content;
+              height: auto;
               border-radius: 10px;
             }
 
@@ -1677,21 +1677,11 @@ h1,h2,h3 {
       }
 
       svg {
-        height: 30px * $height-rate;
+        width: 15px * $width-rate;
         transform: rotate(180deg);
 
-        @include _aspect-ratio {
-          height: 30px * $height-rate-big;
-        }
         path {
           stroke: $color-accent
-        }
-        @include _1400 {
-          margin-top: 12px * $height-rate;
-
-          @include _aspect-ratio {
-            margin-top: 12px * $height-rate-big;
-          }
         }
       }
     }
