@@ -319,9 +319,9 @@
           }
 
           .card_thumbnail {
-            min-height: 170px * $height-rate;
-            height: 170px * $height-rate;
-            max-height: 170px * $height-rate;
+            min-height: 200px * $height-rate;
+            height: 200px * $height-rate;
+            max-height: 200px * $height-rate;
 
             @include _768 {
               border-radius: 0;
