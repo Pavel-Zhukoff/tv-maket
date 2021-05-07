@@ -60,6 +60,7 @@
       .card{
         .card_thumbnail {
           min-height: 260px * $height-rate;
+          height: 260px * $height-rate;
           max-height: 260px * $height-rate;
           @include _768 {
             min-height: 115px;
@@ -319,6 +320,7 @@
 
           .card_thumbnail {
             min-height: 170px * $height-rate;
+            height: 170px * $height-rate;
             max-height: 170px * $height-rate;
 
             @include _768 {

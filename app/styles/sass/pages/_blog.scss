@@ -5,5 +5,8 @@
   }
 }
 .progblock {
-  margin-top: 20px;
+  margin-top: 100px * $height-rate;
+  @include _768() {
+    margin-top: 20px;
+  }
 }
