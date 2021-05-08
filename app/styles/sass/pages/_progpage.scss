@@ -50,10 +50,10 @@
     padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate;
     max-width: 1360px * $width-rate;
     width: 1360px * $width-rate;
-    margin-bottom: 160px * $height-rate;
+    margin-bottom: 100px * $height-rate;
     @include _aspect-ratio {
       padding: 100px * $height-rate 50px * $width-rate 0 50px * $height-rate-big;
-      margin-bottom: 160px * $height-rate-big;
+      margin-bottom: 100px * $height-rate-big;
     }
     @include _768() {
       padding: 0;
@@ -186,19 +186,16 @@
             height: 70px * $width-rate;
             position: absolute;
             left: -30px * $width-rate;
-            top: -40px * $height-rate;
+            top: -30px * $width-rate;
             border-radius: 50%;
             z-index: 3;
             text-align: center;
-            font-size: 24px * $width-rate;
+            font-size: $font-size-24;
             color: #fff;
-            padding-top: 25px * $height-rate;
             font-family: $font-family-accent;
-            @include _aspect-ratio {
-              height: 75px * $height-rate-big;
-              top: -35px * $height-rate-big;
-              padding-top: 25px * $height-rate-big;
-            }
+            @include display-flex(column);
+            align-items: center;
+            justify-content: center;
             @include _768() {
               display: none;
             }
@@ -207,17 +204,13 @@
           &:before {
             content: '';
             width: 100px * $width-rate;
-            height: 100px * $height-rate;
+            height: 100px * $width-rate;
             border-radius: 50%;
             background: #f8f9fb;
-            top: -50px * $height-rate;
+            top: -50px * $width-rate;
             left: -50px * $width-rate;
             position: absolute;
             z-index: 2;
-            @include _aspect-ratio {
-              height: 100px * $height-rate-big;
-              top: -50px * $height-rate-big;
-            }
             @include _768() {
               display: none;
             }
