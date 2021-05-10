@@ -342,13 +342,12 @@
               }
             }
 
-            a {
+            .card_thumbnail {
+              width: 300px * $width-rate;
+              height: 168px * $height-rate;
               img{
-                width: 300px * $width-rate;
-                height: 168px * $height-rate;
-                @include _aspect-ratio {
-                  height: 235px * $height-rate-big;
-                }
+                width: 100%;
+                height: auto;
               }
             }
 
