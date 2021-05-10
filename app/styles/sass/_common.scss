@@ -284,10 +284,10 @@ h1,h2,h3 {
 .card {
   $card-animation-time: .5s;
   @include display-flex(column);
-  margin-right: 20px * $width-rate;
+  margin-right: auto;
 
   @include _1600 {
-    margin-right: 15px * $width-rate;
+    margin-right: auto;
   }
 
   &:last-child {

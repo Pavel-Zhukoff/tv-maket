@@ -617,7 +617,6 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    transition: height .25s linear;
   }
 
   &.nav-menu_active {
@@ -670,6 +669,7 @@
         left: 0;
         bottom: 15px;
         padding: 0;
+        z-index: 100;
       }
     }
 
