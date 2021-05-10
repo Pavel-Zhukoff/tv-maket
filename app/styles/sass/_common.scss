@@ -444,6 +444,7 @@ h1,h2,h3 {
       margin-bottom: 14px * $height-rate;
       transform: color $card-animation-time linear;
       text-decoration: none;
+      overflow-wrap: anywhere;
 
       @include _aspect-ratio {
         margin-bottom: 14px * $height-rate-big;
@@ -465,6 +466,7 @@ h1,h2,h3 {
       color: $color-accent;
       margin-bottom: 10px * $width-rate;
       flex-grow: 1;
+      overflow-wrap: anywhere;
     }
 
     .card_content__date {
