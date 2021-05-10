@@ -643,13 +643,13 @@
           height: 170px * $height-rate-big;
         }
         @include _768() {
-          height: auto;
+          height: 210px;
         }
 
         img {
           @include _768() {
             border-radius: unset;
-            height: 210px;
+            height: auto;
           }
         }
 
