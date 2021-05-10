@@ -422,7 +422,8 @@
       .programs-row {
         .card {
           @include _768() {
-            max-width: 100%;
+            max-width: 100%!important;
+            padding: 0 0 !important;
           }
           .card_thumbnail {
             .card_thumbnail__icon {
