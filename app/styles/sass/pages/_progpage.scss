@@ -421,6 +421,9 @@
     .programs-container {
       .programs-row {
         .card {
+          @include _768() {
+            max-width: 100%;
+          }
           .card_thumbnail {
             .card_thumbnail__icon {
               top: -12px;
