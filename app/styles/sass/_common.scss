@@ -1423,6 +1423,9 @@ h1,h2,h3 {
       @include _aspect-ratio {
         height: 210px * $height-rate-big;
       }
+      @include _2560 {
+        height: 190px * $height-rate;
+      }
     }
 
     &:last-child {
@@ -1725,7 +1728,7 @@ h1,h2,h3 {
 
     .text {
       color: $color-white;
-      font-size: 20px * $width-rate;
+      font-size: $font-size-18;
       margin-right: 5px * $width-rate;
 
       @include _768 {

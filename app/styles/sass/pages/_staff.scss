@@ -239,6 +239,9 @@ body {
           text-align: justify;
           margin-bottom: 2px;
         }
+        @include _2560 {
+          max-width: 95%;
+        }
       }
     }
 

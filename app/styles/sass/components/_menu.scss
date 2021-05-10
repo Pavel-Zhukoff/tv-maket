@@ -150,6 +150,10 @@
           max-width: 900px * $width-rate
         }
 
+        @include _2560 {
+          max-width: 700px * $width-rate
+        }
+
         .menu-container_left__item {
           @include menu-item;
           margin-left: 100px * $width-rate;
