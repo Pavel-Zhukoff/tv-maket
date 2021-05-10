@@ -25,6 +25,9 @@
   }
 
   .sex {
+    @include _768 {
+      margin: auto;
+    }
 
     .title_blsex{
       font-size: $font-size-24;
@@ -36,10 +39,8 @@
     svg{
       width: 460px * $width-rate;
       @include _768 {
-        width: 80%;
-        display: flex;
-        margin: auto;
-        padding-bottom: 15px;
+        width: 100%;
+        padding: 0px 35px 15px 35px;
       }
     }
   }
