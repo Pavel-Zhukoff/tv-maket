@@ -102,6 +102,10 @@
           a{
             color: #222222;
             text-decoration: none;
+
+            &:hover{
+              color:#195cae;
+            }
           }
 
           &:last-child {
@@ -593,6 +597,7 @@
 
 .programs-container {
   @include display-flex(column);
+  max-width: 100%;
 
   .programs-row {
     @include display-flex(row);
@@ -630,6 +635,7 @@
         margin-right: 0;
         max-width: 100%;
         padding: 0 15px;
+        max-width: 100%;
       }
       .card_thumbnail {
         height: 170px * $height-rate;
