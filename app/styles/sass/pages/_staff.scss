@@ -114,7 +114,9 @@ body {
   @include display-flex(row);
   justify-content: center;
   position: relative;
+  height: 640px * $height-rate;
   @include _aspect-ratio {
+    height: 640px * $height-rate-big;
     margin-top: 80px * $height-rate-big;
   }
   @include _768() {
@@ -138,12 +140,9 @@ body {
     position: absolute;
     right: 0;
     top: 0;
-    height: 640px * $height-rate;
     width: 1040px * $width-rate;
     z-index: -1;
-    @include _aspect-ratio {
-      height: 640px * $height-rate-big;
-    }
+    height:100%;
     @include _768() {
       display: none;
     }
