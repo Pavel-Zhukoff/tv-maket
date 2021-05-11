@@ -27,7 +27,7 @@
           }
         }
         .card {
-          max-width: 25%;
+          max-width: 24%;
           a{
             img{
               @include _768() {
@@ -335,6 +335,7 @@
           .card{
             width: 300px * $width-rate;
             margin-bottom: 0px * $height-rate;
+            max-width: auto;
             &:first-child{
               margin-top: 20px * $height-rate;
               @include _aspect-ratio {
@@ -343,7 +344,7 @@
             }
 
             .card_thumbnail {
-              width: 300px * $width-rate;
+              width: 290px * $width-rate;
               height: 168px * $height-rate;
               img{
                 width: 100%;

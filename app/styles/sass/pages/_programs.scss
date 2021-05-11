@@ -630,7 +630,7 @@
     }
 
     .card {
-      max-width: 24%;
+      max-width: 24%!important;
       @include _768() {
         margin-right: 0;
         max-width: 100%;
