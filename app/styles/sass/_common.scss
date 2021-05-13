@@ -462,7 +462,7 @@ h1,h2,h3 {
     }
 
     .card_content__description {
-      font-size: $font-size-base;
+      font-size: $font-size-desc;
       color: $color-accent;
       margin-bottom: 10px * $width-rate;
       flex-grow: 1;
@@ -810,6 +810,43 @@ h1,h2,h3 {
   }
 
   .articles_container {
+    animation: animblog 2s;
+    -moz-animation: animblog 2s;
+    -webkit-animation: animblog 2s;
+    -o-animation: animblog 2s;
+
+    @keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-moz-keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-webkit-keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-o-keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
     .art-card{
       position: relative;

@@ -603,12 +603,49 @@
     @include display-flex(row);
     margin-bottom: 100px * $height-rate;
     position: relative;
+    animation: animprog 2s;
+    -moz-animation: animprog 2s;
+    -webkit-animation: animprog 2s;
+    -o-animation: animprog 2s;
     @include _aspect-ratio {
       margin-bottom: 100px * $height-rate-big;
     }
     @include _768() {
       display: block;
       margin-bottom: 0;
+    }
+
+    @keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-moz-keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-webkit-keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-o-keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     &:after {
@@ -630,7 +667,7 @@
     }
 
     .card {
-      max-width: 24%!important;
+      max-width: 24%;
       @include _768() {
         margin-right: 0;
         max-width: 100%;
