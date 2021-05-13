@@ -387,10 +387,18 @@
 }
 .card {
   max-width: 620px * $width-rate;
+  width: 49%;
+  transition: all 1s;
 
   @include  _768 {
     margin-bottom: 10px;
     max-width: 100%;
+    width: 100%;
+  }
+
+  &:hover{
+    transform: scale(0.95);
+    transition: all 1s;
   }
 }
 
