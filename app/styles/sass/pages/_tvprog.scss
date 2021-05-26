@@ -110,9 +110,9 @@
         background: transparent;
         width: 40px;
         height: 40px;
-        border-radius: 50%;
+        border-radius: 25%;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 13px;
         color: #fff;
         text-decoration: none;
         display: flex;
@@ -237,7 +237,7 @@
           border-radius: 10px;
           background: $color-primary;
           border: 0;
-          width: 10px * $width-rate;
+          width: 15px * $width-rate;
           height: 90px * $height-rate;
           position: absolute;
           @include _aspect-ratio {
@@ -255,7 +255,7 @@
           background-color: #DDE3E8;
           position: absolute;
           top: 0;
-          left: 4px;
+          left: 6px * $width-rate;
           z-index: -1;
         }
       }
@@ -362,7 +362,7 @@
         width: 100%;
         background: transparent;
         border-radius: 0;
-        padding: 15px 0;
+        padding: 45px 0 0 0;
         overflow-y: auto;
         max-height: 770px;
       }

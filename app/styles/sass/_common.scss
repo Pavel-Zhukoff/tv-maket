@@ -1506,6 +1506,7 @@ h1,h2,h3 {
         padding: 12px * $height-rate 30px * $width-rate 40px * $height-rate-big;
       }
 
+
       .contacts-card_content__title {
         color: $color-primary;
         font-weight: 600;
@@ -1515,7 +1516,18 @@ h1,h2,h3 {
         @include _aspect-ratio {
           margin-bottom: 10px * $height-rate-big;
         }
-
+        &.pc-visible{
+          display: inherit!important;
+          @include _768 {
+            display: none!important;
+          }
+        }
+        &.mob-visible{
+          display: none!important;
+          @include _768 {
+            display: inherit!important;
+          }
+        }
       }
       .contacts-card_content__link {
         text-decoration: none;

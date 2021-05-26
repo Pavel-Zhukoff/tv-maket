@@ -477,7 +477,6 @@
             }
 
             svg {
-              margin-top: 5px;
               width: 100%;
               height: 55%;
 
@@ -598,6 +597,7 @@
 .programs-container {
   @include display-flex(column);
   max-width: 100%;
+  width: 100%;
 
   .programs-row {
     @include display-flex(row);
