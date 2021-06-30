@@ -248,7 +248,7 @@
 
     &:after {
       min-height: 190px * $width-rate;
-      max-height: 600px * $width-rate;
+      max-height: 710px * $width-rate;
       height: 100%;
       border-radius: 20px;
       background-color: $color-white;
@@ -284,7 +284,7 @@
 
         .card {
           width: 295px * $width-rate;
-          max-width: 25%;
+          max-width: 24%;
           @include _768 {
             width: 100%;
             padding: 0 15px;
@@ -533,4 +533,16 @@
     opacity: 1;
     transition: 0.5s;
   }
+}
+
+.vjs-error-display {
+  background-image: url("../images/placeholderlive.svg") !important;
+  background-size: cover!important;
+}
+
+.vjs-error-display .vjs-modal-dialog-content{
+  display: none!important;
+}
+.vjs-error-display:before{
+  display: none!important;
 }

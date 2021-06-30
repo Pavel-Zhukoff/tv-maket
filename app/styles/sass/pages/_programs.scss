@@ -477,7 +477,6 @@
             }
 
             svg {
-              margin-top: 5px;
               width: 100%;
               height: 55%;
 
@@ -598,17 +597,55 @@
 .programs-container {
   @include display-flex(column);
   max-width: 100%;
+  width: 100%;
 
   .programs-row {
     @include display-flex(row);
     margin-bottom: 100px * $height-rate;
     position: relative;
+    animation: animprog 2s;
+    -moz-animation: animprog 2s;
+    -webkit-animation: animprog 2s;
+    -o-animation: animprog 2s;
     @include _aspect-ratio {
       margin-bottom: 100px * $height-rate-big;
     }
     @include _768() {
       display: block;
       margin-bottom: 0;
+    }
+
+    @keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-moz-keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-webkit-keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-o-keyframes animprog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     &:after {
@@ -630,7 +667,7 @@
     }
 
     .card {
-      max-width: 25%;
+      max-width: 24%;
       @include _768() {
         margin-right: 0;
         max-width: 100%;
@@ -649,7 +686,7 @@
         img {
           @include _768() {
             border-radius: unset;
-            height: 210px;
+            height: auto;
           }
         }
 

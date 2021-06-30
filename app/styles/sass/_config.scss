@@ -22,6 +22,7 @@ $font-size-18: 1.2857rem;
 $font-size-24: 1.7143rem;
 $font-size-36: 2.5714rem;
 $font-size-48: 3.4286rem;
+$font-size-desc: 1.3rem;
 
 $color-background: #f8f9fb;
 $color-footer: #25292b;
@@ -70,6 +71,12 @@ $nav-menu-width: 1430px * $width-rate;
     @content;
   }
   @media screen and (aspect-ratio: 5/4) {
+    @content;
+  }
+}
+
+@mixin _2560 {
+  @media screen and (max-width: 2570px) and (min-width: 2400px) {
     @content;
   }
 }

@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
         poster: 'images/dist/poster.png',
     });
     video.src({
-        src: `https://606e854f4dd19.streamlock.net:443/live/TeoTV.stream_720p/playlist.m3u8`,
+        src: `https://fafsagg.ru`,
         type: 'application/x-mpegURL',
         withCredentials: false,
     });

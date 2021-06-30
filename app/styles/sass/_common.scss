@@ -284,10 +284,10 @@ h1,h2,h3 {
 .card {
   $card-animation-time: .5s;
   @include display-flex(column);
-  margin-right: 20px * $width-rate;
+  margin-right: auto;
 
   @include _1600 {
-    margin-right: 15px * $width-rate;
+    margin-right: auto;
   }
 
   &:last-child {
@@ -462,7 +462,7 @@ h1,h2,h3 {
     }
 
     .card_content__description {
-      font-size: $font-size-base;
+      font-size: $font-size-desc;
       color: $color-accent;
       margin-bottom: 10px * $width-rate;
       flex-grow: 1;
@@ -810,6 +810,43 @@ h1,h2,h3 {
   }
 
   .articles_container {
+    animation: animblog 2s;
+    -moz-animation: animblog 2s;
+    -webkit-animation: animblog 2s;
+    -o-animation: animblog 2s;
+
+    @keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-moz-keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-webkit-keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity:1;
+      }
+    }
+    @-o-keyframes animblog {
+      from {
+        opacity:0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
 
     .art-card{
       position: relative;
@@ -1423,6 +1460,9 @@ h1,h2,h3 {
       @include _aspect-ratio {
         height: 210px * $height-rate-big;
       }
+      @include _2560 {
+        height: 190px * $height-rate;
+      }
     }
 
     &:last-child {
@@ -1466,6 +1506,7 @@ h1,h2,h3 {
         padding: 12px * $height-rate 30px * $width-rate 40px * $height-rate-big;
       }
 
+
       .contacts-card_content__title {
         color: $color-primary;
         font-weight: 600;
@@ -1475,7 +1516,18 @@ h1,h2,h3 {
         @include _aspect-ratio {
           margin-bottom: 10px * $height-rate-big;
         }
-
+        &.pc-visible{
+          display: inherit!important;
+          @include _768 {
+            display: none!important;
+          }
+        }
+        &.mob-visible{
+          display: none!important;
+          @include _768 {
+            display: inherit!important;
+          }
+        }
       }
       .contacts-card_content__link {
         text-decoration: none;
@@ -1725,7 +1777,7 @@ h1,h2,h3 {
 
     .text {
       color: $color-white;
-      font-size: 20px * $width-rate;
+      font-size: $font-size-18;
       margin-right: 5px * $width-rate;
 
       @include _768 {

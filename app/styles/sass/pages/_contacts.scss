@@ -231,6 +231,7 @@
       }
 
       &::placeholder {
+        font-family: $font-family-accent;
         color: $color-accent;
         opacity: .5;
         @include _768() {
@@ -356,6 +357,7 @@
       }
 
       &::placeholder{
+        font-family: $font-family-accent;
         font-size: $font-size-24;
       }
 
@@ -373,9 +375,11 @@
       background: $color-white;
       border: 1px solid rgba($color-accent, .1);
       color: $color-accent;
+      font-family: $font-family-accent;
       padding: 10px * $height-rate 20px * $width-rate / 2;
       border-radius: 10px;
       @include _768() {
+        font-family: $font-family-accent;
         font-size: 12px;
         padding: 8px 16px;
         border-radius: 10px;
@@ -387,6 +391,7 @@
       }
 
       &::placeholder {
+        font-family: $font-family-accent;
         color: $color-accent;
         opacity: .5;
         @include _1200() {
@@ -399,6 +404,7 @@
       }
 
       &.contact-form_input__textarea {
+        font-family: $font-family-accent;
         resize: none;
         overflow-x: hidden;
         overflow-y: auto;

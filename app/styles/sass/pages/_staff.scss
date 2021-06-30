@@ -191,8 +191,10 @@ body {
     .director_text {
       padding-left: 40px * $width-rate;
       font-size: $font-size-18;
+      max-width: 85%;
       @include _768() {
         font-size: 12px;
+        max-width: 100%;
       }
 
 
@@ -238,6 +240,9 @@ body {
           color: rgba(7, 19, 43, 0.7);
           text-align: justify;
           margin-bottom: 2px;
+        }
+        @include _2560 {
+          max-width: 95%;
         }
       }
     }

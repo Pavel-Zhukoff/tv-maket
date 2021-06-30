@@ -327,6 +327,19 @@
     margin-right: 40px* $width-rate;
     cursor: pointer;
 
+    &.pc-visible{
+      display: inherit!important;
+      @include _768 {
+        display: none!important;
+      }
+    }
+    &.mob-visible{
+      display: none!important;
+      @include _768 {
+        display: inherit!important;
+      }
+    }
+
     @include _768 {
       width: 34px;
       height: 34px;
@@ -337,7 +350,7 @@
       @include display-flex(column);
       align-items: center;
 
-      &:nth-child(5),
+      &:nth-child(7),
       &:last-child {
         margin-right: 0;
       }

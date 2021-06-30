@@ -150,6 +150,10 @@
           max-width: 900px * $width-rate
         }
 
+        @include _2560 {
+          max-width: 700px * $width-rate
+        }
+
         .menu-container_left__item {
           @include menu-item;
           margin-left: 100px * $width-rate;
@@ -617,7 +621,6 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    transition: height .25s linear;
   }
 
   &.nav-menu_active {
@@ -670,6 +673,7 @@
         left: 0;
         bottom: 15px;
         padding: 0;
+        z-index: 100;
       }
     }
 
